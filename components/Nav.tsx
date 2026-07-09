@@ -15,7 +15,7 @@ const SERVICES: [string, string, string][] = [
 ];
 
 const OTHER: [string, string][] = [
-  ["Casework", "#casework"],
+  ["Casework", "/casework"],
   ["About", "#about"],
   ["Insights", "#insights"],
 ];

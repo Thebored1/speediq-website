@@ -10,7 +10,13 @@ const services = [
   ["Events & Exhibitions", "/services/events-exhibitions"],
   ["Print & Production", "/services/print-production"],
 ];
-const company = ["About", "Casework", "Blog", "Careers", "Contact"];
+const company = [
+  ["About", "#about"],
+  ["Casework", "/casework"],
+  ["Blog", "#"],
+  ["Careers", "#"],
+  ["Contact", "#"],
+];
 const resources = ["Free Audit", "Pricing", "Newsletter", "Brand Assets"];
 const legal = ["Privacy Policy", "Terms of Service", "Cookie Policy"];
 
@@ -103,10 +109,10 @@ export default function Footer() {
           <div>
             <div className="mono" style={colHead}>COMPANY</div>
             <div style={colWrap}>
-              {company.map((label) => (
-                <a key={label} href="#" className="footer-link" style={{ fontSize: 15 }}>
+              {company.map(([label, href]) => (
+                <Link key={label} href={href} className="footer-link" style={{ fontSize: 15 }}>
                   {label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
