@@ -16,7 +16,7 @@ export default function Services() {
       const span = r.height - window.innerHeight;
       if (span <= 0) return;
       const p = Math.min(1, Math.max(0, -r.top / span));
-      const idx = Math.min(5, Math.max(0, Math.floor(p * 6)));
+      const idx = Math.min(6, Math.max(0, Math.floor(p * 7)));
       const hid = p > 0.07;
       setActive((a) => (a !== idx ? idx : a));
       setHdrHidden((h) => (h !== hid ? hid : h));
@@ -63,7 +63,7 @@ export default function Services() {
               zIndex: 5,
             }}
           >
-            {[0, 1, 2, 3, 4, 5].map((i) => (
+            {[0, 1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
                 style={{
@@ -141,8 +141,9 @@ export default function Services() {
                     inset: 0,
                     zIndex: active === i ? 2 : 1,
                     opacity: active === i ? 1 : 0,
-                    transform: active === i ? "translateY(0px)" : "translateY(16px)",
-                    transition: "opacity 0.45s ease, transform 0.45s ease",
+                    transform: active === i ? "translateY(0px) scale(1)" : "translateY(24px) scale(0.96)",
+                    filter: active === i ? "blur(0px)" : "blur(8px)",
+                    transition: "opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
                     pointerEvents: active === i ? "auto" : "none",
                   }}
                 >
