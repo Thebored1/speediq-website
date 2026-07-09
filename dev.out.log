@@ -1,0 +1,14 @@
+
+> speediq@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.1.6
+   - Local:        http://localhost:3000
+   - Network:      http://10.183.220.212:3000
+
+ ✓ Starting...
+ ✓ Ready in 1816ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1496ms (611 modules)
+ GET / 200 in 1751ms
+ ✓ Compiled in 46ms

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <style>
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-400.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-500.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+    html, body { margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
+    a { color: #0526D9; text-decoration: none; }
+    a:hover { color: #0318A8; }
+    ::selection { background: #0A1CB8; color: #FFFFFF; }
+    input::placeholder { color: #9A9FB3; }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    .rv { transition: opacity 0.75s cubic-bezier(0.22, 0.8, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.8, 0.36, 1); }
+    .rv[data-rv="hide"] { opacity: 0; transform: translateY(28px); }
+    @media print { .rv { opacity: 1 !important; transform: none !important; transition: none !important; } }
+    @media (max-width: 1100px) {
+      .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-visual { display: none !important; }
+    }
+    @media (max-width: 1000px) {
+      .spec-head { grid-template-columns: 1fr !important; }
+      .spec-img { min-height: 240px !important; }
+      .strip-grid { grid-template-columns: 1fr !important; }
+      .strip-grid .strip-arrow { display: none !important; }
+      .case-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none !important; }
+      .svc-h1 { font-size: clamp(40px, 10vw, 64px) !important; }
+      .spec-row { grid-template-columns: 28px 1fr !important; }
+      .spec-row .spec-meta { grid-column: 2 !important; padding-top: 10px !important; }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</helmet>
+
+<div data-screen-label="Hero" style="position: relative; background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+
+  <nav style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; padding: 26px clamp(24px, 8vw, 128px); gap: 24px;">
+    <a href="uploads/SpeedIQ Website.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF;">
+      <svg width="27" height="19" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#FFFFFF"></path></svg>
+      <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1;">SpeedIQ</span>
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 16.5px; font-weight: 500;">
+      <a href="#" style="color: #FFFFFF;" style-hover="color: #FFFFFF;">Services</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Casework</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">About</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Insights</a>
+    </div>
+    <a href="#" style="color: #FFFFFF; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 500;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Book intro call</a>
+  </nav>
+
+  <div class="hero-grid" style="position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, 6.4fr) minmax(0, 5.6fr); gap: clamp(32px, 4vw, 64px); align-items: center; padding: clamp(32px, 6vh, 64px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing: border-box;">
+    <main>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+        <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+        <span>SERVICES — 06 / 06</span>
+      </div>
+      <h1 class="svc-h1" style="margin: 20px 0 0; font-family: 'Instrument Sans', Helvetica, sans-serif; font-size: clamp(56px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">Print &amp; Production</h1>
+      <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 520px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Packaging, signage, and large-run print produced in-house — color-managed from proof to press, so what you approve is exactly what ships.</p>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.34s backwards;">
+        <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+        <a href="#casework" onclick="{{ goCasework }}" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">See the casework →</a>
+      </div>
+      <div style="margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.58); animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;">ETHMAR · LEIL NHAR · MACEEN CAPITAL</div>
+    </main>
+
+    <sc-if value="{{ showHeroVisual }}" hint-placeholder-val="{{ true }}">
+    <div class="hero-visual" style="position: relative; display: flex; align-items: center; justify-content: center; animation: riseIn 0.8s cubic-bezier(0.22, 0.8, 0.36, 1) 0.3s backwards;">
+      <div style="position: absolute; inset: -40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.25; mix-blend-mode: overlay; pointer-events: none;"></div>
+      <div style="position: relative; background: #FFFFFF; border-radius: 6px; box-shadow: 0 40px 80px -30px rgba(2,10,60,0.6); width: min(348px, 100%); box-sizing: border-box; padding: 22px; transform: rotate(-1.5deg);">
+        <span style="position: absolute; top: 9px; left: 9px; width: 14px; height: 14px; border-top: 1.5px solid #0A0E2A; border-left: 1.5px solid #0A0E2A;"></span>
+        <span style="position: absolute; top: 9px; right: 9px; width: 14px; height: 14px; border-top: 1.5px solid #0A0E2A; border-right: 1.5px solid #0A0E2A;"></span>
+        <span style="position: absolute; bottom: 9px; left: 9px; width: 14px; height: 14px; border-bottom: 1.5px solid #0A0E2A; border-left: 1.5px solid #0A0E2A;"></span>
+        <span style="position: absolute; bottom: 9px; right: 9px; width: 14px; height: 14px; border-bottom: 1.5px solid #0A0E2A; border-right: 1.5px solid #0A0E2A;"></span>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: #8A8FA3;">
+          <span>PROOF — ETHMAR CARTON</span>
+          <span style="color: #0A0E2A;">FOGRA51</span>
+        </div>
+        <div style="border: 1px solid #EEF0F4; border-radius: 4px; margin-top: 12px; overflow: hidden;">
+          <div style="height: 116px; background: linear-gradient(135deg, #DCE9D2 0%, #9CC08A 55%, #1E7A46 100%); display: flex; align-items: flex-end; padding: 12px;">
+            <span style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #FFFFFF;">ETHMAR</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 5px; margin-top: 12px;">
+          <div style="flex: 1;">
+            <div style="height: 18px; border-radius: 3px; background: #23B0E6;"></div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 7.5px; color: #8A8FA3; text-align: center; margin-top: 4px;">C 72</div>
+          </div>
+          <div style="flex: 1;">
+            <div style="height: 18px; border-radius: 3px; background: #E6379B;"></div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 7.5px; color: #8A8FA3; text-align: center; margin-top: 4px;">M 40</div>
+          </div>
+          <div style="flex: 1;">
+            <div style="height: 18px; border-radius: 3px; background: #F4D53B;"></div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 7.5px; color: #8A8FA3; text-align: center; margin-top: 4px;">Y 88</div>
+          </div>
+          <div style="flex: 1;">
+            <div style="height: 18px; border-radius: 3px; background: #0A0E2A;"></div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 7.5px; color: #8A8FA3; text-align: center; margin-top: 4px;">K 12</div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.08em; color: #8A8FA3; border-top: 1px solid #EEF0F4; margin-top: 14px; padding-top: 10px;">
+          <span>350 GSM · MATT</span>
+          <span style="color: #1F8A5B;">✓ APPROVED</span>
+        </div>
+      </div>
+      <span style="position: absolute; right: 6%; bottom: -6px; transform: rotate(6deg); border: 2px solid #9FE8B8; color: #9FE8B8; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; padding: 6px 12px; border-radius: 4px; opacity: 0.9;">30K RUN</span>
+    </div>
+    </sc-if>
+  </div>
+
+  <div style="position: relative; z-index: 2; height: clamp(56px, 7vw, 96px); display: flex; align-items: flex-end; gap: 4px; padding: 0 0;">
+    <sc-for list="{{ heroBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) {{ bar.delay }} backwards;"></div>
+    </sc-for>
+  </div>
+</div>
+
+<section data-screen-label="Service & Deliverables" style="padding: clamp(72px, 10vw, 130px) clamp(24px, 8vw, 128px) clamp(56px, 8vw, 100px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="spec-head rv" style="display: grid; grid-template-columns: 7fr 5fr; gap: clamp(28px, 4vw, 56px); align-items: end;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+          <span>THE SERVICE — WHAT'S INCLUDED</span>
+        </div>
+        <h2 style="margin: 18px 0 0; max-width: 620px; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Color-managed from proof to press <span style="color: #99A0B8;">— run in-house, on our own floor.</span></h2>
+      </div>
+      <div class="spec-img" style="position: relative; border-radius: 14px; overflow: hidden; min-height: 200px; background: #0A1CB8; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.45);">
+        <img src="assets/photos/print-texture.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,40,0.1) 0%, rgba(5,10,40,0.62) 100%);"></div>
+        <div style="position: absolute; left: 18px; right: 18px; bottom: 16px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.8);">IN-HOUSE PRESS FLOOR</div>
+          <div style="margin-top: 6px; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Proof it, then run it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv" style="border: 1px solid #E7E9F0; border-radius: 16px; margin-top: clamp(40px, 5vw, 60px); overflow: hidden;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #F7F8FB; border-bottom: 1px solid #E7E9F0; padding: 13px 22px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8A8FA3;">SPEC SHEET — DELIVERABLES</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8A8FA3;">05 ITEMS</span>
+      </div>
+
+      <div class="spec-row" style="display: grid; grid-template-columns: 40px minmax(0, 1fr) 220px; gap: 0 24px; align-items: baseline; padding: 24px 22px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0526D9;">01</span>
+        <div>
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Packaging &amp; Boxes</div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Cartons, boxes, and product packaging — structural design through die-line to the finished, filled unit.</p>
+        </div>
+        <div class="spec-meta" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">DIE-LINE</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">FOOD-SAFE</span>
+        </div>
+      </div>
+      <div class="spec-row" style="display: grid; grid-template-columns: 40px minmax(0, 1fr) 220px; gap: 0 24px; align-items: baseline; padding: 24px 22px; border-top: 1px solid #EEF0F4;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0526D9;">02</span>
+        <div>
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Digital &amp; Offset Print</div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Short digital runs to long offset — the right press for the quantity, color-matched to your proof.</p>
+        </div>
+        <div class="spec-meta" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">CMYK + PMS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">UP TO 30K</span>
+        </div>
+      </div>
+      <div class="spec-row" style="display: grid; grid-template-columns: 40px minmax(0, 1fr) 220px; gap: 0 24px; align-items: baseline; padding: 24px 22px; border-top: 1px solid #EEF0F4;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0526D9;">03</span>
+        <div>
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Signage &amp; Large Format</div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Storefronts, banners, and environmental graphics — printed, mounted, and finished for install.</p>
+        </div>
+        <div class="spec-meta" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">WIDE FORMAT</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">MOUNTED</span>
+        </div>
+      </div>
+      <div class="spec-row" style="display: grid; grid-template-columns: 40px minmax(0, 1fr) 220px; gap: 0 24px; align-items: baseline; padding: 24px 22px; border-top: 1px solid #EEF0F4;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0526D9;">04</span>
+        <div>
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Production Management</div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Scheduling, stock, and quality control across the run — one contact from purchase order to pallet.</p>
+        </div>
+        <div class="spec-meta" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">QC PASS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">DELIVERY</span>
+        </div>
+      </div>
+      <div class="spec-row" style="display: grid; grid-template-columns: 40px minmax(0, 1fr) 220px; gap: 0 24px; align-items: baseline; padding: 24px 22px; border-top: 1px solid #EEF0F4;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0526D9;">05</span>
+        <div>
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Finishing &amp; Die-cutting</div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Foil, emboss, spot UV, lamination, and die-cutting — the details that make print feel considered.</p>
+        </div>
+        <div class="spec-meta" style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">FOIL · SPOT UV</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 10px;">DIE-CUT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section data-screen-label="Process" style="margin: 0 20px; background: #EEF2FB; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>FROM FILE TO PALLET</span>
+    </div>
+    <h2 class="rv" style="margin: 18px 0 0; max-width: 720px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Five steps, one press floor</h2>
+    <div class="strip-grid rv" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: stretch; margin-top: clamp(40px, 5vw, 64px);">
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 22px 20px 24px; position: relative;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #0526D9;">STEP 1</div>
+        <div style="margin-top: 12px; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Prepress</div>
+        <p style="margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Files checked, trapped, and imposed — bleed, resolution, and color all set for press.</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center;" class="strip-arrow">
+        <span style="font-family: 'IBM Plex Mono', monospace; color: #9AA6D8; font-size: 16px;">→</span>
+      </div>
+      <div style="background: #0526D9; border-radius: 14px; padding: 22px 20px 24px; position: relative; color: #FFFFFF; box-shadow: 0 18px 40px -26px rgba(5,38,217,0.6);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #B7C4FF;">STEP 2</div>
+        <div style="margin-top: 12px; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; color: #FFFFFF;">Proof</div>
+        <p style="margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.82); text-wrap: pretty;">A color-accurate contract proof you sign off — what you approve is the target on press.</p>
+        <span style="position: absolute; top: 16px; right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #9FE8B8; border: 1px solid rgba(159,232,184,0.5); border-radius: 999px; padding: 3px 8px;">SIGN-OFF</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center;" class="strip-arrow">
+        <span style="font-family: 'IBM Plex Mono', monospace; color: #9AA6D8; font-size: 16px;">→</span>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 22px 20px 24px; position: relative;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #0526D9;">STEP 3</div>
+        <div style="margin-top: 12px; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Press</div>
+        <p style="margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Digital or offset, matched to the run — with press checks against the approved proof.</p>
+      </div>
+    </div>
+    <div class="strip-grid rv" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: stretch; margin-top: 12px;">
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 22px 20px 24px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #0526D9;">STEP 4</div>
+        <div style="margin-top: 12px; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Finish</div>
+        <p style="margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Cutting, folding, foil, and lamination — the finishing that makes the piece feel resolved.</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center;" class="strip-arrow">
+        <span style="font-family: 'IBM Plex Mono', monospace; color: #9AA6D8; font-size: 16px;">→</span>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 14px; padding: 22px 20px 24px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #0526D9;">STEP 5</div>
+        <div style="margin-top: 12px; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Deliver</div>
+        <p style="margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">QC'd, packed, and shipped to your door — or straight to the shelf, the show, or the store.</p>
+      </div>
+      <div class="strip-arrow"></div>
+      <div class="strip-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<section id="casework" data-screen-label="Casework" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div class="rv" style="max-width: 1240px; margin: 0 auto;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+          <span>PRODUCTION CASEWORK</span>
+        </div>
+        <h2 style="margin: 16px 0 0; max-width: 560px; font-size: clamp(30px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Runs that shipped on time</h2>
+      </div>
+      <a href="#" style="border: 1px solid #C9D2F2; color: #0526D9; padding: 12px 22px; border-radius: 999px; font-weight: 500; font-size: 14.5px; flex: none; background: #FFFFFF;" style-hover="border-color: #0526D9; color: #0526D9;">Browse all casework →</a>
+    </div>
+    <div class="case-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.5vw, 44px);">
+      <div style="position: relative; border-radius: 16px; overflow: hidden; min-height: 320px; background: #F4F5FA; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35);">
+        <img src="assets/photos/ethmar-packaging.png" alt="Ethmar packaging range" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,40,0) 45%, rgba(5,10,40,0.6) 100%);"></div>
+        <div style="position: absolute; left: 16px; right: 16px; bottom: 16px;">
+          <div style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #FFFFFF;">Ethmar</div>
+          <div style="margin-top: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: rgba(255,255,255,0.82);">30+ CARTONS — PACKAGING RUN</div>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E7E9F0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35);">
+        <div style="background: #F7F8FB; border: 1px solid #E7E9F0; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/leilnhar.png" alt="Leil Nhar logo" style="display: block; height: 44px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Leil Nhar</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #0526D9;">SIGNAGE</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Storefront signage and large-format graphics printed, mounted, and installed across every branch.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">STOREFRONT</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">WIDE FORMAT</span>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E7E9F0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35);">
+        <div style="background: #F7F8FB; border: 1px solid #E7E9F0; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/maceen.png" alt="Maceen Capital logo" style="display: block; height: 44px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Maceen Capital</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #0526D9;">ANNUAL REPORT</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">A foil-and-emboss annual report on 350gsm uncoated — investor-grade finishing, printed and bound in-house.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">FOIL · EMBOSS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">OFFSET</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="faq-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>PRINT FAQ</span>
+      </div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Before you send files</h2>
+      <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 380px;">Still have questions? <a href="#" style="color: #0526D9; font-weight: 500;" style-hover="color: #0318A8;">Talk to a human →</a></p>
+    </div>
+    <div>
+      <div onclick="{{ faq0.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Will the print match what I approved?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq0.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq0.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes — that's what the contract proof is for. We color-manage from proof to press and run press checks against it, so the sheet matches the proof you signed.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq1.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Digital or offset — which do I need?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq1.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq1.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">We pick for you based on quantity and finish. Short runs and fast turnarounds go digital; long runs and special colors go offset — quoted both ways when it's close.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq2.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Do you design the artwork too?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq2.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq2.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">We can — the same studio behind our identity and packaging work designs to your guidelines. Or send print-ready files and we'll preflight them before press.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq3.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What's the largest run you handle?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq3.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq3.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Runs up to 30,000 units on our offset presses, with finishing and die-cutting in the same building — so a large run never leaves our quality control.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq4.toggle }}" style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Can you deliver straight to our stores?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq4.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq4.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes — production management covers kitting and distribution. We can ship to one dock or split a run across branches, packed and labelled per location.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="margin: 0 20px; background: #0526D9; border-radius: 28px; overflow: hidden; position: relative; text-align: center; padding: clamp(72px, 10vw, 110px) clamp(20px, calc(8vw - 20px), 108px) 0;">
+  <div class="rv" style="position: relative; z-index: 2;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>START THE CLIMB</span>
+    </div>
+    <h2 style="margin: 22px auto 0; max-width: 760px; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Print it once. Print it right.</h2>
+    <p style="margin: 20px auto 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.82);">Proof to press on one floor — color-managed, finished, and delivered by the same team.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Get a free audit</a>
+    </div>
+  </div>
+  <div style="margin-top: clamp(56px, 8vw, 84px); margin-left: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); margin-right: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); height: clamp(90px, 12vw, 150px); display: flex; align-items: flex-end; gap: 4px;">
+    <sc-for list="{{ ctaBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0;"></div>
+    </sc-for>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="padding: clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+          <input type="email" placeholder="Enter your email" style="border: 1px solid #D8D8D0; border-radius: 999px; padding: 12px 20px; font-size: 14.5px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; width: min(250px, 100%); box-sizing: border-box; outline: none; background: #FFFFFF;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14.5px; flex: none;" style-hover="background: #0318A8; color: #FFFFFF;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 32px; margin-top: 72px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="Brand Identity Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand &amp; Corporate Identity</a>
+          <a href="Web Development Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Web &amp; App Development</a>
+          <a href="Advertising and Growth Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Advertising &amp; Growth</a>
+          <a href="3D Modeling Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">3D Modeling</a>
+          <a href="Events and Exhibitions Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Events &amp; Exhibitions</a>
+          <a href="Print and Production Service.dc.html" style="font-size: 15px; color: #0526D9; font-weight: 600;" style-hover="color: #0318A8;">Print &amp; Production</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">About</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Casework</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Blog</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Careers</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">RESOURCES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Free Audit</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Pricing</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Newsletter</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand Assets</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">LEGAL</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Privacy Policy</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Terms of Service</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #ECECE6; margin-top: 72px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="uploads/SpeedIQ Website.html" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Home</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Services</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Blog</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:780},&quot;showHeroVisual&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Hero&quot;},&quot;showTimeline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Process&quot;}}">
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+
+  setupReveal(attempt) {
+    if (this.revealDone) return;
+    const els = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    if (!els.length) {
+      const self = this;
+      if ((attempt || 0) < 30) setTimeout(function () { self.setupReveal((attempt || 0) + 1); }, 200);
+      return;
+    }
+    this.revealDone = true;
+    if (typeof IntersectionObserver === 'undefined') return;
+    let ioAlive = false;
+    els.forEach(function (el) { el.setAttribute('data-rv', 'hide'); });
+    const io = new IntersectionObserver(function (entries) {
+      ioAlive = true;
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+        e.target.removeAttribute('data-rv');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+    this.revealIO = io;
+    setTimeout(function () {
+      if (!ioAlive) {
+        io.disconnect();
+        els.forEach(function (el) { el.removeAttribute('data-rv'); });
+      }
+    }, 2000);
+  }
+
+  componentDidMount() {
+    this.setupReveal(0);
+    this.initSmoothScroll();
+  }
+
+  initSmoothScroll() {
+    if (this._smoothInit || typeof window === 'undefined') return;
+    this._smoothInit = true;
+    if ('ontouchstart' in window) return;
+    this._ssTarget = window.scrollY;
+    this._ssCurrent = window.scrollY;
+    this._ssActive = false;
+    this._ssProgrammatic = false;
+    const self = this;
+    const maxY = function () { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); };
+    this._ssTick = function () {
+      const diff = self._ssTarget - self._ssCurrent;
+      if (Math.abs(diff) < 0.5) {
+        self._ssCurrent = self._ssTarget;
+        self._ssActive = false;
+        self._ssProgrammatic = true;
+        window.scrollTo(0, self._ssTarget);
+        return;
+      }
+      self._ssCurrent += diff * 0.115;
+      self._ssProgrammatic = true;
+      window.scrollTo(0, self._ssCurrent);
+      requestAnimationFrame(self._ssTick);
+    };
+    this._ssWheel = function (e) {
+      if (e.ctrlKey || e.metaKey || e.defaultPrevented) return;
+      e.preventDefault();
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 32;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      self._ssTarget = Math.max(0, Math.min(maxY(), self._ssTarget + d));
+      if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); }
+    };
+    this._ssScroll = function () {
+      if (self._ssProgrammatic) { self._ssProgrammatic = false; return; }
+      self._ssTarget = window.scrollY;
+      self._ssCurrent = window.scrollY;
+    };
+    window.addEventListener('wheel', this._ssWheel, { passive: false });
+    window.addEventListener('scroll', this._ssScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._ssWheel) window.removeEventListener('wheel', this._ssWheel);
+    if (this._ssScroll) window.removeEventListener('scroll', this._ssScroll);
+    if (this.revealIO) this.revealIO.disconnect();
+  }
+
+  renderVals() {
+    if (!this._revealKick) {
+      this._revealKick = true;
+      const self = this;
+      setTimeout(function () { self.setupReveal(0); }, 80);
+    }
+    const mkBars = function (count, minPct, maxPct) {
+      const out = [];
+      for (let i = 0; i < count; i++) {
+        const t = count === 1 ? 1 : i / (count - 1);
+        out.push({
+          h: (minPct + (maxPct - minPct) * t).toFixed(1) + '%',
+          bg: 'rgba(255,255,255,' + (0.12 + 0.34 * t).toFixed(3) + ')',
+          delay: (0.2 + i * 0.04).toFixed(2) + 's'
+        });
+      }
+      return out;
+    };
+    const faq = (i) => ({
+      rows: this.state.openFaq === i ? '1fr' : '0fr',
+      icon: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+    });
+    if (!this._goCasework) {
+      const self = this;
+      this._goCasework = function (e) {
+        e.preventDefault();
+        const el = document.getElementById('casework');
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + window.scrollY - 20;
+        if (self._ssWheel) { self._ssTarget = y; self._ssCurrent = window.scrollY; if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); } }
+        else window.scrollTo(0, y);
+      };
+    }
+    return {
+      heroBars: mkBars(22, 8, 100),
+      ctaBars: mkBars(22, 8, 100),
+      faq0: faq(0), faq1: faq(1), faq2: faq(2), faq3: faq(3), faq4: faq(4),
+      goCasework: this._goCasework,
+      showHeroVisual: this.props.showHeroVisual ?? true,
+      showTimeline: this.props.showTimeline ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

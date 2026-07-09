@@ -1,0 +1,490 @@
+<style>
+
+
+
+
+
+    html, body { margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
+    a { color: #0526D9; text-decoration: none; }
+    a:hover { color: #0318A8; }
+    ::selection { background: #0A1CB8; color: #FFFFFF; }
+    input::placeholder { color: #9A9FB3; }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    .rv { transition: opacity 0.75s cubic-bezier(0.22, 0.8, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.8, 0.36, 1); }
+    .rv[data-rv="hide"] { opacity: 0; transform: translateY(28px); }
+    @media print { .rv { opacity: 1 !important; transform: none !important; transition: none !important; } }
+    /* responsive overrides — media queries can't be inlined */
+    @media (max-width: 1100px) {
+      .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-visual { display: none !important; }
+    }
+    @media (max-width: 1000px) {
+      .det-grid { grid-template-columns: 1fr !important; }
+      .proc-split { grid-template-columns: 1fr !important; }
+      .case-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none !important; }
+      .svc-h1 { font-size: clamp(40px, 10vw, 64px) !important; }
+      .img-meta { display: none !important; }
+    }
+  
+</style>
+
+<div data-screen-label="Hero" style="position: relative; background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; padding-top: 72px;">
+
+  
+
+  <div class="hero-grid" style="position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, 6.4fr) minmax(0, 5.6fr); gap: clamp(32px, 4vw, 64px); align-items: center; padding: clamp(32px, 6vh, 64px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing: border-box;">
+    <main>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+        <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+        <span>SERVICES — 04 / 06</span>
+      </div>
+      <h1 class="svc-h1" style="margin: 20px 0 0; font-family: 'Instrument Sans', Helvetica, sans-serif; font-size: clamp(48px, 5vw, 76px); line-height: 1.04; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">3D Exterior &amp; Interior Modeling</h1>
+      <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 520px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Photoreal architectural visualization in any style — from single renders to complete concept campaigns, approved on screen before anything is built.</p>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.34s backwards;">
+        <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;">Book an intro call</a>
+        <a href="/#casework"  style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;">See the casework →</a>
+      </div>
+      <div style="margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.58); animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;">VILLATE · EADS · HBL POWER SYSTEMS</div>
+    </main>
+
+    
+    <div class="hero-visual" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; animation: riseIn 0.8s cubic-bezier(0.22, 0.8, 0.36, 1) 0.3s backwards;">
+      <div style="position: absolute; inset: -40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.25; mix-blend-mode: overlay; pointer-events: none;"></div>
+      <div style="position: relative; width: min(380px, 100%); height: 220px; background: #14171C; border-radius: 12px; box-shadow: 0 40px 80px -30px rgba(2,10,60,0.6); overflow: hidden; transform: rotate(-1.5deg);">
+        <div style="position: absolute; left: -40%; right: -40%; bottom: -4px; height: 68%; background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 26px 26px; transform: perspective(340px) rotateX(58deg); transform-origin: 50% 100%;"></div>
+        <div style="position: absolute; inset: 0; background: radial-gradient(90% 60% at 50% 70%, rgba(201,152,115,0.18), rgba(20,23,28,0) 70%);"></div>
+        <div style="position: absolute; left: 50%; bottom: 30%; transform: translateX(-62%); width: 78px; height: 58px; border: 1.5px solid rgba(255,255,255,0.85); background: rgba(255,255,255,0.05); border-radius: 2px;"></div>
+        <div style="position: absolute; left: 50%; bottom: 30%; transform: translateX(28%); width: 34px; height: 30px; border: 1.5px solid rgba(255,255,255,0.45); background: rgba(255,255,255,0.03); border-radius: 2px;"></div>
+        <span style="position: absolute; top: 10px; left: 10px; width: 13px; height: 13px; border-top: 2px solid rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.5);"></span>
+        <span style="position: absolute; top: 10px; right: 10px; width: 13px; height: 13px; border-top: 2px solid rgba(255,255,255,0.5); border-right: 2px solid rgba(255,255,255,0.5);"></span>
+        <span style="position: absolute; bottom: 10px; left: 10px; width: 13px; height: 13px; border-bottom: 2px solid rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.5);"></span>
+        <span style="position: absolute; bottom: 10px; right: 10px; width: 13px; height: 13px; border-bottom: 2px solid rgba(255,255,255,0.5); border-right: 2px solid rgba(255,255,255,0.5);"></span>
+        <div style="position: absolute; top: 14px; left: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">VILLA_07 — SPANISH</div>
+        <div style="position: absolute; top: 14px; right: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.55);">PERSP · 35MM</div>
+        <div style="position: absolute; left: 22px; right: 22px; bottom: 14px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.8);">RENDERING — EXTERIOR PASS</span>
+          <span style="flex: 1; height: 4px; background: rgba(255,255,255,0.15); border-radius: 2px;"><span style="display: block; width: 82%; height: 100%; background: #9DB98A; border-radius: 2px;"></span></span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #9DB98A;">82%</span>
+        </div>
+      </div>
+      <div style="position: relative; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.85);">5 STYLES · EXTERIOR + INTERIOR · 4K</div>
+    </div>
+    
+  </div>
+
+  <div style="position: relative; z-index: 2; height: clamp(56px, 7vw, 96px); display: flex; align-items: flex-end; gap: 4px; padding: 0 0;">
+    <div style="flex: 1; height: 8.0%; background: rgba(255,255,255,0.120); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.20s backwards;"></div>
+      <div style="flex: 1; height: 12.4%; background: rgba(255,255,255,0.136); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;"></div>
+      <div style="flex: 1; height: 16.8%; background: rgba(255,255,255,0.152); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.28s backwards;"></div>
+      <div style="flex: 1; height: 21.1%; background: rgba(255,255,255,0.169); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.32s backwards;"></div>
+      <div style="flex: 1; height: 25.5%; background: rgba(255,255,255,0.185); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.36s backwards;"></div>
+      <div style="flex: 1; height: 29.9%; background: rgba(255,255,255,0.201); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.40s backwards;"></div>
+      <div style="flex: 1; height: 34.3%; background: rgba(255,255,255,0.217); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;"></div>
+      <div style="flex: 1; height: 38.7%; background: rgba(255,255,255,0.233); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.48s backwards;"></div>
+      <div style="flex: 1; height: 43.0%; background: rgba(255,255,255,0.250); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.52s backwards;"></div>
+      <div style="flex: 1; height: 47.4%; background: rgba(255,255,255,0.266); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.56s backwards;"></div>
+      <div style="flex: 1; height: 51.8%; background: rgba(255,255,255,0.282); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.60s backwards;"></div>
+      <div style="flex: 1; height: 56.2%; background: rgba(255,255,255,0.298); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.64s backwards;"></div>
+      <div style="flex: 1; height: 60.6%; background: rgba(255,255,255,0.314); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.68s backwards;"></div>
+      <div style="flex: 1; height: 65.0%; background: rgba(255,255,255,0.330); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.72s backwards;"></div>
+      <div style="flex: 1; height: 69.3%; background: rgba(255,255,255,0.347); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.76s backwards;"></div>
+      <div style="flex: 1; height: 73.7%; background: rgba(255,255,255,0.363); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.80s backwards;"></div>
+      <div style="flex: 1; height: 78.1%; background: rgba(255,255,255,0.379); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.84s backwards;"></div>
+      <div style="flex: 1; height: 82.5%; background: rgba(255,255,255,0.395); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.88s backwards;"></div>
+      <div style="flex: 1; height: 86.9%; background: rgba(255,255,255,0.411); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.92s backwards;"></div>
+      <div style="flex: 1; height: 91.2%; background: rgba(255,255,255,0.428); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.96s backwards;"></div>
+      <div style="flex: 1; height: 95.6%; background: rgba(255,255,255,0.444); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.00s backwards;"></div>
+      <div style="flex: 1; height: 100.0%; background: rgba(255,255,255,0.460); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.04s backwards;"></div>
+  </div>
+</div>
+
+<section data-screen-label="Service & Deliverables" style="margin: 20px 20px 0; background: #EEF2FB; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div class="rv">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+          <span>THE SERVICE — WHAT'S INCLUDED</span>
+        </div>
+        <h2 style="margin: 18px 0 0; max-width: 760px; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Photoreal, in any style <span style="color: #99A0B8;">— approved on screen before it exists.</span></h2>
+      </div>
+      <div class="rv" style="display: flex; align-items: baseline; gap: 12px; flex: none;">
+        <span style="font-size: clamp(48px, 4vw, 64px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; color: #0526D9;">5</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8FA3; max-width: 150px; line-height: 1.7;">COMPLETE VILLA STYLES MODELED FOR ONE CAMPAIGN</span>
+      </div>
+    </div>
+    <div class="rv" style="position: relative; border-radius: 18px; overflow: hidden; min-height: clamp(300px, 38vw, 460px); margin-top: clamp(32px, 4vw, 48px); background: #DDE3FA;">
+      <img src="/photos/villa-render-crop.png" alt="Villate Spanish villa exterior render" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,14,42,0) 55%, rgba(10,14,42,0.55) 100%);"></div>
+      <div style="position: absolute; top: 16px; left: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #FFFFFF; background: rgba(5,38,217,0.75); backdrop-filter: blur(4px); border-radius: 999px; padding: 6px 12px;">VILLATE — SPANISH · EXTERIOR PASS · 4K</div>
+      <div class="img-meta" style="position: absolute; top: 16px; right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: rgba(255,255,255,0.85);">PERSP · 35MM</div>
+      <div style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 5px 12px; background: rgba(10,14,42,0.35); backdrop-filter: blur(3px);">MODERN</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 5px 12px; background: rgba(10,14,42,0.35); backdrop-filter: blur(3px);">CLASSIC</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 5px 12px; background: rgba(10,14,42,0.35); backdrop-filter: blur(3px);">CONTEMPORARY</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #FFFFFF; border: 2px solid #FFFFFF; border-radius: 999px; padding: 5px 12px; background: rgba(5,38,217,0.6); backdrop-filter: blur(3px); font-weight: 500;">SPANISH</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 5px 12px; background: rgba(10,14,42,0.35); backdrop-filter: blur(3px);">MEXICAN</span>
+      </div>
+    </div>
+    <div class="det-grid rv" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(32px, 4vw, 64px); margin-top: clamp(28px, 3.5vw, 44px);">
+      <div style="border-top: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">01</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Exterior Modeling</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Facades, landscape, and lighting — the hero shots that carry a campaign.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">02</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Interior Modeling</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Furnished, lit interiors in the same style language as the exterior — one continuous world.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">03</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Style Development</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Modern, Classic, Contemporary, Spanish, Mexican — or a style built for your project.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">04</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Campaign Stills</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">4K renders framed for the media plan — print, outdoor, and digital crops from one master.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid #D9DFF2; border-bottom: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">05</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Sales-Platform Assets</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Renders packaged for listings and sales platforms — the Villate styles sold from the screen.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid #D9DFF2; border-bottom: 1px solid #D9DFF2; padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; flex: none; padding-top: 4px;">06</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Render-to-Build Handoff</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #565B72; text-wrap: pretty;">For stands and spaces, the approved render becomes the build spec — what you saw is what gets built.</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Process" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div class="proc-split" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); align-items: start;">
+    <div>
+      <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>HOW RENDER WORK RUNS</span>
+      </div>
+      <h2 class="rv" style="margin: 18px 0 0; max-width: 560px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Brief to 4K master in about three weeks</h2>
+      <div class="rv" style="margin-top: clamp(28px, 3.5vw, 44px);">
+        <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 24px; display: flex; gap: 18px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3; flex: none; padding-top: 3px; width: 56px;">STEP 1</span>
+          <span style="flex: 1;">
+            <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <span style="font-size: 19px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Brief &amp; references</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF; flex: none;">WEEK 1</span>
+            </span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 520px; text-wrap: pretty;">Plans, drawings, and style references in — camera list and shot count agreed.</p>
+          </span>
+        </div>
+        <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 24px; display: flex; gap: 18px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3; flex: none; padding-top: 3px; width: 56px;">STEP 2</span>
+          <span style="flex: 1;">
+            <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <span style="font-size: 19px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Blockout &amp; cameras</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF; flex: none;">WEEK 1–2</span>
+            </span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 520px; text-wrap: pretty;">Massing and angles approved in greyscale — geometry locked before detail work begins.</p>
+          </span>
+        </div>
+        <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 24px; display: flex; gap: 18px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3; flex: none; padding-top: 3px; width: 56px;">STEP 3</span>
+          <span style="flex: 1;">
+            <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <span style="font-size: 19px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Materials &amp; lighting</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF; flex: none;">WEEK 2–3</span>
+            </span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 520px; text-wrap: pretty;">The photoreal pass — materials, landscape, and light tuned per style until it reads like a photograph.</p>
+          </span>
+        </div>
+        <div style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 20px 2px 24px; display: flex; gap: 18px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3; flex: none; padding-top: 3px; width: 56px;">STEP 4</span>
+          <span style="flex: 1;">
+            <span style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+              <span style="font-size: 19px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">4K delivery</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF; flex: none;">WEEK 3</span>
+            </span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 520px; text-wrap: pretty;">4K masters plus the crops your media plan needs — and the source scene stays on file for the next campaign.</p>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="background: #EEF2FB; border-radius: 18px; padding: 28px; align-self: start;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #0526D9;">WHY IT WORKS</div>
+      <div style="margin-top: 14px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Fixed shot list, fixed quote</div>
+      <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.65; color: #565B72; text-wrap: pretty;">Geometry is approved before detail, and detail before delivery — so revisions land in hours, not weeks, and the quote agreed at the brief holds to the master files.</p>
+      <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.65; color: #565B72; text-wrap: pretty;">For stands and interiors, the approved render becomes the build spec — the same discipline behind the EADS and HBL builds.</p>
+      <div style="border-top: 1px solid #D9DFF2; margin-top: 20px; padding-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #8A8FA3; line-height: 1.9;">4K MASTERS · ALL CROPS<br>48HR REVISION LOOP<br>SOURCE SCENE ARCHIVED</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="casework" data-screen-label="Casework" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="rv" style="max-width: 1240px; margin: 0 auto; background: #0526D9; border-radius: 24px; padding: clamp(32px, 4.5vw, 56px); color: #FFFFFF;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+          <span>3D CASEWORK</span>
+        </div>
+        <h2 style="margin: 16px 0 0; max-width: 560px; font-size: clamp(30px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Rendered to approval — then built</h2>
+      </div>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 12px 22px; border-radius: 999px; font-weight: 500; font-size: 14.5px; flex: none;">Browse all casework →</a>
+    </div>
+    <div class="case-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.5vw, 44px);">
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="/logos/villate.png" alt="Villate logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Villate</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">IDENTITY + 3D</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">Five complete villa styles — Mexican, Spanish, Classic, Modern, Contemporary — modeled inside and out, ready for campaigns and sales platforms.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">5 STYLES</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">EXTERIOR + INTERIOR</span>
+        </div>
+      </div>
+      <div style="position: relative; border-radius: 16px; overflow: hidden; min-height: 260px; background: #0A1CB8;">
+        <img src="/photos/maceen-booth-crop.png" alt="Maceen Capital booth render" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="position: absolute; left: 14px; bottom: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #FFFFFF; background: rgba(5,38,217,0.75); backdrop-filter: blur(4px); border-radius: 999px; padding: 6px 12px;">MACEEN CAPITAL — BOOTH RENDER</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 10px 16px; width: fit-content; max-width: 100%;">
+          <img src="/logos/eads.png" alt="EADS Defence &amp; Security logo" style="display: block; height: 56px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">EADS Defence &amp; Security</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">RENDER → BUILD</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">The delta-wing stand rendered to approval, then built on site — winner of the Best Exhibition Award.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">3D RENDERS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">BEST EXHIBITION AWARD</span>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 10px 16px; width: fit-content; max-width: 100%;">
+          <img src="/logos/hbl.png" alt="HBL Power Systems logo" style="display: block; height: 56px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">HBL Power Systems</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">RENDER → BUILD</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">An 11 × 8 m twin-tower stand planned to the metre, rendered to approval, and built on site.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">11×8 M</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">ON-SITE BUILD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="faq-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>3D FAQ</span>
+      </div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Before you brief us</h2>
+      <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 380px;">Still have questions? <a href="#" style="color: #0526D9; font-weight: 500;">Talk to a human →</a></p>
+    </div>
+    <div>
+      <div data-faq-toggle style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What styles can you model?</div>
+          <div data-faq-icon style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">−</div>
+        </div>
+        <div data-faq-body style="display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Any — for Villate we built Modern, Classic, Contemporary, Spanish, and Mexican as complete worlds. New styles are developed from your references in the first week.</p>
+          </div>
+        </div>
+      </div>
+      <div data-faq-toggle style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What do we receive at the end?</div>
+          <div data-faq-icon style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">+</div>
+        </div>
+        <div data-faq-body style="display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">4K master renders for every agreed camera, plus the crops your media plan needs. The source scene stays archived for future shots.</p>
+          </div>
+        </div>
+      </div>
+      <div data-faq-toggle style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What do you need from us to start?</div>
+          <div data-faq-icon style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">+</div>
+        </div>
+        <div data-faq-body style="display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Plans or CAD if you have them; sketches and reference photos if you don't. We rebuild geometry from whatever exists — many projects start from a floor plan and a moodboard.</p>
+          </div>
+        </div>
+      </div>
+      <div data-faq-toggle style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How do revisions work?</div>
+          <div data-faq-icon style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">+</div>
+        </div>
+        <div data-faq-body style="display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">You approve at each gate — angles in greyscale, then materials and light. Because geometry is locked early, revision rounds turn in about 48 hours.</p>
+          </div>
+        </div>
+      </div>
+      <div data-faq-toggle style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Can the renders become a real build?</div>
+          <div data-faq-icon style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">+</div>
+        </div>
+        <div data-faq-body style="display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes — that's how our exhibition work runs. The approved render becomes the build spec, and our events team builds it on site, as with EADS and HBL.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="margin: 0 20px; background: #0526D9; border-radius: 28px; overflow: hidden; position: relative; text-align: center; padding: clamp(72px, 10vw, 110px) clamp(20px, calc(8vw - 20px), 108px) 0;">
+  <div class="rv" style="position: relative; z-index: 2;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>START THE CLIMB</span>
+    </div>
+    <h2 style="margin: 22px auto 0; max-width: 760px; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">See it before you build it.</h2>
+    <p style="margin: 20px auto 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.82);">Photoreal renders, approved on screen — with a fixed shot list and a fixed quote.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;">Get a free audit</a>
+    </div>
+  </div>
+  <div style="margin-top: clamp(56px, 8vw, 84px); margin-left: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); margin-right: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); height: clamp(90px, 12vw, 150px); display: flex; align-items: flex-end; gap: 4px;">
+    <div style="flex: 1; height: 8.0%; background: rgba(255,255,255,0.120); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 12.4%; background: rgba(255,255,255,0.136); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 16.8%; background: rgba(255,255,255,0.152); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 21.1%; background: rgba(255,255,255,0.169); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 25.5%; background: rgba(255,255,255,0.185); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 29.9%; background: rgba(255,255,255,0.201); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 34.3%; background: rgba(255,255,255,0.217); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 38.7%; background: rgba(255,255,255,0.233); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 43.0%; background: rgba(255,255,255,0.250); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 47.4%; background: rgba(255,255,255,0.266); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 51.8%; background: rgba(255,255,255,0.282); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 56.2%; background: rgba(255,255,255,0.298); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 60.6%; background: rgba(255,255,255,0.314); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 65.0%; background: rgba(255,255,255,0.330); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 69.3%; background: rgba(255,255,255,0.347); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 73.7%; background: rgba(255,255,255,0.363); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 78.1%; background: rgba(255,255,255,0.379); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 82.5%; background: rgba(255,255,255,0.395); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 86.9%; background: rgba(255,255,255,0.411); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 91.2%; background: rgba(255,255,255,0.428); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 95.6%; background: rgba(255,255,255,0.444); border-radius: 5px 5px 0 0;"></div>
+      <div style="flex: 1; height: 100.0%; background: rgba(255,255,255,0.460); border-radius: 5px 5px 0 0;"></div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="padding: clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+          <input type="email" placeholder="Enter your email" style="border: 1px solid #D8D8D0; border-radius: 999px; padding: 12px 20px; font-size: 14.5px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; width: min(250px, 100%); box-sizing: border-box; outline: none; background: #FFFFFF;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14.5px; flex: none;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 32px; margin-top: 72px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="/services/brand-identity" style="font-size: 15px; color: #3A3F55;">Brand &amp; Corporate Identity</a>
+          <a href="/services/web-development" style="font-size: 15px; color: #3A3F55;">Web &amp; App Development</a>
+          <a href="/services/advertising-growth" style="font-size: 15px; color: #3A3F55;">Advertising &amp; Growth</a>
+          <a href="/services/3d-modeling" style="font-size: 15px; color: #0526D9; font-weight: 600;">3D Modeling</a>
+          <a href="/services/events-exhibitions" style="font-size: 15px; color: #3A3F55;">Events &amp; Exhibitions</a>
+          <a href="/services/print-production" style="font-size: 15px; color: #3A3F55;">Print &amp; Production</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;">About</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Casework</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Blog</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Careers</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">RESOURCES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Free Audit</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Pricing</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Newsletter</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Brand Assets</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">LEGAL</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Privacy Policy</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Terms of Service</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #ECECE6; margin-top: 72px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 13.5px; color: #8A8FA3;">Home</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;">Services</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;">Blog</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

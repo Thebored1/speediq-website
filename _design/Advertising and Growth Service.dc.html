@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <style>
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-400.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-500.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+    html, body { margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
+    a { color: #0526D9; text-decoration: none; }
+    a:hover { color: #0318A8; }
+    ::selection { background: #0A1CB8; color: #FFFFFF; }
+    input::placeholder { color: #9A9FB3; }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    .rv { transition: opacity 0.75s cubic-bezier(0.22, 0.8, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.8, 0.36, 1); }
+    .rv[data-rv="hide"] { opacity: 0; transform: translateY(28px); }
+    @media print { .rv { opacity: 1 !important; transform: none !important; transition: none !important; } }
+    /* responsive overrides — media queries can't be inlined */
+    @media (max-width: 1100px) {
+      .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-visual { display: none !important; }
+    }
+    @media (max-width: 1000px) {
+      .chk-grid { grid-template-columns: 1fr !important; }
+      .proc-grid2 { grid-template-columns: 1fr !important; }
+      .case-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none !important; }
+      .svc-h1 { font-size: clamp(40px, 10vw, 64px) !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .stat-row > div { border-left: none !important; padding-left: 2px !important; border-top: 1px solid rgba(255,255,255,0.28); padding-top: 18px !important; }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</helmet>
+
+<div data-screen-label="Hero" style="position: relative; background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+
+  <nav style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; padding: 26px clamp(24px, 8vw, 128px); gap: 24px;">
+    <a href="uploads/SpeedIQ Website.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF;">
+      <svg width="27" height="19" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#FFFFFF"></path></svg>
+      <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1;">SpeedIQ</span>
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 16.5px; font-weight: 500;">
+      <a href="#" style="color: #FFFFFF;" style-hover="color: #FFFFFF;">Services</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Casework</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">About</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Insights</a>
+    </div>
+    <a href="#" style="color: #FFFFFF; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 500;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Book intro call</a>
+  </nav>
+
+  <div class="hero-grid" style="position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, 6.4fr) minmax(0, 5.6fr); gap: clamp(32px, 4vw, 64px); align-items: center; padding: clamp(32px, 6vh, 64px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing: border-box;">
+    <main>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+        <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+        <span>SERVICES — 03 / 06</span>
+      </div>
+      <h1 class="svc-h1" style="margin: 20px 0 0; font-family: 'Instrument Sans', Helvetica, sans-serif; font-size: clamp(56px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">Advertising &amp; Growth</h1>
+      <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 520px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Campaigns, media strategy, and SEO that compound reach quarter over quarter — planning comes before production, so everything pulls toward the same number.</p>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.34s backwards;">
+        <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+        <a href="#casework" onclick="{{ goCasework }}" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">See the casework →</a>
+      </div>
+      <div style="margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.58); animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;">VILLATE · ETHMAR · JAROUDI MEDIA</div>
+    </main>
+
+    <sc-if value="{{ showHeroVisual }}" hint-placeholder-val="{{ true }}">
+    <div class="hero-visual" style="position: relative; display: flex; align-items: center; justify-content: center; animation: riseIn 0.8s cubic-bezier(0.22, 0.8, 0.36, 1) 0.3s backwards;">
+      <div style="position: absolute; inset: -40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.25; mix-blend-mode: overlay; pointer-events: none;"></div>
+      <div style="position: relative; background: #FFFFFF; border-radius: 14px; box-shadow: 0 40px 80px -30px rgba(2,10,60,0.6); width: min(340px, 100%); box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; transform: rotate(-1.5deg);">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 11px 16px; border-bottom: 1px solid #EEF0F4; flex: none;">
+          <span style="display: flex; gap: 5px;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+          </span>
+          <span style="font-size: 12.5px; font-weight: 650; color: #0A0E2A;">SpeedIQ</span>
+          <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DASHBOARD</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #EEF0F4; flex: none;">
+          <div style="padding: 10px 16px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DELIVERY RATE</div>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;"><span style="font-size: 23px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: #0A0E2A;">99%</span><span style="font-size: 12px; color: #1F8A5B;">↑</span></div>
+          </div>
+          <div style="padding: 10px 16px; border-left: 1px solid #EEF0F4;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">MESSAGES / MO</div>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;"><span style="font-size: 23px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: #0A0E2A;">2.4M</span><span style="font-size: 12px; color: #1F8A5B;">↑</span></div>
+          </div>
+        </div>
+        <div style="padding: 12px 16px; flex: none;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DELIVERY FORECAST · 6 MONTHS</div>
+          <svg viewBox="0 0 260 84" style="width: 100%; height: 78px; display: block; margin-top: 8px;" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="21" x2="260" y2="21" stroke="#F0F1F5" stroke-width="1"></line>
+            <line x1="0" y1="42" x2="260" y2="42" stroke="#F0F1F5" stroke-width="1"></line>
+            <line x1="0" y1="63" x2="260" y2="63" stroke="#F0F1F5" stroke-width="1"></line>
+            <path d="M12 40 L58 44 L104 31 L150 27 L196 23 L244 19" fill="none" stroke="#C9CCD6" stroke-width="2" stroke-dasharray="4 4"></path>
+            <path d="M12 44 L58 66 L104 24 L150 54 L196 35 L244 31" fill="none" stroke="#1F8A5B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>
+            <circle cx="12" cy="44" r="3.5" fill="#1F8A5B"></circle>
+            <circle cx="58" cy="66" r="3.5" fill="#1F8A5B"></circle>
+            <circle cx="104" cy="24" r="3.5" fill="#1F8A5B"></circle>
+            <circle cx="150" cy="54" r="3.5" fill="#1F8A5B"></circle>
+            <circle cx="196" cy="35" r="3.5" fill="#1F8A5B"></circle>
+            <circle cx="244" cy="31" r="3.5" fill="#1F8A5B"></circle>
+          </svg>
+          <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; color: #8A8FA3; padding: 0 2px; margin-top: 4px;">
+            <span>NOW</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span>
+          </div>
+        </div>
+      </div>
+      <span style="position: absolute; right: 6%; bottom: -6px; transform: rotate(6deg); border: 2px solid #9FE8B8; color: #9FE8B8; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; padding: 6px 12px; border-radius: 4px; opacity: 0.9;">↑ 38% YOY</span>
+    </div>
+    </sc-if>
+  </div>
+
+  <div style="position: relative; z-index: 2; height: clamp(56px, 7vw, 96px); display: flex; align-items: flex-end; gap: 4px; padding: 0 0;">
+    <sc-for list="{{ heroBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) {{ bar.delay }} backwards;"></div>
+    </sc-for>
+  </div>
+</div>
+
+<section data-screen-label="Service & Deliverables" style="margin: 20px 20px 0; background: #0526D9; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px); color: #FFFFFF;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>THE SERVICE — WHAT'S INCLUDED</span>
+    </div>
+    <h2 class="rv" style="margin: 18px 0 0; max-width: 940px; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Reach that compounds <span style="color: rgba(183,196,255,0.75);">— strategy, creative, and channels pulling toward one number.</span></h2>
+    <div class="stat-row rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); margin-top: clamp(36px, 4.5vw, 56px); border-top: 1px solid rgba(255,255,255,0.28); padding-top: clamp(24px, 3vw, 36px);">
+      <div>
+        <div style="font-size: clamp(40px, 3.6vw, 56px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; color: #FFFFFF;">38%</div>
+        <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #B7C4FF;">AVG. CLIENT YOY GROWTH</div>
+      </div>
+      <div style="border-left: 1px solid rgba(255,255,255,0.28); padding-left: clamp(20px, 3vw, 44px);">
+        <div style="font-size: clamp(40px, 3.6vw, 56px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; color: #FFFFFF;">2.4M</div>
+        <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #B7C4FF;">MESSAGES DELIVERED / MO</div>
+      </div>
+      <div style="border-left: 1px solid rgba(255,255,255,0.28); padding-left: clamp(20px, 3vw, 44px);">
+        <div style="font-size: clamp(40px, 3.6vw, 56px); font-weight: 650; letter-spacing: -0.03em; line-height: 1; color: #FFFFFF;">99%</div>
+        <div style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #B7C4FF;">CAMPAIGN DELIVERY RATE</div>
+      </div>
+    </div>
+    <div class="chk-grid rv" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(32px, 4vw, 64px); margin-top: clamp(32px, 4vw, 48px);">
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">01</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Advertising Campaigns</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Concept to placement — campaigns built on the positioning, not around it.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">02</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Media Strategy &amp; Planning</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Channels, budget, and targets agreed before production — thinking done before anything ships.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">03</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">SEO &amp; Direct Marketing</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Search visibility and direct channels that keep working between campaigns.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">04</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Photography</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Product and brand photography shot in-house — imagery the campaigns can actually use.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); border-bottom: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">05</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Corporate Video</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Films and corporate video produced end to end — script, shoot, edit, deliver.</p>
+        </span>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.28); border-bottom: 1px solid rgba(255,255,255,0.28); padding: 22px 2px 26px; display: flex; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF; flex: none; padding-top: 4px;">06</span>
+        <span>
+          <span style="display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Creative Copywriting</span>
+          <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.72); text-wrap: pretty;">Headlines, scripts, and campaign copy in the brand's voice — written with the creative, not after it.</p>
+        </span>
+      </div>
+    </div>
+    <div class="rv" style="position: relative; border-radius: 18px; overflow: hidden; min-height: clamp(200px, 24vw, 300px); margin-top: clamp(28px, 3.5vw, 44px); background: #0A1CB8; display: flex; align-items: flex-end; padding: 24px; box-sizing: border-box;">
+      <img src="assets/photos/growth-texture.jpg" alt="Campaign production texture" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,20,120,0) 40%, rgba(3,20,120,0.5) 100%);"></div>
+      <div style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; flex-wrap: wrap;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #FFFFFF; background: rgba(5,38,217,0.75); backdrop-filter: blur(4px); border-radius: 999px; padding: 6px 12px;">IN-HOUSE STUDIO — CAMPAIGN PRODUCTION</span>
+        <span class="img-meta" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: rgba(255,255,255,0.85);">COPY · DESIGN · PHOTO · VIDEO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Process" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>HOW GROWTH WORK RUNS</span>
+    </div>
+    <h2 class="rv" style="margin: 18px 0 0; max-width: 720px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Planning before production — always</h2>
+    <div class="proc-grid2 rv" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px clamp(24px, 3vw, 44px); margin-top: clamp(40px, 5vw, 64px);">
+      <div style="background: #EEF2FB; border-radius: 18px; padding: 28px 28px 30px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 1</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 1</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Audit &amp; baseline</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 460px; text-wrap: pretty;">Channels, funnel, and brand awareness measured before anything ships — targets agreed up front, not vanity metrics.</p>
+      </div>
+      <div style="background: #EEF2FB; border-radius: 18px; padding: 28px 28px 30px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 2</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 2</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Media strategy &amp; plan</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 460px; text-wrap: pretty;">Positioning, channel mix, and budget with clear targets — creative, channels, and spend pulling toward the same number.</p>
+      </div>
+      <div style="background: #EEF2FB; border-radius: 18px; padding: 28px 28px 30px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 3</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 3–4</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Produce &amp; launch</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 460px; text-wrap: pretty;">Campaign creative, copy, photography, and video produced in-house and launched across the agreed channels.</p>
+      </div>
+      <div style="background: #EEF2FB; border-radius: 18px; padding: 28px 28px 30px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 4</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">ONGOING</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Optimize weekly</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 460px; text-wrap: pretty;">Live dashboards track what's working; we iterate weekly so results compound quarter over quarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casework" data-screen-label="Casework" style="padding: 0 20px clamp(48px, 6vw, 72px);">
+  <div class="rv" style="background: #EEF2FB; border-radius: 28px; padding: clamp(48px, 6vw, 80px) clamp(20px, calc(8vw - 20px), 108px);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+          <span>GROWTH CASEWORK</span>
+        </div>
+        <h2 style="margin: 16px 0 0; max-width: 560px; font-size: clamp(30px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Campaigns with a number attached</h2>
+      </div>
+      <a href="#" style="border: 1px solid #C9D2F2; color: #0526D9; padding: 12px 22px; border-radius: 999px; font-weight: 500; font-size: 14.5px; flex: none; background: #FFFFFF;" style-hover="border-color: #0526D9; color: #0526D9;">Browse all casework →</a>
+    </div>
+    <div class="case-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.5vw, 44px);">
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35);">
+        <div style="background: #F7F8FB; border: 1px solid #E7E9F0; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/villate.png" alt="Villate logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Villate</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #0526D9;">CAMPAIGN</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">A five-style villa campaign — each style with its own concept color, speaking to its own buyer without splitting the brand.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">5 STYLE BRANDS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">CAMPAIGN</span>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35);">
+        <div style="background: #F7F8FB; border: 1px solid #E7E9F0; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/ethmar.png" alt="Ethmar logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Ethmar</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #0526D9;">FMCG LAUNCHES</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Range launches for a 30-product food brand — every new pack slots into the same campaign system.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">30+ PACKAGES</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">RETAIL</span>
+        </div>
+      </div>
+      <div style="position: relative; border-radius: 16px; overflow: hidden; min-height: 300px; box-shadow: 0 18px 44px -32px rgba(10,14,42,0.35); background: #DDE3FA;">
+        <img src="assets/photos/jaroudi-ad-crop.png" alt="Jaroudi Media press ad" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="position: absolute; left: 14px; bottom: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #FFFFFF; background: rgba(5,38,217,0.75); backdrop-filter: blur(4px); border-radius: 999px; padding: 6px 12px;">JAROUDI MEDIA — PRESS AD</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="faq-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>GROWTH FAQ</span>
+      </div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Before you brief us</h2>
+      <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 380px;">Still have questions? <a href="#" style="color: #0526D9; font-weight: 500;" style-hover="color: #0318A8;">Talk to a human →</a></p>
+    </div>
+    <div>
+      <div onclick="{{ faq0.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How do you measure success?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq0.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq0.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">We baseline before we start, agree targets up front, and report against them in a live dashboard — traffic, conversion, and brand awareness, not vanity metrics.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq1.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Do you handle the media buying too?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq1.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq1.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes — media strategy, planning, and placement run through the same team that makes the creative, so budget and message never drift apart.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq2.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Do you produce the creative in-house?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq2.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq2.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">All of it — copy, design, photography, and corporate video come from the same studio, so campaigns ship in weeks, not hand-offs.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq3.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How often do we hear from you?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq3.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq3.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">The dashboard is live around the clock; we iterate weekly and review targets with you quarterly.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq4.toggle }}" style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Is there a minimum engagement?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq4.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq4.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">One quarter — growth compounds, and a single month can't prove a channel. Every engagement starts with a free audit and a fixed quote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="margin: 0 20px; background: #0526D9; border-radius: 28px; overflow: hidden; position: relative; text-align: center; padding: clamp(72px, 10vw, 110px) clamp(20px, calc(8vw - 20px), 108px) 0;">
+  <div class="rv" style="position: relative; z-index: 2;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>START THE CLIMB</span>
+    </div>
+    <h2 style="margin: 22px auto 0; max-width: 760px; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Compound your reach, quarter over quarter.</h2>
+    <p style="margin: 20px auto 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.82);">Strategy, creative, and channels — one team, one number, charted live.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Get a free audit</a>
+    </div>
+  </div>
+  <div style="margin-top: clamp(56px, 8vw, 84px); margin-left: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); margin-right: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); height: clamp(90px, 12vw, 150px); display: flex; align-items: flex-end; gap: 4px;">
+    <sc-for list="{{ ctaBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0;"></div>
+    </sc-for>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="padding: clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+          <input type="email" placeholder="Enter your email" style="border: 1px solid #D8D8D0; border-radius: 999px; padding: 12px 20px; font-size: 14.5px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; width: min(250px, 100%); box-sizing: border-box; outline: none; background: #FFFFFF;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14.5px; flex: none;" style-hover="background: #0318A8; color: #FFFFFF;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 32px; margin-top: 72px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="Brand Identity Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand &amp; Corporate Identity</a>
+          <a href="Web Development Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Web &amp; App Development</a>
+          <a href="Advertising and Growth Service.dc.html" style="font-size: 15px; color: #0526D9; font-weight: 600;" style-hover="color: #0318A8;">Advertising &amp; Growth</a>
+          <a href="3D Modeling Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">3D Modeling</a>
+          <a href="Events and Exhibitions Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Events &amp; Exhibitions</a>
+          <a href="Print and Production Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Print &amp; Production</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">About</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Casework</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Blog</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Careers</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">RESOURCES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Free Audit</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Pricing</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Newsletter</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand Assets</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">LEGAL</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Privacy Policy</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Terms of Service</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #ECECE6; margin-top: 72px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="uploads/SpeedIQ Website.html" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Home</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Services</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Blog</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:780},&quot;showHeroVisual&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Hero&quot;},&quot;showTimeline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Process&quot;}}">
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+
+  setupReveal(attempt) {
+    if (this.revealDone) return;
+    const els = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    if (!els.length) {
+      const self = this;
+      if ((attempt || 0) < 30) setTimeout(function () { self.setupReveal((attempt || 0) + 1); }, 200);
+      return;
+    }
+    this.revealDone = true;
+    if (typeof IntersectionObserver === 'undefined') return;
+    let ioAlive = false;
+    els.forEach(function (el) { el.setAttribute('data-rv', 'hide'); });
+    const io = new IntersectionObserver(function (entries) {
+      ioAlive = true;
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+        e.target.removeAttribute('data-rv');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+    this.revealIO = io;
+    setTimeout(function () {
+      if (!ioAlive) {
+        io.disconnect();
+        els.forEach(function (el) { el.removeAttribute('data-rv'); });
+      }
+    }, 2000);
+  }
+
+  componentDidMount() {
+    this.setupReveal(0);
+    this.initSmoothScroll();
+  }
+
+  initSmoothScroll() {
+    if (this._smoothInit || typeof window === 'undefined') return;
+    this._smoothInit = true;
+    if ('ontouchstart' in window) return;
+    this._ssTarget = window.scrollY;
+    this._ssCurrent = window.scrollY;
+    this._ssActive = false;
+    this._ssProgrammatic = false;
+    const self = this;
+    const maxY = function () { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); };
+    this._ssTick = function () {
+      const diff = self._ssTarget - self._ssCurrent;
+      if (Math.abs(diff) < 0.5) {
+        self._ssCurrent = self._ssTarget;
+        self._ssActive = false;
+        self._ssProgrammatic = true;
+        window.scrollTo(0, self._ssTarget);
+        return;
+      }
+      self._ssCurrent += diff * 0.115;
+      self._ssProgrammatic = true;
+      window.scrollTo(0, self._ssCurrent);
+      requestAnimationFrame(self._ssTick);
+    };
+    this._ssWheel = function (e) {
+      if (e.ctrlKey || e.metaKey || e.defaultPrevented) return;
+      e.preventDefault();
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 32;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      self._ssTarget = Math.max(0, Math.min(maxY(), self._ssTarget + d));
+      if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); }
+    };
+    this._ssScroll = function () {
+      if (self._ssProgrammatic) { self._ssProgrammatic = false; return; }
+      self._ssTarget = window.scrollY;
+      self._ssCurrent = window.scrollY;
+    };
+    window.addEventListener('wheel', this._ssWheel, { passive: false });
+    window.addEventListener('scroll', this._ssScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._ssWheel) window.removeEventListener('wheel', this._ssWheel);
+    if (this._ssScroll) window.removeEventListener('scroll', this._ssScroll);
+    if (this.revealIO) this.revealIO.disconnect();
+  }
+
+  renderVals() {
+    if (!this._revealKick) {
+      this._revealKick = true;
+      const self = this;
+      setTimeout(function () { self.setupReveal(0); }, 80);
+    }
+    const mkBars = function (count, minPct, maxPct) {
+      const out = [];
+      for (let i = 0; i < count; i++) {
+        const t = count === 1 ? 1 : i / (count - 1);
+        out.push({
+          h: (minPct + (maxPct - minPct) * t).toFixed(1) + '%',
+          bg: 'rgba(255,255,255,' + (0.12 + 0.34 * t).toFixed(3) + ')',
+          delay: (0.2 + i * 0.04).toFixed(2) + 's'
+        });
+      }
+      return out;
+    };
+    const faq = (i) => ({
+      rows: this.state.openFaq === i ? '1fr' : '0fr',
+      icon: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+    });
+    if (!this._goCasework) {
+      const self = this;
+      this._goCasework = function (e) {
+        e.preventDefault();
+        const el = document.getElementById('casework');
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + window.scrollY - 20;
+        if (self._ssWheel) { self._ssTarget = y; self._ssCurrent = window.scrollY; if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); } }
+        else window.scrollTo(0, y);
+      };
+    }
+    return {
+      heroBars: mkBars(22, 8, 100),
+      ctaBars: mkBars(22, 8, 100),
+      faq0: faq(0), faq1: faq(1), faq2: faq(2), faq3: faq(3), faq4: faq(4),
+      goCasework: this._goCasework,
+      showHeroVisual: this.props.showHeroVisual ?? true,
+      showTimeline: this.props.showTimeline ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script src="b2c932c3-d1d3-42c7-8e8f-9ca31b130d10"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d830206c-ad8a-49ca-ae5b-67ec10cf7fd8") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("97984f0c-ccb3-4df3-aa14-c552af36ba9c") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4bff7e62-1ea5-4364-962c-f33db39c7159") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("0018995b-1f28-4062-bf06-fd075fe0b151") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("7bb933a7-4c62-4cac-82f3-06c26dccc562") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("9179e983-395f-4e3e-b15a-9e32ba921320") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("dcb9c270-75a8-4c1d-9d8a-a6f3c7efad2b") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2451c621-0fcd-438b-ac9b-b4439348f481") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("db5f6d67-32b6-463a-bf65-d73b0c54a4e4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f041b941-65f7-43e7-b43b-4bd377936e23") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("ec8cd470-af28-4556-8d9b-3f2880566f9a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1cf66fd8-ea99-4e59-9dea-9522879d3569") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+  <link rel="icon" type="image/svg+xml" href="d882764e-aca1-44c9-80cc-12349ab24815">
+  <style>
+    html, body { margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
+    a { color: #0526D9; text-decoration: none; }
+    a:hover { color: #0318A8; }
+    ::selection { background: #0A1CB8; color: #FFFFFF; }
+    input::placeholder { color: #9A9FB3; }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes marqueeX { to { transform: translateX(-50%); } }
+    @keyframes brandFill { from { width: 0; } to { width: 100%; } }
+    .rv { transition: opacity 0.75s cubic-bezier(0.22, 0.8, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.8, 0.36, 1); }
+    .rv[data-rv="hide"] { opacity: 0; transform: translateY(28px); }
+    @media print { .rv { opacity: 1 !important; transform: none !important; transition: none !important; } }
+    /* responsive overrides — media queries can't be inlined */
+    @media (max-width: 1100px) {
+      .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none !important; }
+      .hero-h1 { font-size: clamp(44px, 11vw, 76px) !important; }
+      .hero-p { width: auto !important; height: auto !important; }
+      .yoy-pill { display: none !important; }
+      .process-grid { grid-template-columns: 1fr !important; row-gap: 44px !important; }
+    }
+    @media (max-width: 1000px) {
+      .recog-grid { grid-template-columns: 1fr !important; }
+      .gal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-auto-rows: 150px !important; }
+      .gal-panel { grid-column: 1 / -1; grid-row: auto !important; min-height: 300px; }
+      .sector-grid { grid-template-columns: 1fr !important; }
+      .pillar-grid { grid-template-columns: 1fr !important; }
+      .svc-row { grid-template-columns: 1fr !important; gap: 22px !important; }
+      .svc-card { height: 420px !important; min-height: 0 !important; }
+      .svc-layerbox { min-height: 620px !important; }
+      .svc-ind { display: none !important; }
+      .wip-cols { grid-template-columns: 1fr !important; }
+      .results-grid2 { grid-template-columns: 1fr !important; }
+      .results-list-detail { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.28) !important; padding-top: 24px !important; }
+      .wip-panel { grid-template-columns: 1fr !important; }
+      .wip-media { min-height: 300px !important; }
+    }
+  </style>
+</helmet>
+
+<div data-screen-label="Hero" style="position: relative; min-height: clamp(600px, 92svh, 880px); background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+
+  <nav style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; padding: 26px clamp(24px, 8vw, 128px); gap: 24px;">
+    <a href="#" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF;">
+      <svg width="27" height="19" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#FFFFFF"></path></svg>
+      <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1;">SpeedIQ</span>
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 16.5px; font-weight: 500;">
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Services</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Casework</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">About</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Insights</a>
+    </div>
+    <a href="#" style="color: #FFFFFF; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 500;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Book intro call</a>
+  </nav>
+
+  <main style="position: relative; z-index: 3; padding: clamp(36px, 8vh, 88px) clamp(24px, 4vw, 56px) 0 clamp(24px, 8vw, 128px); max-width: 860px; box-sizing: border-box;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>CREATIVE · CONSULTATION · PRODUCTION</span>
+    </div>
+    <h1 class="hero-h1" style="margin: 20px 0 0; font-family: 'Instrument Sans', Helvetica, sans-serif; font-size: 104px; line-height: 1.06; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards">Every quarter, a&nbsp;little higher.</h1>
+    <p class="hero-p" style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 560px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards; width: 612px; height: 85px">SpeedIQ runs your brand, digital, and production work end to end — senior strategists, creatives, and makers, with results you can chart.</p>
+    <div style="display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.34s backwards;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Explore services →</a>
+    </div>
+    <div style="margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.58); animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;">ETHMAR · JAROUDI MEDIA · MACEEN CAPITAL · VILLATE · EADS · H2L</div>
+  </main>
+
+  <div style="position: absolute; inset: 0; display: flex; align-items: flex-end; gap: 5px; z-index: 2;">
+    <sc-for list="{{ bars }}" as="bar" hint-placeholder-count="28">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 6px 6px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) {{ bar.delay }} backwards;" style-hover="filter: brightness(1.25);"></div>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ showAnnotation }}" hint-placeholder-val="{{ true }}">
+    <div class="yoy-pill" style="position: absolute; right: 190px; bottom: {{ annotationBottom }}; z-index: 4; display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #FFFFFF; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 7px 13px; backdrop-filter: blur(4px); animation: riseIn 0.6s cubic-bezier(0.22, 0.8, 0.36, 1) 1s backwards;">
+      <span style="color: #9FE8B8;">↑</span>
+      <span>38% avg. client YoY</span>
+    </div>
+  </sc-if>
+
+</div>
+
+
+<section data-screen-label="Studio" style="padding: clamp(72px, 10vw, 130px) clamp(24px, 8vw, 128px) clamp(56px, 8vw, 100px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: center; gap: 14px;">
+      <span style="display: flex; align-items: flex-end; gap: 3px;">
+        <span style="display: block; width: 5px; height: 9px; background: #0526D9;"></span>
+        <span style="display: block; width: 5px; height: 14px; background: #0526D9;"></span>
+        <span style="display: block; width: 5px; height: 19px; background: #0526D9;"></span>
+      </span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9;">THE STUDIO</span>
+    </div>
+    <h2 class="rv" style="margin: 26px 0 0; max-width: 1020px; font-size: clamp(26px, 2.8vw, 42px); line-height: 1.22; letter-spacing: -0.022em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">SpeedIQ is a creative studio — <span style="color: #99A0B8;">strategy, design, and production,</span> compounding every quarter.</h2>
+    <div class="pillar-grid rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); margin-top: clamp(48px, 6vw, 72px);">
+      <div style="border-top: 2px solid #0526D9; padding-top: 22px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Creative</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8FA3;">01</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Identity, campaigns, web &amp; apps, photography and film — the work your audience actually sees.</p>
+      </div>
+      <div style="border-top: 2px solid #0526D9; padding-top: 22px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Consultation</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8FA3;">02</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Media strategy, planning, and straight marketing advice — thinking done before anything ships.</p>
+      </div>
+      <div style="border-top: 2px solid #0526D9; padding-top: 22px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-size: 18px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Production</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8A8FA3;">03</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Signage, packaging, printing, and exhibition builds that survive contact with the real world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Services" style="margin: 20px 20px 0; background: #EEF2FB; border-radius: 28px;">
+  <div ref="{{ svcTrackRef }}" style="position: relative; height: 400vh;">
+    <div style="position: sticky; top: 0; min-height: 100svh; display: flex; align-items: center; padding: 40px clamp(20px, calc(8vw - 20px), 108px); box-sizing: border-box; overflow: hidden;">
+      <div class="svc-ind" style="position: absolute; left: clamp(14px, 2vw, 34px); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 5;">
+        <div style="width: 6px; height: {{ s0.ih }}; background: {{ s0.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+        <div style="width: 6px; height: {{ s1.ih }}; background: {{ s1.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+        <div style="width: 6px; height: {{ s2.ih }}; background: {{ s2.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+        <div style="width: 6px; height: {{ s3.ih }}; background: {{ s3.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+        <div style="width: 6px; height: {{ s4.ih }}; background: {{ s4.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+        <div style="width: 6px; height: {{ s5.ih }}; background: {{ s5.ibg }}; border-radius: 999px; transition: height 0.4s ease, background 0.4s ease;"></div>
+      </div>
+      <div style="max-width: 1240px; margin: 0 auto; width: 100%;">
+        <div style="display: grid; grid-template-rows: {{ hdrRows }}; transition: grid-template-rows 0.5s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <div style="opacity: {{ hdrOp }}; transform: translateY({{ hdrY }}); transition: opacity 0.5s ease, transform 0.5s ease;">
+              <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+                <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+                <span>FULL-STACK SERVICES</span>
+              </div>
+              <h2 class="rv" style="margin: 18px 0 0; max-width: 640px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Everything you need to scale, under one roof</h2>
+            </div>
+          </div>
+        </div>
+    <div class="svc-layerbox rv" style="position: relative; min-height: clamp(360px, 46vh, 450px); margin-top: clamp(24px, 3vw, 36px);">
+        <div style="position: absolute; inset: 0; z-index: {{ s0.z }}; opacity: {{ s0.op }}; transform: translateY({{ s0.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Brand &amp; Corporate Identity</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Logos, complete identities, guidelines, and collateral — positioning that makes you unmistakable at every touchpoint. From Ethmar's thirty-plus package range to Maceen Capital's annual reports, we build identities that hold together everywhere they show up.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">LOGOS &amp; IDENTITIES</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">BRAND GUIDELINES</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">ANNUAL REPORTS &amp; BROCHURES</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">SALES COLLATERAL</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">CREATIVE COPYWRITING</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;8690252d-8398-4b28-aab7-37f5f7ec00a9&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); padding: 20px; width: min(340px, 88%); box-sizing: border-box;">
+                <div style="display: flex; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #8A8FA3;">
+                  <span>ETHMAR — BRAND GUIDELINES</span>
+                  <span style="color: #0A0E2A;">V2.1</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 18px; border-top: 1px solid #EEF0F4; margin-top: 12px; padding-top: 14px;">
+                  <span style="font-size: 58px; font-weight: 650; letter-spacing: -0.03em; line-height: 0.9; color: #0A0E2A;">Aa</span>
+                  <span>
+                    <span style="display: block; font-size: 13px; font-weight: 600; color: #0A0E2A;">Instrument Sans</span>
+                    <span style="display: block; font-size: 10.5px; color: #8A8FA3; margin-top: 3px;">Regular · Medium · Bold</span>
+                    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.08em; color: #8A8FA3; margin-top: 8px;">HEADLINES −2% TRACKING</span>
+                  </span>
+                </div>
+                <div style="display: flex; gap: 6px; margin-top: 16px;">
+                  <div style="flex: 1;">
+                    <div style="height: 44px; border-radius: 6px; background: #1E7A46; border: 1px solid rgba(10,14,42,0.08);"></div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #8A8FA3; text-align: center; margin-top: 5px;">1E7A46</div>
+                  </div>
+                  <div style="flex: 1;">
+                    <div style="height: 44px; border-radius: 6px; background: #F4B840; border: 1px solid rgba(10,14,42,0.08);"></div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #8A8FA3; text-align: center; margin-top: 5px;">F4B840</div>
+                  </div>
+                  <div style="flex: 1;">
+                    <div style="height: 44px; border-radius: 6px; background: #E2582A; border: 1px solid rgba(10,14,42,0.08);"></div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #8A8FA3; text-align: center; margin-top: 5px;">E2582A</div>
+                  </div>
+                  <div style="flex: 1;">
+                    <div style="height: 44px; border-radius: 6px; background: #0A0E2A; border: 1px solid rgba(10,14,42,0.08);"></div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #8A8FA3; text-align: center; margin-top: 5px;">0A0E2A</div>
+                  </div>
+                  <div style="flex: 1;">
+                    <div style="height: 44px; border-radius: 6px; background: #F4F1EA; border: 1px solid rgba(10,14,42,0.08);"></div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: #8A8FA3; text-align: center; margin-top: 5px;">F4F1EA</div>
+                  </div>
+                </div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.1em; color: #8A8FA3; border-top: 1px solid #EEF0F4; margin-top: 14px; padding-top: 10px;">PRINT · PACKAGING · DIGITAL</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; z-index: {{ s1.z }}; opacity: {{ s1.op }}; transform: translateY({{ s1.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Web &amp; App Development</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Fast, conversion-focused websites and apps — designed, built, and shipped in weeks. One team carries your identity straight into the product: design system, build, launch, and the iterations after go-live.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">WEBSITE DESIGN</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">WEB APPS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">MOBILE APPS</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;bd951a32-83b9-4617-b117-a43f42c9a1a4&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); width: min(370px, 92%); box-sizing: border-box; overflow: visible; position: relative;">
+                <div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #EEF0F4;">
+                  <span style="display: flex; gap: 5px;">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #F26D5F;"></span>
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #F5BE4F;"></span>
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #5FC26D;"></span>
+                  </span>
+                  <span style="flex: 1; background: #F1F2F6; border-radius: 999px; padding: 5px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; color: #565B72; text-align: center;">ethmar.com</span>
+                </div>
+                <div style="padding: 16px 16px 18px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="width: 9px; height: 9px; background: #1E7A46; border-radius: 2px;"></span>
+                    <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em; color: #0A0E2A;">ETHMAR</span>
+                    <span style="margin-left: auto; display: flex; gap: 8px;">
+                      <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+                      <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+                      <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+                    </span>
+                  </div>
+                  <div style="width: 72%;">
+                    <div style="margin-top: 16px; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; color: #0A0E2A;">Fresh from the farm, boxed with care</div>
+                    <div style="height: 5px; width: 84%; border-radius: 3px; background: #EDEEF3; margin-top: 10px;"></div>
+                    <div style="height: 5px; width: 62%; border-radius: 3px; background: #EDEEF3; margin-top: 6px;"></div>
+                    <div style="display: inline-block; margin-top: 13px; background: #0526D9; color: #FFFFFF; font-size: 10.5px; font-weight: 600; padding: 7px 13px; border-radius: 999px;">Shop the range</div>
+                  </div>
+                  <div style="display: flex; gap: 8px; margin-top: 16px; width: 68%;">
+                    <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #DCE9D2, #9CC08A);"></div>
+                    <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #F6E3C2, #E4B265);"></div>
+                    <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #D8E4F6, #8FA3FF);"></div>
+                  </div>
+                </div>
+                <div style="position: absolute; right: 14px; bottom: 14px; width: 64px; border: 3px solid #0A0E2A; border-radius: 12px; background: #FFFFFF; box-shadow: 0 14px 28px -12px rgba(15,20,40,0.45); padding: 7px 6px;">
+                  <div style="width: 18px; height: 3px; border-radius: 2px; background: #0A0E2A; margin: 0 auto;"></div>
+                  <div style="height: 4px; border-radius: 2px; background: #EDEEF3; margin-top: 8px;"></div>
+                  <div style="height: 4px; width: 70%; border-radius: 2px; background: #EDEEF3; margin-top: 4px;"></div>
+                  <div style="height: 22px; border-radius: 4px; background: linear-gradient(135deg, #DCE9D2, #9CC08A); margin-top: 7px;"></div>
+                  <div style="height: 9px; border-radius: 999px; background: #0526D9; margin-top: 7px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; z-index: {{ s2.z }}; opacity: {{ s2.op }}; transform: translateY({{ s2.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Advertising &amp; Growth</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Campaigns, creative copywriting, media strategy, and SEO that compound reach quarter over quarter. Planning comes before production, so creative, channels, and budget all pull toward the same number.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">ADVERTISEMENTS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">MEDIA STRATEGY &amp; PLANNING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">DIRECT MARKETING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">SEO</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">PHOTOGRAPHY</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">CORPORATE VIDEO</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;13c5c1b7-cdcf-444f-ab60-625556529169&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="background: #FFFFFF; border-radius: 14px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); width: min(330px, 90%); max-height: 96%; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden;">
+                <div style="display: flex; align-items: center; gap: 10px; padding: 11px 16px; border-bottom: 1px solid #EEF0F4; flex: none;">
+                  <span style="display: flex; gap: 5px;">
+                    <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+                    <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+                    <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+                  </span>
+                  <span style="font-size: 12.5px; font-weight: 650; color: #0A0E2A;">SpeedIQ</span>
+                  <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DASHBOARD</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #EEF0F4; flex: none;">
+                  <div style="padding: 10px 16px;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DELIVERY RATE</div>
+                    <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;"><span style="font-size: 23px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: #0A0E2A;">99%</span><span style="font-size: 12px; color: #1F8A5B;">↑</span></div>
+                  </div>
+                  <div style="padding: 10px 16px; border-left: 1px solid #EEF0F4;">
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">MESSAGES / MO</div>
+                    <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;"><span style="font-size: 23px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: #0A0E2A;">2.4M</span><span style="font-size: 12px; color: #1F8A5B;">↑</span></div>
+                  </div>
+                </div>
+                <div style="padding: 12px 16px; flex: none;">
+                  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #8A8FA3;">DELIVERY FORECAST · 6 MONTHS</div>
+                  <svg viewBox="0 0 260 84" style="width: 100%; height: 78px; display: block; margin-top: 8px;" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="21" x2="260" y2="21" stroke="#F0F1F5" stroke-width="1"></line>
+                    <line x1="0" y1="42" x2="260" y2="42" stroke="#F0F1F5" stroke-width="1"></line>
+                    <line x1="0" y1="63" x2="260" y2="63" stroke="#F0F1F5" stroke-width="1"></line>
+                    <path d="M12 40 L58 44 L104 31 L150 27 L196 23 L244 19" fill="none" stroke="#C9CCD6" stroke-width="2" stroke-dasharray="4 4"></path>
+                    <path d="M12 44 L58 66 L104 24 L150 54 L196 35 L244 31" fill="none" stroke="#1F8A5B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                    <circle cx="12" cy="44" r="3.5" fill="#1F8A5B"></circle>
+                    <circle cx="58" cy="66" r="3.5" fill="#1F8A5B"></circle>
+                    <circle cx="104" cy="24" r="3.5" fill="#1F8A5B"></circle>
+                    <circle cx="150" cy="54" r="3.5" fill="#1F8A5B"></circle>
+                    <circle cx="196" cy="35" r="3.5" fill="#1F8A5B"></circle>
+                    <circle cx="244" cy="31" r="3.5" fill="#1F8A5B"></circle>
+                  </svg>
+                  <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; color: #8A8FA3; padding: 0 2px; margin-top: 4px;">
+                    <span>NOW</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; z-index: {{ s3.z }}; opacity: {{ s3.op }}; transform: translateY({{ s3.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">3D Exterior &amp; Interior Modeling</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Photoreal architectural visualization in any style — from single renders to complete concept campaigns. For Villate we modeled five complete villa styles, exteriors and interiors, ready for campaigns and sales platforms.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">EXTERIOR MODELING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">INTERIOR MODELING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">MODERN · CLASSIC · CONTEMPORARY · SPANISH · MEXICAN</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;dbf3e850-1577-43c9-b364-dadd5d4f6fa3&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="position: relative; width: min(370px, 92%); height: 216px; background: #14171C; border-radius: 12px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); overflow: hidden;">
+                <div style="position: absolute; left: -40%; right: -40%; bottom: -4px; height: 68%; background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 26px 26px; transform: perspective(340px) rotateX(58deg); transform-origin: 50% 100%;"></div>
+                <div style="position: absolute; inset: 0; background: radial-gradient(90% 60% at 50% 70%, rgba(201,152,115,0.18), rgba(20,23,28,0) 70%);"></div>
+                <div style="position: absolute; left: 50%; bottom: 30%; transform: translateX(-62%); width: 78px; height: 58px; border: 1.5px solid rgba(255,255,255,0.85); background: rgba(255,255,255,0.05); border-radius: 2px;"></div>
+                <div style="position: absolute; left: 50%; bottom: 30%; transform: translateX(28%); width: 34px; height: 30px; border: 1.5px solid rgba(255,255,255,0.45); background: rgba(255,255,255,0.03); border-radius: 2px;"></div>
+                <span style="position: absolute; top: 10px; left: 10px; width: 13px; height: 13px; border-top: 2px solid rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.5);"></span>
+                <span style="position: absolute; top: 10px; right: 10px; width: 13px; height: 13px; border-top: 2px solid rgba(255,255,255,0.5); border-right: 2px solid rgba(255,255,255,0.5);"></span>
+                <span style="position: absolute; bottom: 10px; left: 10px; width: 13px; height: 13px; border-bottom: 2px solid rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.5);"></span>
+                <span style="position: absolute; bottom: 10px; right: 10px; width: 13px; height: 13px; border-bottom: 2px solid rgba(255,255,255,0.5); border-right: 2px solid rgba(255,255,255,0.5);"></span>
+                <div style="position: absolute; top: 14px; left: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">VILLA_07 — SPANISH</div>
+                <div style="position: absolute; top: 14px; right: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.55);">PERSP · 35MM</div>
+                <div style="position: absolute; left: 22px; right: 22px; bottom: 14px; display: flex; align-items: center; gap: 10px;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(255,255,255,0.8);">RENDERING — EXTERIOR PASS</span>
+                  <span style="flex: 1; height: 4px; background: rgba(255,255,255,0.15); border-radius: 2px;"><span style="display: block; width: 82%; height: 100%; background: #9DB98A; border-radius: 2px;"></span></span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #9DB98A;">82%</span>
+                </div>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.85); text-shadow: 0 1px 10px rgba(0,0,0,0.3);">5 STYLES · EXTERIOR + INTERIOR · 4K</div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; z-index: {{ s4.z }}; opacity: {{ s4.op }}; transform: translateY({{ s4.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Events &amp; Exhibitions</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Stands and event branding from concept render to on-site build. Our EADS Defence &amp; Security stand took home the Best Exhibition Award — Maceen Capital, Amesys Bull, and H2L followed the same render-to-reality process.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">EXHIBITION STANDS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">EVENT BRANDING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">ON-SITE BUILD</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;c465a54f-2284-4de9-87e2-0320232fd59f&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); padding: 16px 18px 14px; width: min(330px, 88%); box-sizing: border-box;">
+                <div style="display: flex; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #8A8FA3;">
+                  <span style="color: #0A0E2A;">STAND 4.12 — EADS</span>
+                  <span>SCALE 1:50</span>
+                </div>
+                <div style="position: relative; height: 158px; margin-top: 12px; background: #F7F8FB; border: 1px solid #E7E9F0; border-radius: 8px; background-image: radial-gradient(#DBDEE8 1px, transparent 1px); background-size: 14px 14px;">
+                  <div style="position: absolute; top: 12px; left: 12px; right: 12px; height: 7px; background: #0526D9; border-radius: 2px;"></div>
+                  <div style="position: absolute; top: 12px; left: 12px; width: 7px; height: 62%; background: #0526D9; border-radius: 2px;"></div>
+                  <div style="position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 64px; height: 13px; background: #0A0E2A; border-radius: 3px; border: 2px solid #F7F8FB;"></div>
+                  <div style="position: absolute; bottom: 16px; left: 16px; width: 58px; height: 20px; background: #8FA3FF; border-radius: 3px;"></div>
+                  <div style="position: absolute; top: 14px; right: 16px; width: 26px; height: 26px; border: 1.5px dashed #9AA1B8; border-radius: 3px;"></div>
+                  <div style="position: absolute; top: 52%; right: 24%; width: 30px; height: 30px;">
+                    <span style="position: absolute; inset: 0; border: 2px solid #4A63E4; border-radius: 50%; background: #FFFFFF;"></span>
+                    <span style="position: absolute; top: -9px; left: 50%; transform: translateX(-50%); width: 7px; height: 7px; border-radius: 50%; background: #4A63E4;"></span>
+                    <span style="position: absolute; bottom: -9px; left: 50%; transform: translateX(-50%); width: 7px; height: 7px; border-radius: 50%; background: #4A63E4;"></span>
+                    <span style="position: absolute; left: -9px; top: 50%; transform: translateY(-50%); width: 7px; height: 7px; border-radius: 50%; background: #4A63E4;"></span>
+                    <span style="position: absolute; right: -9px; top: 50%; transform: translateY(-50%); width: 7px; height: 7px; border-radius: 50%; background: #4A63E4;"></span>
+                  </div>
+                  <div style="position: absolute; bottom: 3px; left: 0; right: 0; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; color: #8A8FA3;">6.0 M</div>
+                  <div style="position: absolute; right: 3px; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.1em; color: #8A8FA3;">4.0 M</div>
+                </div>
+                <div style="display: flex; gap: 14px; margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.06em; color: #8A8FA3; align-items: center;">
+                  <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; background: #0526D9; border-radius: 2px;"></span>WALLS</span>
+                  <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; background: #8FA3FF; border-radius: 2px;"></span>COUNTER</span>
+                  <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border: 1.5px solid #4A63E4; border-radius: 50%; box-sizing: border-box;"></span>MEETING</span>
+                  <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border: 1.5px dashed #9AA1B8; border-radius: 2px; box-sizing: border-box;"></span>STORE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; z-index: {{ s5.z }}; opacity: {{ s5.op }}; transform: translateY({{ s5.y }}); transition: opacity 0.45s ease, transform 0.45s ease;">
+          <div class="svc-row" style="display: grid; grid-template-columns: minmax(0, 4.2fr) minmax(0, 7.8fr); gap: clamp(28px, 4vw, 60px); align-items: stretch; height: 100%;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <h3 style="margin: 0; font-size: clamp(23px, 2.1vw, 33px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Print &amp; Production</h3>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Packaging, signage, and premium digital &amp; offset printing — production-managed end to end. One accountable team from final artwork to delivered product, the way Leil Nhar's illustrated brand world made it to shelf.</p>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8FA3; margin-top: auto; padding-top: 28px;">INCLUDES</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">PACKAGING &amp; BOXES</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">INDOOR &amp; OUTDOOR SIGNS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">DIGITAL PRINTING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; color: #0526D9; background: #FFFFFF; border: 1px solid #C9D2F2; border-radius: 999px; padding: 5px 11px;">OFFSET PRINTING</span>
+          </div>
+          </div>
+          <div class="svc-card" style="position: relative; height: 100%; min-height: clamp(280px, 38vh, 380px); border-radius: 18px; overflow: hidden; background: #DDE3FA;">
+            <div style="position: absolute; inset: 0; background: url(&quot;807a7af4-1899-40bb-8b62-ca4325894df2&quot;) center / cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+            <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.35; mix-blend-mode: overlay;"></div>
+            <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: clamp(18px, 3vw, 30px); box-sizing: border-box;">
+              <div style="position: relative; background: #FFFFFF; border-radius: 3px; box-shadow: 0 28px 56px -24px rgba(15,20,40,0.5); padding: 22px; width: min(320px, 86%); box-sizing: border-box; transform: rotate(-1.5deg);">
+                <span style="position: absolute; top: 7px; left: 7px; width: 12px; height: 12px; border-top: 1.5px solid #2E2E33; border-left: 1.5px solid #2E2E33;"></span>
+                <span style="position: absolute; top: 7px; right: 7px; width: 12px; height: 12px; border-top: 1.5px solid #2E2E33; border-right: 1.5px solid #2E2E33;"></span>
+                <span style="position: absolute; bottom: 7px; left: 7px; width: 12px; height: 12px; border-bottom: 1.5px solid #2E2E33; border-left: 1.5px solid #2E2E33;"></span>
+                <span style="position: absolute; bottom: 7px; right: 7px; width: 12px; height: 12px; border-bottom: 1.5px solid #2E2E33; border-right: 1.5px solid #2E2E33;"></span>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                  <span style="display: flex; gap: 2px;"><span style="width: 13px; height: 13px; background: #56A8D8;"></span><span style="width: 13px; height: 13px; background: #C2549B;"></span><span style="width: 13px; height: 13px; background: #E4C24A;"></span><span style="width: 13px; height: 13px; background: #2E2E33;"></span><span style="width: 13px; height: 13px; background: #BBD9EC;"></span><span style="width: 13px; height: 13px; background: #E4B3D2;"></span><span style="width: 13px; height: 13px; background: #F2E3A8;"></span><span style="width: 13px; height: 13px; background: #ABABB0;"></span></span>
+                  <span style="position: relative; width: 18px; height: 18px; flex: none;">
+                    <span style="position: absolute; inset: 0; border: 1.5px solid #2E2E33; border-radius: 50%;"></span>
+                    <span style="position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1.5px; background: #2E2E33; transform: translateX(-50%);"></span>
+                    <span style="position: absolute; top: 50%; left: -2px; right: -2px; height: 1.5px; background: #2E2E33; transform: translateY(-50%);"></span>
+                  </span>
+                </div>
+                <div style="margin-top: 16px; font-size: 14px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Placemat range — Vol. 2</div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #8A8FA3; margin-top: 6px; line-height: 1.7;">LEIL NHAR · OFFSET 4/4 · 350GSM MATTE<br>RUN 30,000 · SHEET B2 · DIE-CUT R6</div>
+                <div style="display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #EEF0F4; margin-top: 14px; padding-top: 10px; padding-right: 96px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.08em; color: #8A8FA3;">
+                  <span>PROOF 2 OF 2</span>
+                  <span>08 JUL 2026</span>
+                </div>
+                <span style="position: absolute; right: 14px; bottom: 26px; transform: rotate(7deg); border: 2px solid #1F8A5B; color: #1F8A5B; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em; padding: 5px 10px; border-radius: 4px; opacity: 0.85;">APPROVED</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Belief" style="padding: clamp(48px, 7vw, 90px) clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px); text-align: center;">
+  <div class="rv" style="max-width: 860px; margin: 0 auto;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>WE BELIEVE IN EVOLUTION</span>
+    </div>
+    <h2 style="margin: 22px auto 0; font-size: clamp(34px, 4vw, 56px); line-height: 1.12; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">If you believe in something, it will happen.</h2>
+    <p style="margin: 22px auto 0; max-width: 560px; font-size: 16.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">The belief that started this studio still runs every engagement: brands don't transform overnight — they evolve, deliberately, with senior people doing the work.</p>
+  </div>
+</section>
+
+<section data-screen-label="Results" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="rv" style="max-width: 1240px; margin: 0 auto; background: #0526D9; border-radius: 24px; padding: clamp(32px, 4.5vw, 56px); color: #FFFFFF;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>CLIENT RESULTS</span>
+    </div>
+    <h2 style="margin: 16px 0 0; max-width: 520px; font-size: clamp(30px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Transform your digital presence</h2>
+    <div class="results-grid2" style="display: grid; grid-template-columns: minmax(0, 5.5fr) minmax(0, 6.5fr); gap: clamp(28px, 3.5vw, 52px); margin-top: clamp(28px, 3.5vw, 44px);">
+      <div onmouseenter="{{ bPause }}" onmouseleave="{{ bResume }}">
+          <div onclick="{{ bs0 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp0 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn0 }}; flex: none; transition: color 0.25s ease;">01</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc0 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">ETHMAR</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">30+ package designs &amp; a complete integrated identity</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">IDENTITY</span>
+          </div>
+          <div onclick="{{ bs1 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp1 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn1 }}; flex: none; transition: color 0.25s ease;">02</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc1 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">JAROUDI MEDIA</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Dynamic scripted logotype &amp; corporate identity</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">IDENTITY</span>
+          </div>
+          <div onclick="{{ bs2 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp2 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn2 }}; flex: none; transition: color 0.25s ease;">03</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc2 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">MACEEN CAPITAL</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Identity, annual reports, sales kits &amp; office branding</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">IDENTITY + PRINT</span>
+          </div>
+          <div onclick="{{ bs3 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp3 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn3 }}; flex: none; transition: color 0.25s ease;">04</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc3 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">VILLATE</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Five villa style brands, campaign &amp; 3D visualization</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">IDENTITY + 3D</span>
+          </div>
+          <div onclick="{{ bs4 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp4 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn4 }}; flex: none; transition: color 0.25s ease;">05</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc4 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">RETAIL PROJECTS</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Premium retail identity &amp; branch rollouts across KSA</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">IDENTITY</span>
+          </div>
+          <div onclick="{{ bs5 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp5 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn5 }}; flex: none; transition: color 0.25s ease;">06</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc5 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">EADS DEFENCE &amp; SECURITY</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Delta-wing stand — Best Exhibition Award winner</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">EXHIBITIONS</span>
+          </div>
+          <div onclick="{{ bs6 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp6 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn6 }}; flex: none; transition: color 0.25s ease;">07</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc6 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">AMESYS BULL</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Curved booth with live demo stations &amp; vehicle display</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">EXHIBITIONS</span>
+          </div>
+          <div onclick="{{ bs7 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative;">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp7 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn7 }}; flex: none; transition: color 0.25s ease;">08</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc7 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">HBL POWER SYSTEMS</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">11×8 m twin-tower stand, planned &amp; built on site</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">EXHIBITIONS</span>
+          </div>
+          <div onclick="{{ bs8 }}" style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid rgba(255,255,255,0.28); padding: 21px 2px; cursor: pointer; position: relative; border-bottom: 1px solid rgba(255,255,255,0.28);">
+            <span style="position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #FFFFFF; display: {{ bp8 }}; animation: {{ bAnim }};"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: {{ bn8 }}; flex: none; transition: color 0.25s ease;">09</span>
+            <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+              <span style="font-size: 17px; font-weight: 550; letter-spacing: -0.01em; color: {{ bc8 }}; transition: color 0.25s ease;" style-hover="color: #FFFFFF;">LEIL NHAR</span>
+              <span style="font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.5);">Complete branding production &amp; restaurant collateral</span>
+            </span>
+            <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(183,196,255,0.7); flex: none;">PRINT</span>
+          </div>
+      </div>
+      <div class="results-list-detail" style="border-left: 1px solid rgba(255,255,255,0.28); padding-left: clamp(28px, 3vw, 44px); display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C4FF;">{{ pjNum }} / 09</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #B7C4FF;">{{ pjTag }}</span>
+        </div>
+        <div style="margin-top: 14px; font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.015em; color: #FFFFFF;">{{ pjName }}</div>
+        <p style="margin: 14px 0 0; font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.8); text-wrap: pretty;">{{ pjDesc }}</p>
+        <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.66); text-wrap: pretty;">{{ pjDesc2 }}</p>
+        <div style="display: {{ lgv0 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="f3ab13a1-73dd-455b-ad1f-089b4cf3246c" alt="Ethmar logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv1 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="7cd1b1d9-566f-49a1-8f64-17a341b64a96" alt="Jaroudi Media logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv2 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="b16c50f1-0f87-41c9-b12f-bd70e727991a" alt="Maceen Capital logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv3 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="01c267b3-ccd2-4e0b-8a42-37a610d2ba5a" alt="Villate logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv4 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="4143753f-5bda-4b73-8f77-bf07ed8a82e8" alt="Retail Projects logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv5 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 0px;">
+            <img src="4a254401-7daf-43d0-9234-43c4e879024c" alt="EADS Defence &amp; Security logo" style="display: block; height: 116px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv6 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 0px;">
+            <img src="8d9bc5c8-3860-4d05-8160-67014f974efb" alt="Amesys Bull logo" style="display: block; height: 116px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv7 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 0px;">
+            <img src="de1db081-c7cc-40dc-8af0-b2a8d0853407" alt="HBL Power Systems logo" style="display: block; height: 116px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="display: {{ lgv8 }}; margin-top: 26px; background: #FFFFFF; border-radius: 14px; overflow: hidden; width: fit-content; max-width: 100%; padding: 16px 24px;">
+            <img src="74093e1a-64ef-433b-a948-abe3564d709f" alt="Leil Nhar logo" style="display: block; height: 72px; max-width: 100%; object-fit: contain;">
+          </div>
+        <div style="margin-top: 30px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: #B7C4FF;">HIGHLIGHTS</div>
+          <div style="margin-top: 8px;">
+            <sc-for list="{{ pjFacts }}" as="f" hint-placeholder-count="3">
+              <div style="display: flex; gap: 14px; border-top: 1px solid rgba(255,255,255,0.22); padding: 12px 2px; font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.85);">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #B7C4FF; flex: none; padding-top: 3px;">{{ f.n }}</span>
+                <span style="text-wrap: pretty;">{{ f.t }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="margin-top: auto; padding-top: 26px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; color: #B7C4FF;">SCOPE</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+            <sc-for list="{{ pjScope }}" as="s" hint-placeholder-count="3">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">{{ s.t }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Process" style="margin: 0 20px; background: #EEF2FB; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>HOW WE WORK</span>
+    </div>
+    <h2 class="rv" style="margin: 20px auto 0; max-width: 820px; text-align: center; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Audit, build, launch &amp; optimize<br>— in a single engagement</h2>
+    <div class="process-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 24px; margin-top: 64px;">
+      <div class="rv" style="display: flex; flex-direction: column; gap: 22px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 1</div>
+          <div style="margin-top: 10px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Audit your brand &amp; channels</div>
+          <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">We map your positioning, site performance, and funnel to find the gaps worth closing first.</p>
+        </div>
+        <div style="height: 280px; border-radius: 18px; overflow: hidden; background: #0526D9; display: flex; align-items: center; justify-content: center;">
+          <img src="fea2c4c5-24d4-4eee-bc0a-0455d51ca4de" alt="Audit illustration" style="display: block; width: 280px; height: 280px; object-fit: contain; flex: none;">
+        </div>
+      </div>
+      <div class="rv" style="display: flex; flex-direction: column; gap: 22px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 2</div>
+          <div style="margin-top: 10px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Build the strategy</div>
+          <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Positioning, messaging, and a channel roadmap with clear targets — agreed before any pixels ship.</p>
+        </div>
+        <div style="height: 280px; border-radius: 18px; overflow: hidden; background: #0526D9; display: flex; align-items: center; justify-content: center;">
+          <img src="444507e3-4255-4542-be60-894e23411794" alt="Strategy illustration" style="display: block; width: 280px; height: 280px; object-fit: contain; flex: none;">
+        </div>
+      </div>
+      <div class="rv" style="display: flex; flex-direction: column; gap: 22px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 3</div>
+          <div style="margin-top: 10px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Launch across every touchpoint</div>
+          <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Identity, website, content, and campaigns shipped by one team — in weeks, not quarters.</p>
+        </div>
+        <div style="height: 280px; border-radius: 18px; overflow: hidden; background: #0526D9; display: flex; align-items: center; justify-content: center;">
+          <img src="f451ffa1-5463-4e08-937c-c6203b27b809" alt="Launch illustration" style="display: block; width: 280px; height: 280px; object-fit: contain; flex: none;">
+        </div>
+      </div>
+      <div class="rv" style="display: flex; flex-direction: column; gap: 22px;">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 4</div>
+          <div style="margin-top: 10px; font-size: 21px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Optimize with real-time insights</div>
+          <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 460px;">Live dashboards track what's working; we iterate weekly so results compound.</p>
+        </div>
+        <div style="height: 280px; border-radius: 18px; overflow: hidden; background: #0526D9; display: flex; align-items: center; justify-content: center;">
+          <img src="6e1139c7-b9b4-49a2-aae7-ea724e913afa" alt="Optimize illustration" style="display: block; width: 280px; height: 280px; object-fit: contain; flex: none;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Sectors" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>SECTORS</span>
+      </div>
+      <h2 style="margin: 18px 0 0; max-width: 640px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Nine sectors, one approach</h2>
+      <p style="margin: 18px 0 0; max-width: 560px; font-size: 16px; line-height: 1.6; color: #565B72; text-wrap: pretty;">From supermarket shelves to defence expos — the same audit-to-launch engagement, tuned to each floor.</p>
+    </div>
+    <div class="sector-grid rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(28px, 3vw, 48px); margin-top: clamp(32px, 4vw, 48px);">
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">01</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Food &amp; FMCG</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Ethmar</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">02</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Media production</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Jaroudi Media</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">03</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Investment &amp; banking</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Maceen Capital</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">04</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Real estate</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Villate</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">05</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Retail</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Retail Projects</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">06</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Defence &amp; aerospace</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">EADS Defence &amp; Security</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">07</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Technology</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Amesys · Bull Group</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">08</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Power systems</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">HBL Power Systems</div></div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 18px 2px 22px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8A8FA3;">09</div><div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #0A0E2A;">Food &amp; beverage</div><div style="margin-top: 4px; font-size: 13.5px; color: #8A8FA3;">Leil Nhar</div></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Gallery" style="margin: 0 20px; background: #EEF2FB; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px);">
+  <div class="gal-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 4.4fr) repeat(3, minmax(0, 2.7fr)); grid-auto-rows: clamp(150px, 15vw, 205px); gap: 10px;">
+    <div class="gal-panel" style="grid-row: span 3; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(24px, 3vw, 44px) clamp(24px, 3vw, 48px) clamp(24px, 3vw, 44px) 0;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 9px;">
+        <span style="width: 6px; height: 6px; background: #0526D9; display: inline-block;"></span>
+        <span>THE ARCHIVE</span>
+      </div>
+      <div>
+        <div style="font-size: clamp(40px, 4.6vw, 72px); font-weight: 650; letter-spacing: -0.035em; line-height: 1; color: #0A0E2A;">SpeedIQ<span style="color: #0526D9;">.</span></div>
+        <p style="margin: 18px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 300px; text-wrap: pretty;">Frames from shipped jobs — packaging, villas, booths, and brand worlds. The full story behind each lives in the case studies.</p>
+        <div style="margin-top: 28px;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 10px;" style-hover="background: #0318A8; color: #FFFFFF;">Browse case studies <span style="font-size: 16px; line-height: 1;">→</span></a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.11em; color: #8A8FA3;">
+        <span>IDENTITY · 3D · EXHIBITIONS · PRINT</span>
+      </div>
+    </div>
+      <div style="grid-row: span 2; position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="db89f610-3c04-4698-adf5-0012b7e11cd7" alt="Leil Nhar storefront" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="19709534-b86c-4dcd-8f2f-75b77ac4d6f7" alt="Ethmar tuna packaging" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="grid-row: span 2; position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="a32916f5-a84e-4370-a134-78970a43a9c6" alt="Jaroudi Media photography direction" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="0d5ee254-7ae3-4b55-a048-31878257737d" alt="Maceen Capital exhibition booth" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="fafee437-0ef1-4fdc-8f28-3481cace1bba" alt="Leil Nhar restaurant interior" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="b0686157-dea2-424d-81ba-b5a1242f51cd" alt="Spanish-style villa render" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="position: relative; border-radius: 14px; overflow: hidden; background: #EEF2FB;">
+        <img src="8224ca9a-2460-454f-944c-cc1c655f8ed0" alt="Amesys Bull exhibition stand" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div class="faq-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>FAQ</span>
+      </div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Your questions, answered</h2>
+      <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 380px;">Still have questions? <a href="#" style="color: #0526D9; font-weight: 500;" style-hover="color: #0318A8;">Talk to a human →</a></p>
+    </div>
+    <div>
+      <div onclick="{{ faq0.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What services does SpeedIQ offer?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq0.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq0.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Everything a growing brand needs, end to end: corporate identity, web &amp; app development, advertising &amp; growth, 3D exterior &amp; interior modeling, events &amp; exhibitions, and print production — as one engagement or à la carte.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq1.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How do you measure success?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq1.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq1.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">We baseline before we start, agree on targets up front, and report against them in a live dashboard — traffic, conversion, and brand awareness, not vanity metrics.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq2.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How long does a typical project take?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq2.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq2.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">An identity lands in 3–4 weeks; a full site plus growth engine in 6–10. Work ships in phases, so value starts landing before the engagement ends.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq3.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Do you work with startups or established brands?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq3.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq3.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Both. Most of our clients are growth-stage, but the process scales — from first identity to a rebrand across dozens of markets.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq4.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What happens after launch?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq4.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq4.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Every project includes post-launch support. Most clients move to an optimization retainer — the same team keeps iterating so results compound.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq5.toggle }}" style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How does pricing work?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq5.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq5.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Fixed-scope projects or a monthly retainer — your choice. Every engagement starts with a free audit and a quote before any work begins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="margin: 0 20px; background: #0526D9; border-radius: 28px; overflow: hidden; position: relative; text-align: center; padding: clamp(72px, 10vw, 110px) clamp(20px, calc(8vw - 20px), 108px) 0;">
+  <div class="rv" style="position: relative; z-index: 2;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>START THE CLIMB</span>
+    </div>
+    <h2 style="margin: 22px auto 0; max-width: 760px; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Turn your brand into a competitive advantage.</h2>
+    <p style="margin: 20px auto 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.82);">One senior team across identity, web, and growth — with results you can chart.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Get a free audit</a>
+    </div>
+  </div>
+  <div style="margin-top: clamp(56px, 8vw, 84px); height: clamp(90px, 12vw, 150px); display: flex; align-items: flex-end; gap: 4px;">
+    <sc-for list="{{ ctaBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0;"></div>
+    </sc-for>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="padding: clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+          <input type="email" placeholder="Enter your email" style="border: 1px solid #D8D8D0; border-radius: 999px; padding: 12px 20px; font-size: 14.5px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; width: min(250px, 100%); box-sizing: border-box; outline: none; background: #FFFFFF;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14.5px; flex: none;" style-hover="background: #0318A8; color: #FFFFFF;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 32px; margin-top: 72px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand &amp; Corporate Identity</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Web &amp; App Development</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Advertising &amp; Growth</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">3D Modeling</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Events &amp; Exhibitions</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Print &amp; Production</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">About</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Casework</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Blog</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Careers</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">RESOURCES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Free Audit</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Pricing</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Newsletter</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand Assets</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">LEGAL</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Privacy Policy</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Terms of Service</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #ECECE6; margin-top: 72px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Home</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Services</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Blog</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer></x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:780},&quot;barCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:12,&quot;min&quot;:8,&quot;max&quot;:48,&quot;section&quot;:&quot;Chart&quot;},&quot;barMaxHeight&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:70,&quot;min&quot;:25,&quot;max&quot;:70,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;section&quot;:&quot;Chart&quot;},&quot;showAnnotation&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;section&quot;:&quot;Chart&quot;}}">
+class Component extends DCLogic {
+  state = { openFaq: 0, activeSvc: 0, hdrHidden: false, activeProj: 0, activeBrand: 0, brandLive: false, brandPaused: false };
+
+  // scroll-reveal, progressive enhancement: content is VISIBLE by default;
+  // we only hide-then-reveal once the observer is confirmed running.
+  setupReveal(attempt) {
+    if (this.revealDone) return;
+    const els = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    if (!els.length) {
+      const self = this;
+      if ((attempt || 0) < 30) setTimeout(function () { self.setupReveal((attempt || 0) + 1); }, 200);
+      return;
+    }
+    this.revealDone = true;
+    if (typeof IntersectionObserver === 'undefined') return; // stays visible
+    let ioAlive = false; // set on ANY callback — IO always delivers initial records
+    els.forEach(function (el) { el.setAttribute('data-rv', 'hide'); });
+    const io = new IntersectionObserver(function (entries) {
+      ioAlive = true;
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+        e.target.removeAttribute('data-rv');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+    this.revealIO = io;
+    // safety net: only if the observer never fired AT ALL (broken), un-hide everything
+    setTimeout(function () {
+      if (!ioAlive) {
+        io.disconnect();
+        els.forEach(function (el) { el.removeAttribute('data-rv'); });
+      }
+    }, 2000);
+  }
+
+  componentDidMount() {
+    this.setupReveal(0);
+    this.watchBrandSection(0);
+    this.initSmoothScroll();
+  }
+
+  initSmoothScroll() {
+    if (this._smoothInit || typeof window === 'undefined') return;
+    this._smoothInit = true;
+    if ('ontouchstart' in window) return; // native inertia on touch devices
+    this._ssTarget = window.scrollY;
+    this._ssCurrent = window.scrollY;
+    this._ssActive = false;
+    this._ssProgrammatic = false;
+    const self = this;
+    const maxY = function () { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); };
+    this._ssTick = function () {
+      const diff = self._ssTarget - self._ssCurrent;
+      if (Math.abs(diff) < 0.5) {
+        self._ssCurrent = self._ssTarget;
+        self._ssActive = false;
+        self._ssProgrammatic = true;
+        window.scrollTo(0, self._ssTarget);
+        return;
+      }
+      self._ssCurrent += diff * 0.115;
+      self._ssProgrammatic = true;
+      window.scrollTo(0, self._ssCurrent);
+      requestAnimationFrame(self._ssTick);
+    };
+    this._ssWheel = function (e) {
+      if (e.ctrlKey || e.metaKey || e.defaultPrevented) return;
+      e.preventDefault();
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 32;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      self._ssTarget = Math.max(0, Math.min(maxY(), self._ssTarget + d));
+      if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); }
+    };
+    this._ssScroll = function () {
+      if (self._ssProgrammatic) { self._ssProgrammatic = false; return; }
+      self._ssTarget = window.scrollY;
+      self._ssCurrent = window.scrollY;
+    };
+    window.addEventListener('wheel', this._ssWheel, { passive: false });
+    window.addEventListener('scroll', this._ssScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._ssWheel) window.removeEventListener('wheel', this._ssWheel);
+    if (this._ssScroll) window.removeEventListener('scroll', this._ssScroll);
+    if (this._brandIO) this._brandIO.disconnect();
+    if (this._brandTimer) clearInterval(this._brandTimer);
+    if (this.destroyCube) this.destroyCube();
+    if (this.revealIO) this.revealIO.disconnect();
+    if (this.svcDetach) this.svcDetach();
+  }
+
+  buildCube() {
+    const mount = this.cubeMount;
+    if (!mount) return null;
+    mount.innerHTML = '';
+    let alive = true;
+
+    const scene = document.createElement('div');
+    scene.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;';
+    const cube = document.createElement('div');
+    cube.style.cssText = 'position:relative;width:0;height:0;transform-style:preserve-3d;';
+    scene.appendChild(cube);
+    mount.appendChild(scene);
+
+    const u = 104;                 // cubie spacing
+    const s = 94;                  // sticker/cubie size
+    const colors = { U: 'rgba(255,255,255,0.92)', D: 'rgba(255,255,255,0.10)', F: 'rgba(255,255,255,0.45)', B: 'rgba(255,255,255,0.05)', L: 'rgba(255,255,255,0.68)', R: 'rgba(255,255,255,0.20)' };
+    const plastic = '#0526D9';
+    const faceDefs = [
+      ['U', 'rotateX(90deg)',  (p) => p.y === -1],
+      ['D', 'rotateX(-90deg)', (p) => p.y === 1],
+      ['F', '',                (p) => p.z === 1],
+      ['B', 'rotateY(180deg)', (p) => p.z === -1],
+      ['R', 'rotateY(90deg)',  (p) => p.x === 1],
+      ['L', 'rotateY(-90deg)', (p) => p.x === -1]
+    ];
+
+    const cubies = [];
+    for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++) {
+      const el = document.createElement('div');
+      el.style.cssText = 'position:absolute;left:' + (-s / 2) + 'px;top:' + (-s / 2) + 'px;width:' + s + 'px;height:' + s + 'px;transform-style:preserve-3d;will-change:transform;';
+      const p = { x: x, y: y, z: z };
+      faceDefs.forEach(function (fd) {
+        if (!fd[2](p)) return; // interior faces are invisible against the panel — skip them (162 → 54 nodes)
+        const f = document.createElement('div');
+        f.style.cssText = 'position:absolute;inset:0;box-sizing:border-box;transform:' + fd[1] + ' translateZ(' + (s / 2) + 'px);background:' + colors[fd[0]] + ';border:2.5px solid #FFFFFF;backface-visibility:hidden;-webkit-backface-visibility:hidden;';
+        el.appendChild(f);
+      });
+      const mat = new DOMMatrix().translate(x * u, y * u, z * u);
+      el.style.transform = mat.toString();
+      cubies.push({ el: el, pos: p, mat: mat });
+      cube.appendChild(el);
+    }
+
+    // flat isometric pose (no perspective = 2D look), scaled to fit panel
+    let k = 1;
+    const pose = function () {
+      cube.style.transform = 'scale(' + k.toFixed(4) + ') rotateX(-32deg) rotateY(-38deg)';
+    };
+    const fit = function () {
+      const h = mount.clientHeight || 500, w = mount.clientWidth || 900;
+      k = Math.min(h * 0.74, w * 0.44, 560) / (3 * u * 1.42);
+      pose();
+    };
+    fit();
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(fit) : null;
+    if (ro) ro.observe(mount);
+
+    let onScreen = true;
+    const io = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver(function (entries) {
+      onScreen = entries[0].isIntersecting;
+    }) : null;
+    if (io) io.observe(mount);
+
+    const AXES = { x: [1, 0, 0], y: [0, 1, 0], z: [0, 0, 1] };
+    // snap a finished quarter-turn into each affected cubie's matrix + logical position
+    const bake = function (mv) {
+      const a = AXES[mv.axis];
+      const Rf = new DOMMatrix().rotateAxisAngle(a[0], a[1], a[2], mv.dir * 90);
+      cubies.forEach(function (c) {
+        if (c.pos[mv.axis] !== mv.layer) return;
+        c.mat = Rf.multiply(c.mat);
+        const m = c.mat;
+        ['m11','m12','m13','m14','m21','m22','m23','m24','m31','m32','m33','m34','m44'].forEach(function (key) { m[key] = Math.round(m[key]); });
+        m.m41 = Math.round(m.m41 / u) * u; m.m42 = Math.round(m.m42 / u) * u; m.m43 = Math.round(m.m43 / u) * u;
+        const p2 = Rf.transformPoint(new DOMPoint(c.pos.x, c.pos.y, c.pos.z));
+        c.pos = { x: Math.round(p2.x), y: Math.round(p2.y), z: Math.round(p2.z) };
+        c.el.style.transform = m.toString();
+      });
+    };
+    const turn = function (mv, dur) {
+      return new Promise(function (res) {
+        if (!onScreen) { bake(mv); res(); return; } // off-screen: apply instantly, no animation work
+        const a = AXES[mv.axis];
+        const affected = cubies.filter(function (c) { return c.pos[mv.axis] === mv.layer; });
+        const t0 = performance.now();
+        const frame = function (now) {
+          if (!alive) return res();
+          const t = Math.min(1, (now - t0) / dur);
+          const e = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+          const R = new DOMMatrix().rotateAxisAngle(a[0], a[1], a[2], mv.dir * 90 * e);
+          affected.forEach(function (c) { c.el.style.transform = R.multiply(c.mat).toString(); });
+          if (t < 1) { requestAnimationFrame(frame); return; }
+          bake(mv);
+          res();
+        };
+        requestAnimationFrame(frame);
+      });
+    };
+
+    // 30-move solve sequence; the matching scramble is pre-applied instantly,
+    // so the cube starts scrambled and the 30th turn lands it solved.
+    const TOTAL = 100;
+    const axes = ['x', 'y', 'z'];
+    const solveSeq = [];
+    let lastAxis = '';
+    for (let i = 0; i < TOTAL; i++) {
+      let ax;
+      do { ax = axes[Math.floor(Math.random() * 3)]; } while (ax === lastAxis);
+      lastAxis = ax;
+      solveSeq.push({ axis: ax, layer: [-1, 0, 1][Math.floor(Math.random() * 3)], dir: Math.random() < 0.5 ? 1 : -1 });
+    }
+    for (let i = TOTAL - 1; i >= 0; i--) bake({ axis: solveSeq[i].axis, layer: solveSeq[i].layer, dir: -solveSeq[i].dir });
+
+    // scroll in ANY direction accumulates distance; each step = one turn,
+    // monotonic — after the 30th turn the cube stays solved and stops listening
+    // tiny confetti from the panel's bottom-left when the cube solves
+    let celebrated = false;
+    const celebrate = function () {
+      if (celebrated || !alive) return;
+      celebrated = true;
+      const w = mount.clientWidth || 900, h = mount.clientHeight || 500;
+      const cv = document.createElement('canvas');
+      cv.width = w * 2; cv.height = h * 2;
+      cv.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;';
+      mount.appendChild(cv);
+      const ctx = cv.getContext('2d');
+      ctx.scale(2, 2);
+      const cols = ['#FFFFFF', '#DDE3FA', '#B7C4FF', '#8FA3FF', '#5E7CFF', '#0A1CB8'];
+      const ps = [];
+      for (let i = 0; i < 110; i++) {
+        const ang = (-85 + Math.random() * 62) * Math.PI / 180;
+        const sp = 2.6 + Math.random() * 5.5;
+        ps.push({
+          x: 26 + Math.random() * 34, y: h - 22 - Math.random() * 22,
+          vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp,
+          s: 2 + Math.random() * 2.5, r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.14,
+          c: cols[Math.floor(Math.random() * cols.length)], d: 0.99 + Math.random() * 0.007
+        });
+      }
+      const t0 = performance.now();
+      const fr = function (now) {
+        if (!alive) { cv.remove(); return; }
+        const t = (now - t0) / 1000;
+        ctx.clearRect(0, 0, w, h);
+        let live = 0;
+        ps.forEach(function (p) {
+          p.vy += 0.055; p.vx *= p.d; p.vy *= p.d;
+          p.x += p.vx; p.y += p.vy; p.r += p.vr;
+          if (p.y < h + 20 && t < 6) {
+            live++;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.r);
+            ctx.globalAlpha = Math.max(0, Math.min(1, 6 - t));
+            ctx.fillStyle = p.c;
+            ctx.fillRect(-p.s / 2, -p.s * 2.6, p.s * 0.9, p.s * 5.2);
+            ctx.restore();
+          }
+        });
+        if (live > 0) requestAnimationFrame(fr); else cv.remove();
+      };
+      requestAnimationFrame(fr);
+    };
+
+    let done = 0, busy = false, acc = 0;
+    let lastY = window.scrollY || document.documentElement.scrollTop || 0;
+    const stepSize = function () {
+      const doc = document.documentElement;
+      return Math.max(120, ((doc.scrollHeight - window.innerHeight) / TOTAL) * 2);
+    };
+    const pump = async function () {
+      if (busy) return;
+      busy = true;
+      while (alive && done < TOTAL && done < Math.floor(acc / stepSize())) {
+        const gap = Math.floor(acc / stepSize()) - done;
+        await turn(solveSeq[done], gap > 2 ? 120 : 280);
+        done++;
+      }
+      busy = false;
+      if (done >= TOTAL) { detach(); celebrate(); }
+    };
+    const onScroll = function () {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      acc += Math.abs(y - lastY);
+      lastY = y;
+      pump();
+    };
+    const detach = function () {
+      window.removeEventListener('scroll', onScroll);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return function () {
+      alive = false;
+      if (ro) ro.disconnect();
+      if (io) io.disconnect();
+      detach();
+    };
+  }
+
+  projVals() {
+    const P = [
+      { name: 'ETHMAR', logo: 'uploads/logos/ethmar.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: 'Complete food-brand identity with 30+ package designs and integrated collateral.' },
+      { name: 'EADS DEFENCE & SECURITY', logo: 'uploads/logos/eads.png', logoKind: 'photo', tag: 'EVENTS & EXHIBITIONS', desc: 'Exhibition stand design — winner of the Best Exhibition Award.' },
+      { name: 'VILLATE', logo: 'uploads/logos/villate.png', logoKind: 'mark', tag: 'IDENTITY + 3D MODELING', desc: 'Real-estate campaign across five villa styles — from logo and slogan to photoreal 3D modeling.' },
+      { name: 'JAROUDI MEDIA', logo: 'uploads/logos/jaroudi.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: 'A daring, scripted identity for a regional media production house.' },
+      { name: 'MACEEN CAPITAL', logo: 'uploads/logos/maceen.png', logoKind: 'mark', tag: 'IDENTITY + PRINT', desc: 'Investment-firm identity carried through annual reports, collateral, and an exhibition booth.' },
+      { name: 'H2L POWER SYSTEMS', tag: 'EVENTS & EXHIBITIONS', desc: 'Twin-tower trade-show stand, rendered to approval and built on site.' },
+      { name: 'AMESYS BULL', logo: 'uploads/logos/amesys.png', logoKind: 'photo', tag: 'EVENTS & EXHIBITIONS', desc: 'Curved, demo-driven booth for a Bull Group technology company.' },
+      { name: 'RETAIL PROJECTS', logo: 'uploads/logos/rp.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: "B2B lifestyle-retail identity, rolled out across flagship stores in KSA's best malls." }
+    ];
+    const ap = Math.min(7, Math.max(0, this.state.activeProj || 0));
+    if (!this._projSel) this._projSel = P.map((_, i) => () => this.setState({ activeProj: i }));
+    const o = { activeName: P[ap].name, activeTag: P[ap].tag, activeDesc: P[ap].desc };
+    for (let i = 0; i < 8; i++) {
+      o['sel' + i] = this._projSel[i];
+      o['r' + i + 'bg'] = ap === i ? 'rgba(255,255,255,0.14)' : 'transparent';
+      o['r' + i + 'bd'] = ap === i ? '#FFFFFF' : 'rgba(255,255,255,0.4)';
+      o['p' + i + 'd'] = ap === i ? 'block' : 'none';
+    }
+    return o;
+  }
+
+  watchBrandSection(attempt) {
+    const el = document.querySelector('[data-screen-label="Results"]');
+    if (!el) {
+      const self = this;
+      if ((attempt || 0) < 40) setTimeout(function () { self.watchBrandSection((attempt || 0) + 1); }, 250);
+      return;
+    }
+    if (typeof IntersectionObserver === 'undefined') {
+      this.setState({ brandLive: true });
+      this.startBrandLoop();
+      return;
+    }
+    const self = this;
+    this._brandIO = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        self.setState({ brandLive: true });
+        self.startBrandLoop();
+      } else {
+        if (self._brandTimer) clearInterval(self._brandTimer);
+        self._brandTimer = null;
+        self.setState({ brandLive: false });
+      }
+    }, { threshold: 0.3 });
+    this._brandIO.observe(el);
+  }
+
+  startBrandLoop() {
+    if (this._brandTimer) clearInterval(this._brandTimer);
+    const self = this;
+    this._brandTimer = setInterval(function () {
+      self.setState(function (s) { return { activeBrand: ((s.activeBrand || 0) + 1) % 9 }; });
+    }, 6000);
+  }
+
+  brandVals() {
+    const B = [
+      { name: 'ETHMAR', logo: 'uploads/logos/ethmar.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: 'Ethmar is a leading company with a variety of food products focused on fine quality and food-safety standards. We helped them develop a distinct brand with over thirty package designs and a complete integrated identity.', desc2: 'Every pack in the range shares one system — logo, color coding and layout rules that hold from shelf to carton — so each new product slots in without a redesign.', scope: ['LOGO', '30+ PACKAGE DESIGNS', 'INTEGRATED IDENTITY'], facts: ['Food producer focused on fine quality & food-safety standards', 'Thirty-plus package designs across the product range', 'Complete integrated identity system'] },
+      { name: 'JAROUDI MEDIA', logo: 'uploads/logos/jaroudi.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: 'Jaroudi Media started as a young production house and became a creative regional production company. The dynamic scripted logo and corporate identity were created to project a daring, innovative personality — just what this competitive media industry demands.', desc2: 'The scripted mark flexes from title cards to slates and stationery, giving a young studio the presence of an established production house on every deliverable.', scope: ['SCRIPTED LOGOTYPE', 'CORPORATE IDENTITY'], facts: ['Young production house grown into a regional creative company', 'Dynamic scripted logotype at the heart of the identity', 'Built to project a daring, innovative personality'] },
+      { name: 'MACEEN CAPITAL', logo: 'uploads/logos/maceen.png', logoKind: 'mark', tag: 'IDENTITY + PRINT', desc: 'Maceen Capital is a closed joint-stock investment company regulated by the CMA, spanning real-estate investment and investment banking. We developed their identity through dynamic shapes with integrated intersections reflecting transparency — carried through office branding, sales kits, annual reports and fund-launch projects.', desc2: 'One geometric language runs from the business card to the exhibition booth, so investors meet the same brand at the office, in the annual report and on the expo floor.', scope: ['IDENTITY', 'OFFICE BRANDING', 'SALES KITS', 'ANNUAL REPORT', 'EXHIBITION BOOTH'], facts: ['Closed joint-stock investment company regulated by the CMA', 'Real-estate investment & investment banking group', 'Dynamic intersecting shapes reflecting transparency', 'Carried through office, sales kits, reports & fund launches'] },
+      { name: 'VILLATE', logo: 'uploads/logos/villate.png', logoKind: 'mark', tag: 'IDENTITY + 3D MODELING', desc: 'Villate is a real-estate fund of unique villas in five styles — Mexican, Spanish, Classic, Modern and Contemporary. From the logo and slogan we created a distinct graphic element representing dreams, reflecting each style with its own concept color branding to bring the emotional aspect to life for prospect buyers.', desc2: 'Each of the five styles carries its own concept color while sharing the same mark — campaigns can speak to a Mexican-villa buyer and a contemporary-villa buyer without splitting the brand.', scope: ['LOGO & SLOGAN', 'CAMPAIGN', '5 STYLE BRANDS', '3D MODELING'], facts: ['Real-estate fund of unique villas in five styles', 'Mexican, Spanish, Classic, Modern & Contemporary concepts', 'A graphic element representing dreams, carried into 3D'] },
+      { name: 'RETAIL PROJECTS', logo: 'uploads/logos/rp.png', logoKind: 'mark', tag: 'CORPORATE IDENTITY', desc: 'RP is a B2B lifestyle organization bringing selective products to flagship stores in the best malls in KSA. With each premium retail brand we start by developing a logo and corporate identity that stands out and reflects their values — then carry on through multiple projects across their new branches.', desc2: 'The RP monogram anchors every rollout: as new branches and brands come online, signage and collateral extend the same system instead of starting over.', scope: ['LOGO', 'CORPORATE IDENTITY', 'BRANCH ROLLOUTS'], facts: ['B2B lifestyle organization for premium retail brands', 'Flagship stores in the best malls in KSA', 'Identity carried through multiple branch projects'] },
+      { name: 'EADS DEFENCE & SECURITY', logo: 'uploads/logos/eads.png', logoKind: 'photo', tag: 'EVENTS & EXHIBITIONS', desc: 'Winner of the Best Exhibition Award — a delta-wing stand concept for EADS Defence & Security with integrated demo stations, meeting areas and hospitality zones. Designed and rendered to approval, then built on site.', desc2: 'The wing works as both architecture and signage — visible across the hall, while demo stations, meeting areas and hospitality zones sit organized beneath it.', scope: ['STAND CONCEPT', '3D RENDERS', 'ON-SITE BUILD', 'BEST EXHIBITION AWARD'], facts: ['Delta-wing stand with integrated demo stations', 'Meeting areas & hospitality zones worked into the wing', 'Winner of the Best Exhibition Award'] },
+      { name: 'AMESYS BULL', logo: 'uploads/logos/amesys.png', logoKind: 'photo', tag: 'EVENTS & EXHIBITIONS', desc: 'A curved, demo-driven booth for Amesys, a Bull Group technology company — live Road Runner interception demos, integrated screens and a full vehicle display worked into the sweeping shell.', desc2: 'The sweep of the shell guides visitors from the live interception demos past the integrated screens to the vehicle — one continuous route through the story.', scope: ['STAND DESIGN', 'DEMO STATIONS', 'VEHICLE DISPLAY'], facts: ['Curved shell hosting live Road Runner interception demos', 'Integrated screens & a full vehicle display', 'Built for Amesys, a Bull Group technology company'] },
+      { name: 'HBL POWER SYSTEMS', logo: 'uploads/logos/h2l.png', logoKind: 'photo', tag: 'EVENTS & EXHIBITIONS', desc: 'An 11 × 8 metre twin-tower trade-show stand for HBL Power Systems — meeting zones, podium displays and a central mast, planned to the metre on the floor plan, rendered to approval and built on site.', desc2: 'The twin towers give the brand height on a crowded floor, while the plan keeps meeting zones and podium displays working inside the 11 × 8 footprint.', scope: ['11×8 M STAND', 'FLOOR PLANNING', 'ON-SITE BUILD'], facts: ['11 × 8 metre twin-tower trade-show stand', 'Meeting zones, podium displays & central mast', 'Rendered to approval, then built on site'] },
+      { name: 'LEIL NHAR', logo: 'uploads/logos/leilnhar.png', logoKind: 'mark', tag: 'PRINT & PRODUCTION', desc: 'Leil Nhar is a casual eatery serving fast bites around the clock, with branches across the region. We delivered the complete branding production and restaurant collateral for their Riyadh branch, built around an illustrated brand world.', desc2: 'The illustrated world — pots, cups and the day-and-night mark — carries from menus to placemats to signage, keeping the around-the-clock story on every touchpoint.', scope: ['BRANDING PRODUCTION', 'RESTAURANT COLLATERAL', 'ILLUSTRATION'], facts: ['Casual eatery serving fast bites around the clock', 'Complete branding production for the Riyadh branch', 'An illustrated brand world across the collateral'] }
+    ];
+    const ab = Math.min(B.length - 1, Math.max(0, this.state.activeBrand || 0));
+    if (!this._brandSel) this._brandSel = B.map((_, i) => () => { this.setState({ activeBrand: i }); if (!this.state.brandPaused) this.startBrandLoop(); });
+    if (!this._bPause) {
+      this._bPause = () => {
+        if (this._brandTimer) clearInterval(this._brandTimer);
+        this._brandTimer = null;
+        this.setState({ brandPaused: true });
+      };
+      this._bResume = () => {
+        this.setState({ brandPaused: false });
+        if (this.state.brandLive) this.startBrandLoop();
+      };
+    }
+    const o = {
+      pjNum: ('0' + (ab + 1)).slice(-2),
+      pjName: B[ab].name,
+      pjTag: B[ab].tag,
+      pjDesc: B[ab].desc,
+      pjDesc2: B[ab].desc2,
+      pjScope: B[ab].scope.map(function (t) { return { t: t }; }),
+      pjFacts: (B[ab].facts || []).map(function (t, j) { return { t: t, n: '0' + (j + 1) }; }),
+      bPause: this._bPause,
+      bResume: this._bResume,
+      bAnim: this.state.brandPaused ? 'none' : 'brandFill 6s linear forwards'
+    };
+    for (let i = 0; i < B.length; i++) {
+      o['bs' + i] = this._brandSel[i];
+      o['bc' + i] = ab === i ? '#FFFFFF' : 'rgba(255,255,255,0.55)';
+      o['bn' + i] = ab === i ? '#B7C4FF' : 'rgba(183,196,255,0.5)';
+      o['bp' + i] = (this.state.brandLive && ab === i) ? 'block' : 'none';
+      o['lgv' + i] = ab === i ? 'block' : 'none';
+    }
+    return o;
+  }
+
+  renderVals() {
+    if (!this._revealKick) {
+      this._revealKick = true;
+      const self = this;
+      setTimeout(function () { self.setupReveal(0); }, 80);
+    }
+    const count = Math.min(64, Math.max(8, Math.round(this.props.barCount ?? 18)));
+    const maxH = this.props.barMaxHeight ?? 50;
+    const minH = Math.max(3, maxH * 0.06);
+    const bars = [];
+    for (let i = 0; i < count; i++) {
+      const t = count === 1 ? 1 : i / (count - 1);
+      const h = minH + (maxH - minH) * t;
+      bars.push({
+        h: h.toFixed(2) + '%',
+        bg: 'rgba(255,255,255,' + (0.10 + 0.36 * t).toFixed(3) + ')',
+        delay: (0.2 + i * 0.05).toFixed(2) + 's'
+      });
+    }
+    const ctaBars = [];
+    const ctaCount = 22;
+    for (let i = 0; i < ctaCount; i++) {
+      const t = i / (ctaCount - 1);
+      ctaBars.push({
+        h: (8 + 92 * t).toFixed(1) + '%',
+        bg: 'rgba(255,255,255,' + (0.12 + 0.34 * t).toFixed(3) + ')'
+      });
+    }
+    // scroll-driven services stack: active index follows progress through the 400vh track
+    const s = (i) => ({
+      c: this.state.activeSvc === i ? '#0A0E2A' : '#B7BCCE',
+      dot: this.state.activeSvc === i ? '#0526D9' : '#B7BCCE',
+      op: this.state.activeSvc === i ? 1 : 0,
+      z: this.state.activeSvc === i ? 2 : 1,
+      y: this.state.activeSvc === i ? '0px' : '16px',
+      ih: this.state.activeSvc === i ? '34px' : '6px',
+      ibg: this.state.activeSvc === i ? '#0526D9' : '#C3C8DA'
+    });
+    this.svcTrackRefCb = this.svcTrackRefCb || ((el) => {
+      if (el && el !== this.svcTrack) {
+        this.svcTrack = el;
+        if (this.svcDetach) this.svcDetach();
+        const onScroll = () => {
+          const track = this.svcTrack;
+          if (!track) return;
+          const r = track.getBoundingClientRect();
+          const span = r.height - window.innerHeight;
+          if (span <= 0) return;
+          const p = Math.min(1, Math.max(0, -r.top / span));
+          const idx = Math.min(5, Math.max(0, Math.floor(p * 6)));
+          const hid = p > 0.07; // heading slides out as soon as stacking begins
+          if (idx !== this.state.activeSvc || hid !== this.state.hdrHidden) this.setState({ activeSvc: idx, hdrHidden: hid });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        onScroll();
+        this.svcDetach = () => {
+          window.removeEventListener('scroll', onScroll);
+          window.removeEventListener('resize', onScroll);
+        };
+      }
+    });
+    const faq = (i) => ({
+      rows: this.state.openFaq === i ? '1fr' : '0fr',
+      icon: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+    });
+    this.cubeRefCb = this.cubeRefCb || ((el) => {
+      if (el && el !== this.cubeMount) {
+        this.cubeMount = el;
+        if (this.destroyCube) this.destroyCube();
+        this.destroyCube = this.buildCube();
+      }
+    });
+    return {
+      ...this.projVals(),
+      ...this.brandVals(),
+      bars: bars,
+      ctaBars: ctaBars,
+      cubeRef: this.cubeRefCb,
+      s0: s(0), s1: s(1), s2: s(2), s3: s(3), s4: s(4), s5: s(5),
+      hdrOp: this.state.hdrHidden ? 0 : 1,
+      hdrY: this.state.hdrHidden ? '-44px' : '0px',
+      hdrRows: this.state.hdrHidden ? '0fr' : '1fr',
+      svcTrackRef: this.svcTrackRefCb,
+      faq0: faq(0), faq1: faq(1), faq2: faq(2), faq3: faq(3), faq4: faq(4), faq5: faq(5),
+      showAnnotation: this.props.showAnnotation ?? true,
+      annotationBottom: (maxH * 0.78).toFixed(1) + '%'
+    };
+  }
+}
+</script>
+
+
+</body></html>

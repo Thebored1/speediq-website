@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <style>
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-400.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/plex-mono-500.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+    html, body { margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
+    a { color: #0526D9; text-decoration: none; }
+    a:hover { color: #0318A8; }
+    ::selection { background: #0A1CB8; color: #FFFFFF; }
+    input::placeholder { color: #9A9FB3; }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    .rv { transition: opacity 0.75s cubic-bezier(0.22, 0.8, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.8, 0.36, 1); }
+    .rv[data-rv="hide"] { opacity: 0; transform: translateY(28px); }
+    @media print { .rv { opacity: 1 !important; transform: none !important; transition: none !important; } }
+    /* responsive overrides — media queries can't be inlined */
+    @media (max-width: 1100px) {
+      .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-visual { display: none !important; }
+    }
+    @media (max-width: 1000px) {
+      .svc-two { grid-template-columns: 1fr !important; }
+      .proc-grid { grid-template-columns: 1fr !important; }
+      .case-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none !important; }
+      .svc-h1 { font-size: clamp(40px, 10vw, 64px) !important; }
+      .svc-proof { display: none !important; }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</helmet>
+
+<div data-screen-label="Hero" style="position: relative; background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+
+  <nav style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; padding: 26px clamp(24px, 8vw, 128px); gap: 24px;">
+    <a href="uploads/SpeedIQ Website.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF;">
+      <svg width="27" height="19" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#FFFFFF"></path></svg>
+      <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1;">SpeedIQ</span>
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 16.5px; font-weight: 500;">
+      <a href="#" style="color: #FFFFFF;" style-hover="color: #FFFFFF;">Services</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Casework</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">About</a>
+      <a href="#" style="color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Insights</a>
+    </div>
+    <a href="#" style="color: #FFFFFF; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 500;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Book intro call</a>
+  </nav>
+
+  <div class="hero-grid" style="position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, 6.4fr) minmax(0, 5.6fr); gap: clamp(32px, 4vw, 64px); align-items: center; padding: clamp(32px, 6vh, 64px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing: border-box;">
+    <main>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+        <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+        <span>SERVICES — 02 / 06</span>
+      </div>
+      <h1 class="svc-h1" style="margin: 20px 0 0; font-family: 'Instrument Sans', Helvetica, sans-serif; font-size: clamp(56px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">Web &amp; App Development</h1>
+      <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 520px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Fast, conversion-focused websites and apps — designed, built, and shipped in weeks. One team carries your identity straight into the product.</p>
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.34s backwards;">
+        <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+        <a href="#casework" onclick="{{ goCasework }}" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">See the casework →</a>
+      </div>
+      <div style="margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: rgba(255,255,255,0.58); animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;">ETHMAR · VILLATE · JAROUDI MEDIA</div>
+    </main>
+
+    <sc-if value="{{ showHeroVisual }}" hint-placeholder-val="{{ true }}">
+    <div class="hero-visual" style="position: relative; display: flex; align-items: center; justify-content: center; animation: riseIn 0.8s cubic-bezier(0.22, 0.8, 0.36, 1) 0.3s backwards;">
+      <div style="position: absolute; inset: -40px; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E'); background-size: 160px 160px; opacity: 0.25; mix-blend-mode: overlay; pointer-events: none;"></div>
+      <div style="position: relative; background: #FFFFFF; border-radius: 12px; box-shadow: 0 40px 80px -30px rgba(2,10,60,0.6); width: min(360px, 100%); box-sizing: border-box; transform: rotate(-1.5deg);">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #EEF0F4;">
+          <span style="display: flex; gap: 5px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #F26D5F;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #F5BE4F;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #5FC26D;"></span>
+          </span>
+          <span style="flex: 1; background: #F1F2F6; border-radius: 999px; padding: 5px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; color: #565B72; text-align: center;">ethmar.com</span>
+        </div>
+        <div style="padding: 16px 16px 18px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="width: 9px; height: 9px; background: #1E7A46; border-radius: 2px;"></span>
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em; color: #0A0E2A;">ETHMAR</span>
+            <span style="margin-left: auto; display: flex; gap: 8px;">
+              <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+              <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+              <span style="width: 22px; height: 4px; border-radius: 2px; background: #E3E5EE;"></span>
+            </span>
+          </div>
+          <div style="width: 72%;">
+            <div style="margin-top: 16px; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; color: #0A0E2A;">Fresh from the farm, boxed with care</div>
+            <div style="height: 5px; width: 84%; border-radius: 3px; background: #EDEEF3; margin-top: 10px;"></div>
+            <div style="height: 5px; width: 62%; border-radius: 3px; background: #EDEEF3; margin-top: 6px;"></div>
+            <div style="display: inline-block; margin-top: 13px; background: #0526D9; color: #FFFFFF; font-size: 10.5px; font-weight: 600; padding: 7px 13px; border-radius: 999px;">Shop the range</div>
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 16px; width: 68%;">
+            <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #DCE9D2, #9CC08A);"></div>
+            <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #F6E3C2, #E4B265);"></div>
+            <div style="flex: 1; height: 36px; border-radius: 6px; background: linear-gradient(135deg, #D8E4F6, #8FA3FF);"></div>
+          </div>
+        </div>
+        <div style="position: absolute; right: 14px; bottom: 14px; width: 64px; border: 3px solid #0A0E2A; border-radius: 12px; background: #FFFFFF; box-shadow: 0 14px 28px -12px rgba(15,20,40,0.45); padding: 7px 6px;">
+          <div style="width: 18px; height: 3px; border-radius: 2px; background: #0A0E2A; margin: 0 auto;"></div>
+          <div style="height: 4px; border-radius: 2px; background: #EDEEF3; margin-top: 8px;"></div>
+          <div style="height: 4px; width: 70%; border-radius: 2px; background: #EDEEF3; margin-top: 4px;"></div>
+          <div style="height: 22px; border-radius: 4px; background: linear-gradient(135deg, #DCE9D2, #9CC08A); margin-top: 7px;"></div>
+          <div style="height: 9px; border-radius: 999px; background: #0526D9; margin-top: 7px;"></div>
+        </div>
+      </div>
+      <span style="position: absolute; right: 6%; bottom: -6px; transform: rotate(6deg); border: 2px solid #9FE8B8; color: #9FE8B8; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; padding: 6px 12px; border-radius: 4px; opacity: 0.9;">LIVE IN 6 WKS</span>
+    </div>
+    </sc-if>
+  </div>
+
+  <div style="position: relative; z-index: 2; height: clamp(56px, 7vw, 96px); display: flex; align-items: flex-end; gap: 4px; padding: 0 0;">
+    <sc-for list="{{ heroBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) {{ bar.delay }} backwards;"></div>
+    </sc-for>
+  </div>
+</div>
+
+<section data-screen-label="Service & Deliverables" style="margin: 20px 20px 0; background: #EEF2FB; border-radius: 28px; padding: clamp(64px, 8vw, 100px) clamp(20px, calc(8vw - 20px), 108px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>THE SERVICE — WHAT'S INCLUDED</span>
+    </div>
+    <h2 class="rv" style="margin: 18px 0 0; max-width: 940px; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.14; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Your identity, carried straight into the product <span style="color: #99A0B8;">— designed and built by one team.</span></h2>
+    <p class="rv" style="margin: 18px 0 0; max-width: 620px; font-size: 16px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Design system, build, launch, and the iterations after go-live — one engagement, scoped and quoted before work begins.</p>
+    <div class="svc-two rv" style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 3.5vw, 56px); margin-top: clamp(40px, 5vw, 64px); align-items: stretch;">
+      <div style="position: relative; border-radius: 18px; overflow: hidden; min-height: 480px; background: #0A1CB8; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: clamp(24px, 2.5vw, 34px); box-sizing: border-box;">
+        <img src="assets/photos/web-texture.jpg" alt="Web development texture" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="position: absolute; inset: 0; background: rgba(5,38,217,0.55); backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);"></div>
+        <div style="position: relative; background: #FFFFFF; border-radius: 12px; box-shadow: 0 28px 56px -24px rgba(2,10,60,0.55); padding: 16px; width: min(320px, 100%); box-sizing: border-box;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: flex; gap: 4px;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: #DCDEE6;"></span>
+            </span>
+            <span style="flex: 1; background: #F1F2F6; border-radius: 999px; padding: 4px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; color: #8A8FA3; text-align: center;">app.yourbrand.com</span>
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 12px;">
+            <span style="width: 44px; height: 68px; border-radius: 6px; background: #F7F8FB; border: 1px solid #E7E9F0; flex: none;"></span>
+            <span style="flex: 1;">
+              <span style="display: block; height: 8px; width: 60%; border-radius: 3px; background: #E3E5EE;"></span>
+              <span style="display: block; height: 5px; width: 84%; border-radius: 3px; background: #EDEEF3; margin-top: 7px;"></span>
+              <span style="display: block; height: 5px; width: 70%; border-radius: 3px; background: #EDEEF3; margin-top: 4px;"></span>
+              <span style="display: inline-block; margin-top: 10px; background: #0526D9; border-radius: 999px; height: 14px; width: 58px;"></span>
+            </span>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.1em; color: #8A8FA3; border-top: 1px solid #EEF0F4; margin-top: 14px; padding-top: 10px;">DESIGN SYSTEM → COMPONENTS → SHIP</div>
+        </div>
+        <div style="position: relative;">
+          <div style="display: flex; align-items: baseline; gap: 10px; color: #FFFFFF;">
+            <span style="font-size: clamp(52px, 4.6vw, 72px); font-weight: 650; letter-spacing: -0.03em; line-height: 1;">6–10</span>
+            <span style="font-size: 20px; font-weight: 500;">weeks</span>
+          </div>
+          <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.85); max-width: 340px; text-wrap: pretty;">from kickoff to a full site plus growth engine — shipped in phases, so value lands before the engagement ends.</p>
+          <div style="border-top: 1px solid rgba(255,255,255,0.32); margin-top: 18px; padding-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #B7C4FF;">DESIGN → BUILD → LAUNCH</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div style="border-top: 1px solid #D9DFF2; padding: 24px 2px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; padding-top: 4px;">01</span>
+          <span>
+            <span style="display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Website Design</span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Conversion-focused marketing sites, designed in your identity — fast and legible on every device.</p>
+          </span>
+          <span class="svc-proof" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #8A8FA3; padding-top: 7px;">ETHMAR — RANGE SITE</span>
+        </div>
+        <div style="border-top: 1px solid #D9DFF2; padding: 24px 2px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; padding-top: 4px;">02</span>
+          <span>
+            <span style="display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Web Apps</span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Dashboards, portals, and products — one team from design system to shipped, tested build.</p>
+          </span>
+          <span class="svc-proof" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #8A8FA3; padding-top: 7px;">STAGING · QA · LAUNCH</span>
+        </div>
+        <div style="border-top: 1px solid #D9DFF2; padding: 24px 2px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; padding-top: 4px;">03</span>
+          <span>
+            <span style="display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Mobile Apps</span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">iOS and Android companions that carry the same system — one codebase where it makes sense.</p>
+          </span>
+          <span class="svc-proof" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #8A8FA3; padding-top: 7px;">APP STORE · GOOGLE PLAY</span>
+        </div>
+        <div style="border-top: 1px solid #D9DFF2; padding: 24px 2px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; padding-top: 4px;">04</span>
+          <span>
+            <span style="display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Design Systems</span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Components, tokens, and layout rules your team can build on — the identity, made executable.</p>
+          </span>
+          <span class="svc-proof" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #8A8FA3; padding-top: 7px;">TOKENS · COMPONENTS · DOCS</span>
+        </div>
+        <div style="border-top: 1px solid #D9DFF2; border-bottom: 1px solid #D9DFF2; padding: 24px 2px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0526D9; padding-top: 4px;">05</span>
+          <span>
+            <span style="display: block; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; color: #0A0E2A;">Launch &amp; Iteration</span>
+            <p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 560px; text-wrap: pretty;">Go-live is the start — analytics wired, weekly iterations after launch so results compound.</p>
+          </span>
+          <span class="svc-proof" style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: #8A8FA3; padding-top: 7px;">POST-LAUNCH SUPPORT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Process" style="padding: clamp(64px, 9vw, 110px) clamp(24px, 8vw, 128px);">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <span>HOW BUILD WORK RUNS</span>
+    </div>
+    <h2 class="rv" style="margin: 18px 0 0; max-width: 720px; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">From kickoff to launch in 6–10 weeks</h2>
+    <div class="proc-grid rv" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 clamp(24px, 3vw, 44px); margin-top: clamp(40px, 5vw, 64px);">
+      <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 26px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 1</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 1</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 20px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Audit &amp; architecture</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">We map your content, funnel, and performance baseline — and agree what the site must do before any pixels.</p>
+      </div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 26px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 2</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 2–3</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 20px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Design in the system</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">Key pages designed in your identity — desktop and mobile together, approved as real screens.</p>
+      </div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 26px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 3</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 3–8</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 20px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Build &amp; content</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">A fast, accessible build — while copy, photography, and imagery land in parallel, not after.</p>
+      </div>
+      <div style="border-top: 1px solid #E7E7E1; padding: 20px 2px 26px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8FA3;">STEP 4</span>
+          <sc-if value="{{ showTimeline }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #0526D9; border: 1px solid #C9D2F2; border-radius: 999px; padding: 4px 10px; background: #FFFFFF;">WEEK 6–10</span></sc-if>
+        </div>
+        <div style="margin-top: 14px; font-size: 20px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">Launch &amp; iterate</div>
+        <p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; text-wrap: pretty;">QA, redirects, analytics — then weekly iterations against the baseline so results compound.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casework" data-screen-label="Casework" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="rv" style="max-width: 1240px; margin: 0 auto; background: #0526D9; border-radius: 24px; padding: clamp(32px, 4.5vw, 56px); color: #FFFFFF;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+          <span>DIGITAL CASEWORK</span>
+        </div>
+        <h2 style="margin: 16px 0 0; max-width: 560px; font-size: clamp(30px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Brands we carried onto the screen</h2>
+      </div>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 12px 22px; border-radius: 999px; font-weight: 500; font-size: 14.5px; flex: none;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Browse all casework →</a>
+    </div>
+    <div class="case-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.5vw, 44px);">
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;" style-hover="border-color: rgba(255,255,255,0.6);">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/ethmar.png" alt="Ethmar logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Ethmar</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">WEBSITE</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">The 30-product range carried onto a fast e-commerce site — the shelf system, translated to the screen.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">RANGE SITE</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">E-COMMERCE</span>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;" style-hover="border-color: rgba(255,255,255,0.6);">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/villate.png" alt="Villate logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Villate</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">SALES PLATFORM</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">Five villa styles, each with its own concept color, delivered onto campaign and sales platforms.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">5 STYLE BRANDS</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">CAMPAIGN</span>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px;" style-hover="border-color: rgba(255,255,255,0.6);">
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 14px 20px; width: fit-content; max-width: 100%;">
+          <img src="assets/logos/jaroudi.png" alt="Jaroudi Media logo" style="display: block; height: 48px; max-width: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF;">Jaroudi Media</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B7C4FF;">DIGITAL PRESENCE</span>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.75); text-wrap: pretty;">The scripted logotype flexed into a digital presence with the presence of an established production house.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">SHOWREEL SITE</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.06em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 5px 11px;">IDENTITY IN MOTION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="padding: 0 clamp(24px, 8vw, 128px) clamp(64px, 9vw, 110px);">
+  <div class="faq-grid rv" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
+    <div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
+        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+        <span>BUILD FAQ</span>
+      </div>
+      <h2 style="margin: 18px 0 0; font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A;">Before you brief us</h2>
+      <p style="margin: 20px 0 0; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 380px;">Still have questions? <a href="#" style="color: #0526D9; font-weight: 500;" style-hover="color: #0318A8;">Talk to a human →</a></p>
+    </div>
+    <div>
+      <div onclick="{{ faq0.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">How long does a website take?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq0.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq0.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">A marketing site lands in 6 weeks; a full site plus growth engine in 6–10. Work ships in phases, so pages go live before the engagement ends.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq1.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Can we edit the site ourselves after launch?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq1.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq1.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes — every build hands over an editable CMS with templates in your design system, plus a working session with your team. You own it all.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq2.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Who writes the content?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq2.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq2.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">We do — creative copywriting and photography are in-house, developed alongside the design rather than dropped in at the end.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq3.toggle }}" style="border-top: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">Can you redesign without losing our SEO?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq3.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq3.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Yes. The audit baselines your rankings first; redirects, structure, and performance are part of the build — we track the baseline through launch.</p>
+          </div>
+        </div>
+      </div>
+      <div onclick="{{ faq4.toggle }}" style="border-top: 1px solid #E7E7E1; border-bottom: 1px solid #E7E7E1; padding: 24px 4px; cursor: pointer;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div style="font-size: 17px; font-weight: 600; color: #0A0E2A;">What happens after launch?</div>
+          <div style="font-size: 22px; font-weight: 400; color: #0526D9; width: 24px; text-align: center; flex: none;">{{ faq4.icon }}</div>
+        </div>
+        <div style="display: grid; grid-template-rows: {{ faq4.rows }}; transition: grid-template-rows 0.3s ease;">
+          <div style="overflow: hidden; min-height: 0;">
+            <p style="margin: 14px 0 2px; font-size: 15px; line-height: 1.6; color: #565B72; max-width: 600px;">Every build includes post-launch support. Most clients move to an optimization retainer — the same team iterates weekly against the dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="margin: 0 20px; background: #0526D9; border-radius: 28px; overflow: hidden; position: relative; text-align: center; padding: clamp(72px, 10vw, 110px) clamp(20px, calc(8vw - 20px), 108px) 0;">
+  <div class="rv" style="position: relative; z-index: 2;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+      <span>START THE CLIMB</span>
+    </div>
+    <h2 style="margin: 22px auto 0; max-width: 760px; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; color: #FFFFFF; text-wrap: balance;">Ship a site that sells.</h2>
+    <p style="margin: 20px auto 0; max-width: 480px; font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.82);">One senior team from design system to deployed product — in weeks, not quarters.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+      <a href="#" style="background: #FFFFFF; color: #0526D9; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15.5px;" style-hover="background: #DFE7FF; color: #0526D9;">Book an intro call</a>
+      <a href="#" style="border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 13px 24px; border-radius: 999px; font-weight: 500; font-size: 15.5px;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,0.08); color: #FFFFFF;">Get a free audit</a>
+    </div>
+  </div>
+  <div style="margin-top: clamp(56px, 8vw, 84px); margin-left: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); margin-right: calc(clamp(20px, calc(8vw - 20px), 108px) * -1); height: clamp(90px, 12vw, 150px); display: flex; align-items: flex-end; gap: 4px;">
+    <sc-for list="{{ ctaBars }}" as="bar" hint-placeholder-count="22">
+      <div style="flex: 1; height: {{ bar.h }}; background: {{ bar.bg }}; border-radius: 5px 5px 0 0;"></div>
+    </sc-for>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="padding: clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <div class="rv" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+          <input type="email" placeholder="Enter your email" style="border: 1px solid #D8D8D0; border-radius: 999px; padding: 12px 20px; font-size: 14.5px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; width: min(250px, 100%); box-sizing: border-box; outline: none; background: #FFFFFF;">
+          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14.5px; flex: none;" style-hover="background: #0318A8; color: #FFFFFF;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 32px; margin-top: 72px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="Brand Identity Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand &amp; Corporate Identity</a>
+          <a href="Web Development Service.dc.html" style="font-size: 15px; color: #0526D9; font-weight: 600;" style-hover="color: #0318A8;">Web &amp; App Development</a>
+          <a href="Advertising and Growth Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Advertising &amp; Growth</a>
+          <a href="3D Modeling Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">3D Modeling</a>
+          <a href="Events and Exhibitions Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Events &amp; Exhibitions</a>
+          <a href="Print and Production Service.dc.html" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Print &amp; Production</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">About</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Casework</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Blog</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Careers</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">RESOURCES</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Free Audit</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Pricing</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Newsletter</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Brand Assets</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">LEGAL</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Privacy Policy</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Terms of Service</a>
+          <a href="#" style="font-size: 15px; color: #3A3F55;" style-hover="color: #0526D9;">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #ECECE6; margin-top: 72px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="uploads/SpeedIQ Website.html" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Home</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Services</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Blog</a>
+        <a href="#" style="font-size: 13.5px; color: #8A8FA3;" style-hover="color: #0526D9;">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:780},&quot;showHeroVisual&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Hero&quot;},&quot;showTimeline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Process&quot;}}">
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+
+  setupReveal(attempt) {
+    if (this.revealDone) return;
+    const els = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    if (!els.length) {
+      const self = this;
+      if ((attempt || 0) < 30) setTimeout(function () { self.setupReveal((attempt || 0) + 1); }, 200);
+      return;
+    }
+    this.revealDone = true;
+    if (typeof IntersectionObserver === 'undefined') return;
+    let ioAlive = false;
+    els.forEach(function (el) { el.setAttribute('data-rv', 'hide'); });
+    const io = new IntersectionObserver(function (entries) {
+      ioAlive = true;
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+        e.target.removeAttribute('data-rv');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+    this.revealIO = io;
+    setTimeout(function () {
+      if (!ioAlive) {
+        io.disconnect();
+        els.forEach(function (el) { el.removeAttribute('data-rv'); });
+      }
+    }, 2000);
+  }
+
+  componentDidMount() {
+    this.setupReveal(0);
+    this.initSmoothScroll();
+  }
+
+  initSmoothScroll() {
+    if (this._smoothInit || typeof window === 'undefined') return;
+    this._smoothInit = true;
+    if ('ontouchstart' in window) return;
+    this._ssTarget = window.scrollY;
+    this._ssCurrent = window.scrollY;
+    this._ssActive = false;
+    this._ssProgrammatic = false;
+    const self = this;
+    const maxY = function () { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); };
+    this._ssTick = function () {
+      const diff = self._ssTarget - self._ssCurrent;
+      if (Math.abs(diff) < 0.5) {
+        self._ssCurrent = self._ssTarget;
+        self._ssActive = false;
+        self._ssProgrammatic = true;
+        window.scrollTo(0, self._ssTarget);
+        return;
+      }
+      self._ssCurrent += diff * 0.115;
+      self._ssProgrammatic = true;
+      window.scrollTo(0, self._ssCurrent);
+      requestAnimationFrame(self._ssTick);
+    };
+    this._ssWheel = function (e) {
+      if (e.ctrlKey || e.metaKey || e.defaultPrevented) return;
+      e.preventDefault();
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 32;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      self._ssTarget = Math.max(0, Math.min(maxY(), self._ssTarget + d));
+      if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); }
+    };
+    this._ssScroll = function () {
+      if (self._ssProgrammatic) { self._ssProgrammatic = false; return; }
+      self._ssTarget = window.scrollY;
+      self._ssCurrent = window.scrollY;
+    };
+    window.addEventListener('wheel', this._ssWheel, { passive: false });
+    window.addEventListener('scroll', this._ssScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._ssWheel) window.removeEventListener('wheel', this._ssWheel);
+    if (this._ssScroll) window.removeEventListener('scroll', this._ssScroll);
+    if (this.revealIO) this.revealIO.disconnect();
+  }
+
+  renderVals() {
+    if (!this._revealKick) {
+      this._revealKick = true;
+      const self = this;
+      setTimeout(function () { self.setupReveal(0); }, 80);
+    }
+    const mkBars = function (count, minPct, maxPct) {
+      const out = [];
+      for (let i = 0; i < count; i++) {
+        const t = count === 1 ? 1 : i / (count - 1);
+        out.push({
+          h: (minPct + (maxPct - minPct) * t).toFixed(1) + '%',
+          bg: 'rgba(255,255,255,' + (0.12 + 0.34 * t).toFixed(3) + ')',
+          delay: (0.2 + i * 0.04).toFixed(2) + 's'
+        });
+      }
+      return out;
+    };
+    const faq = (i) => ({
+      rows: this.state.openFaq === i ? '1fr' : '0fr',
+      icon: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+    });
+    if (!this._goCasework) {
+      const self = this;
+      this._goCasework = function (e) {
+        e.preventDefault();
+        const el = document.getElementById('casework');
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + window.scrollY - 20;
+        if (self._ssWheel) { self._ssTarget = y; self._ssCurrent = window.scrollY; if (!self._ssActive) { self._ssActive = true; requestAnimationFrame(self._ssTick); } }
+        else window.scrollTo(0, y);
+      };
+    }
+    return {
+      heroBars: mkBars(22, 8, 100),
+      ctaBars: mkBars(22, 8, 100),
+      faq0: faq(0), faq1: faq(1), faq2: faq(2), faq3: faq(3), faq4: faq(4),
+      goCasework: this._goCasework,
+      showHeroVisual: this.props.showHeroVisual ?? true,
+      showTimeline: this.props.showTimeline ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
