@@ -79,9 +79,9 @@ export default function Nav({ prefix = "" }: { prefix?: string }) {
         </div>
 
         {OTHER.map(([label, href]) => (
-          <a key={label} href={prefix + href} className="nav-link">
+          <Link key={label} href={href} className="nav-link">
             {label}
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -146,9 +146,9 @@ export default function Nav({ prefix = "" }: { prefix?: string }) {
             
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {OTHER.map(([label, href]) => (
-                <a key={label} href={prefix + href} onClick={() => setMobileMenuOpen(false)} style={{ color: "#FFFFFF" }}>
+                <Link key={label} href={href} onClick={() => setMobileMenuOpen(false)} style={{ color: "#FFFFFF" }}>
                   {label}
-                </a>
+                </Link>
               ))}
             </div>
 
