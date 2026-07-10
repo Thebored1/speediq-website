@@ -1,9 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Footer from "./Footer";
 
 export default function RawPage({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
+  // The design bakes its own footer into every page; strip it and use the
+  // single React <Footer/> so the footer is consistent everywhere.
+  const content = html.replace(/<footer[\s\S]*?<\/footer>/i, "");
 
   useEffect(() => {
     const root = ref.current;
@@ -52,7 +56,12 @@ export default function RawPage({ html }: { html: string }) {
       io?.disconnect();
       handlers.forEach(({ item, h }) => item.removeEventListener("click", h));
     };
-  }, [html]);
+  }, [content]);
 
-  return <div ref={ref} dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <>
+      <div ref={ref} dangerouslySetInnerHTML={{ __html: content }} />
+      <Footer />
+    </>
+  );
 }

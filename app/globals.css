@@ -43,7 +43,6 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
 html, body { margin: 0; padding: 0; background: #FFFFFF; }
 [id] { scroll-margin-top: 24px; }
 body {
@@ -110,11 +109,8 @@ input::placeholder { color: #9A9FB3; }
 @media (max-width: 1100px) {
   .faq-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
 }
-.mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; color: #FFFFFF; padding: 8px; }
-.desktop-only { display: block; }
 @media (max-width: 860px) {
-  .nav-links, .desktop-only { display: none !important; }
-  .mobile-menu-btn { display: block !important; }
+  .nav-links { display: none !important; }
   .hero-h1 { font-size: clamp(44px, 11vw, 76px) !important; }
   .hero-p { width: auto !important; height: auto !important; }
   .yoy-pill { display: none !important; }

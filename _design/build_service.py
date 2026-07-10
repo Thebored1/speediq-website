@@ -70,11 +70,12 @@ def transform(html):
     style = "<style>\n" + "\n".join(media) + "\n</style>\n\n" if media else ""
     return (style + body).strip()
 
-for slug, fname in PAGES.items():
-    html = open(fname, encoding="utf-8").read()
-    out = transform(html)
-    d = os.path.join("..", "app", "services", slug)
-    os.makedirs(d, exist_ok=True)
-    with open(os.path.join(d, "content.html"), "w", encoding="utf-8") as f:
-        f.write(out)
-    print(slug, "->", len(out), "bytes; remaining {{}}:", out.count("{{"))
+if __name__ == "__main__":
+    for slug, fname in PAGES.items():
+        html = open(fname, encoding="utf-8").read()
+        out = transform(html)
+        d = os.path.join("..", "app", "services", slug)
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "content.html"), "w", encoding="utf-8") as f:
+            f.write(out)
+        print(slug, "->", len(out), "bytes; remaining {{}}:", out.count("{{"))
