@@ -1,7 +1,7 @@
 import Reveal from "../Reveal";
 import { MonoLabel } from "../common";
 
-function art(src: string, alt: string, rotate = 0) {
+function art(src: string, alt: string, scale = 1) {
   return (
     <img
       src={src}
@@ -11,17 +11,17 @@ function art(src: string, alt: string, rotate = 0) {
         height: "100%",
         objectFit: "contain",
         display: "block",
-        transform: rotate ? `rotate(${rotate}deg)` : undefined,
+        transform: scale !== 1 ? `scale(${scale})` : undefined,
       }}
     />
   );
 }
 
 const steps = [
-  ["STEP 1", "Audit your brand & channels", "We map your positioning, site performance, and funnel to find the gaps worth closing first.", art("/photos/Audit%20your%20brand%20%26%20channels.png", "Audit your brand & channels", 9)],
-  ["STEP 2", "Build the strategy", "Positioning, messaging, and a channel roadmap with clear targets — agreed before any pixels ship.", art("/photos/Build%20the%20strategy-Photoroom.png", "Build the strategy")],
-  ["STEP 3", "Launch across every touchpoint", "Identity, website, content, and campaigns shipped by one team — in weeks, not quarters.", art("/photos/Launch%20across%20every%20touchpoint-Photoroom.png", "Launch across every touchpoint")],
-  ["STEP 4", "Optimize with real-time insights", "Live dashboards track what's working; we iterate weekly so results compound.", art("/photos/Optimize%20with%20real-time%20insights-Photoroom.png", "Optimize with real-time insights")],
+  ["STEP 1", "Audit your brand & channels", "We map your positioning, site performance, and funnel to find the gaps worth closing first.", art("/photos/audit-feedback.png", "Audit your brand & channels", 1.1)],
+  ["STEP 2", "Build the strategy", "Positioning, messaging, and a channel roadmap with clear targets — agreed before any pixels ship.", art("/photos/build-the-strategy.png", "Build the strategy", 1.1)],
+  ["STEP 3", "Launch across every touchpoint", "Identity, website, content, and campaigns shipped by one team — in weeks, not quarters.", art("/photos/launch-across-every-touchpoint.png", "Launch across every touchpoint")],
+  ["STEP 4", "Optimize with real-time insights", "Live dashboards track what's working; we iterate weekly so results compound.", art("/photos/optimize-with-real-time-insights.png", "Optimize with real-time insights")],
 ] as const;
 
 export default function Process() {
