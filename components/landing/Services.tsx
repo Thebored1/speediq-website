@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { MOCKUPS } from "./mockups";
 
+const N = MOCKUPS.length;
+
 export default function Services() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -16,7 +18,7 @@ export default function Services() {
       const span = r.height - window.innerHeight;
       if (span <= 0) return;
       const p = Math.min(1, Math.max(0, -r.top / span));
-      const idx = Math.min(5, Math.max(0, Math.floor(p * 6)));
+      const idx = Math.min(N - 1, Math.max(0, Math.floor(p * N)));
       const hid = p > 0.07;
       setActive((a) => (a !== idx ? idx : a));
       setHdrHidden((h) => (h !== hid ? hid : h));
@@ -36,7 +38,7 @@ export default function Services() {
       data-screen-label="Services"
       style={{ margin: "20px 20px 0", background: "#EEF2FB", borderRadius: 28 }}
     >
-      <div ref={trackRef} style={{ position: "relative", height: "400vh" }}>
+      <div ref={trackRef} style={{ position: "relative", height: "470vh" }}>
         <div
           style={{
             position: "sticky",
@@ -63,7 +65,7 @@ export default function Services() {
               zIndex: 5,
             }}
           >
-            {[0, 1, 2, 3, 4, 5].map((i) => (
+            {Array.from({ length: N }, (_, i) => i).map((i) => (
               <div
                 key={i}
                 style={{

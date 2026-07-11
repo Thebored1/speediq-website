@@ -7,8 +7,9 @@ next-env.d.ts
 .DS_Store
 npm-debug.log*
 
-# raw design export (source for generators; large, regenerable inputs)
+# raw design exports (source for generators; large, regenerable inputs)
 /_design_cs
+/_design_handoff
 
 # python generator caches
 __pycache__/

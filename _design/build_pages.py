@@ -7,9 +7,21 @@ import re, os
 from build_service import bars  # reuse the 22-bar generator
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "..", "_design_cs", "uploads", "SpeedIQ Website design")
+# redesign handoff export (Home + 6 services + Casework/About/Contact)
+SRC = os.path.join(HERE, "..", "_design_handoff", "home-page-review", "project")
+# Case Study detail page is not in the handoff; keep the earlier export for it
+CS_SRC = os.path.join(HERE, "..", "_design_cs", "uploads", "SpeedIQ Website design")
 APP = os.path.join(HERE, "..", "app")
 SLUGS = ["ethmar", "jaroudi", "maceen", "villate", "leilnhar", "amesys"]
+
+SERVICE_PAGES = {
+    "brand-identity": "Brand Identity Service",
+    "web-development": "Web Development Service",
+    "advertising-growth": "Advertising and Growth Service",
+    "3d-modeling": "3D Modeling Service",
+    "events-exhibitions": "Events and Exhibitions Service",
+    "print-production": "Print and Production Service",
+}
 
 LINKS = {
     "Brand Identity Service.dc.html": "/services/brand-identity",
@@ -124,6 +136,13 @@ def write(path, content):
 
 
 if __name__ == "__main__":
+    # 6 service pages (nav stripped for the React <Nav> overlay)
+    for slug, fname in SERVICE_PAGES.items():
+        html = open(os.path.join(SRC, fname + ".dc.html"), encoding="utf-8").read()
+        out = simple_page(html)
+        write(os.path.join(APP, "services", slug, "content.html"), out)
+        print("svc/" + slug, "->", len(out), "bytes; leftover {{}}:", out.count("{{"), "nav:", out.count("<nav"))
+
     # simple single pages
     for out_slug, fname in [("about", "About"), ("contact", "Contact"), ("casework", "Casework")]:
         html = open(os.path.join(SRC, fname + ".dc.html"), encoding="utf-8").read()
@@ -131,8 +150,8 @@ if __name__ == "__main__":
         write(os.path.join(APP, out_slug, "content.html"), out)
         print(out_slug, "->", len(out), "bytes; leftover {{}}:", out.count("{{"), "nav:", out.count("<nav"))
 
-    # case study, one file per client
-    cs = open(os.path.join(SRC, "Case Study.dc.html"), encoding="utf-8").read()
+    # case study, one file per client (from the earlier export)
+    cs = open(os.path.join(CS_SRC, "Case Study.dc.html"), encoding="utf-8").read()
     for client in SLUGS:
         out = case_page(cs, client)
         write(os.path.join(APP, "casework", "_cases", client + ".html"), out)

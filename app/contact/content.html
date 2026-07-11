@@ -1,75 +1,86 @@
 <style>
+@keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 html, body { margin: 0; padding: 0; background: #FFFFFF; }
-    body { font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; }
-    a { color: #0526D9; text-decoration: none; }
-    a:hover { color: #0318A8; }
-    ::selection { background: #0A1CB8; color: #FFFFFF; }
-    @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-    @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-    .cf-input { border: 1px solid #D8D8D0; border-radius: 12px; padding: 13px 16px; font-size: 15px; font-family: 'Instrument Sans', sans-serif; color: #0A0E2A; background: #FFFFFF; outline: none; width: 100%; box-sizing: border-box; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-    .cf-input:focus { border-color: #0526D9; box-shadow: 0 0 0 3px rgba(5,38,217,0.12); }
-    .cf-input::placeholder { color: #9BA0B2; }
-    @media (max-width: 1100px) {
-      .ct-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
-      .lead-grid { grid-template-columns: 1fr !important; }
-      .floor-inner { grid-template-columns: 1fr !important; }
-      .floor-imgs { max-width: 560px; }
-    }
-    @media (max-width: 860px) {
-      .nav-links { display: none !important; }
-      .ct-h1 { font-size: clamp(40px, 10vw, 60px) !important; }
-      .cf-row { grid-template-columns: 1fr !important; }
-    }
+body { font-family: "Instrument Sans", Helvetica, Arial, sans-serif; color: #0A0E2A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: #0526D9; text-decoration: none; }
+a:hover { color: #0318A8; }
+::selection { background: #0A1CB8; color: #FFFFFF; }
+input::placeholder, textarea::placeholder { color: #9BA0B2; }
 </style>
 
 
 
-<div data-screen-label="Hero" style="position: relative; background: #0526D9; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; padding-top: 72px;">
+<!-- ============ HERO ============ -->
+<div data-screen-label="Hero" style="position:relative; background:#0526D9; color:#FFFFFF; overflow:hidden; display:flex; flex-direction:column; padding-top: 72px;">
 
   
 
-  <div style="position: relative; z-index: 3; padding: clamp(40px, 7vh, 72px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing: border-box;">
-    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
-      <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+  <div style="position:relative; z-index:3; padding:clamp(40px, 7vh, 72px) clamp(24px, 8vw, 128px) clamp(48px, 7vh, 80px); box-sizing:border-box;">
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.14em; color:#B7C4FF; display:flex; align-items:center; gap:10px; animation:riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.05s backwards;">
+      <span style="width:7px; height:7px; background:#B7C4FF; display:inline-block;"></span>
       <span>CONTACT — BOOK AN INTRO CALL</span>
     </div>
-    <h1 class="ct-h1" style="margin: 20px 0 0; max-width: 900px; font-size: clamp(56px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.028em; font-weight: 100; text-wrap: balance; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">Twenty minutes. Bring the brief.</h1>
-    <p style="margin: 24px 0 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 560px; text-wrap: pretty; animation: riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Tell us where the brand stands and where it needs to go. You'll leave the call knowing what we'd do, in what order, and what it costs.</p>
+    <h1 style="margin:20px 0 0; max-width:900px; font-size:clamp(56px, 5.6vw, 84px); line-height:1.04; letter-spacing:-0.028em; font-weight:100; text-wrap:balance; animation:riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.14s backwards;">Twenty minutes. Bring the brief.</h1>
+    <p style="margin:24px 0 0; font-size:18px; line-height:1.55; color:rgba(255,255,255,0.82); max-width:560px; text-wrap:pretty; animation:riseIn 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;">Tell us where the brand stands and where it needs to go. You'll leave the call knowing what we'd do, in what order, and what it costs.</p>
   </div>
 
-  <div style="position: relative; z-index: 2; height: clamp(56px, 7vw, 96px); display: flex; align-items: flex-end; gap: 4px;">
-    <div style="flex: 1; height: 8.0%; background: rgba(255,255,255,0.120); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.20s backwards;"></div><div style="flex: 1; height: 12.4%; background: rgba(255,255,255,0.136); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;"></div><div style="flex: 1; height: 16.8%; background: rgba(255,255,255,0.152); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.28s backwards;"></div><div style="flex: 1; height: 21.1%; background: rgba(255,255,255,0.169); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.32s backwards;"></div><div style="flex: 1; height: 25.5%; background: rgba(255,255,255,0.185); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.36s backwards;"></div><div style="flex: 1; height: 29.9%; background: rgba(255,255,255,0.201); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.40s backwards;"></div><div style="flex: 1; height: 34.3%; background: rgba(255,255,255,0.217); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;"></div><div style="flex: 1; height: 38.7%; background: rgba(255,255,255,0.233); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.48s backwards;"></div><div style="flex: 1; height: 43.0%; background: rgba(255,255,255,0.250); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.52s backwards;"></div><div style="flex: 1; height: 47.4%; background: rgba(255,255,255,0.266); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.56s backwards;"></div><div style="flex: 1; height: 51.8%; background: rgba(255,255,255,0.282); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.60s backwards;"></div><div style="flex: 1; height: 56.2%; background: rgba(255,255,255,0.298); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.64s backwards;"></div><div style="flex: 1; height: 60.6%; background: rgba(255,255,255,0.314); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.68s backwards;"></div><div style="flex: 1; height: 65.0%; background: rgba(255,255,255,0.330); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.72s backwards;"></div><div style="flex: 1; height: 69.3%; background: rgba(255,255,255,0.347); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.76s backwards;"></div><div style="flex: 1; height: 73.7%; background: rgba(255,255,255,0.363); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.80s backwards;"></div><div style="flex: 1; height: 78.1%; background: rgba(255,255,255,0.379); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.84s backwards;"></div><div style="flex: 1; height: 82.5%; background: rgba(255,255,255,0.395); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.88s backwards;"></div><div style="flex: 1; height: 86.9%; background: rgba(255,255,255,0.411); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.92s backwards;"></div><div style="flex: 1; height: 91.2%; background: rgba(255,255,255,0.428); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.96s backwards;"></div><div style="flex: 1; height: 95.6%; background: rgba(255,255,255,0.444); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.00s backwards;"></div><div style="flex: 1; height: 100.0%; background: rgba(255,255,255,0.460); border-radius: 5px 5px 0 0; transform-origin: bottom; animation: barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.04s backwards;"></div>
+  <div style="position:relative; z-index:2; height:clamp(56px, 7vw, 96px); display:flex; align-items:flex-end; gap:4px;">
+    <div style="flex:1; height:8.0%; background:rgba(255,255,255,0.120); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.20s backwards;"></div>
+    <div style="flex:1; height:12.4%; background:rgba(255,255,255,0.136); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.24s backwards;"></div>
+    <div style="flex:1; height:16.8%; background:rgba(255,255,255,0.152); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.28s backwards;"></div>
+    <div style="flex:1; height:21.1%; background:rgba(255,255,255,0.169); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.32s backwards;"></div>
+    <div style="flex:1; height:25.5%; background:rgba(255,255,255,0.185); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.36s backwards;"></div>
+    <div style="flex:1; height:29.9%; background:rgba(255,255,255,0.201); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.40s backwards;"></div>
+    <div style="flex:1; height:34.3%; background:rgba(255,255,255,0.217); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.44s backwards;"></div>
+    <div style="flex:1; height:38.7%; background:rgba(255,255,255,0.233); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.48s backwards;"></div>
+    <div style="flex:1; height:43.0%; background:rgba(255,255,255,0.250); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.52s backwards;"></div>
+    <div style="flex:1; height:47.4%; background:rgba(255,255,255,0.266); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.56s backwards;"></div>
+    <div style="flex:1; height:51.8%; background:rgba(255,255,255,0.282); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.60s backwards;"></div>
+    <div style="flex:1; height:56.2%; background:rgba(255,255,255,0.298); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.64s backwards;"></div>
+    <div style="flex:1; height:60.6%; background:rgba(255,255,255,0.314); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.68s backwards;"></div>
+    <div style="flex:1; height:65.0%; background:rgba(255,255,255,0.330); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.72s backwards;"></div>
+    <div style="flex:1; height:69.3%; background:rgba(255,255,255,0.347); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.76s backwards;"></div>
+    <div style="flex:1; height:73.7%; background:rgba(255,255,255,0.363); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.80s backwards;"></div>
+    <div style="flex:1; height:78.1%; background:rgba(255,255,255,0.379); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.84s backwards;"></div>
+    <div style="flex:1; height:82.5%; background:rgba(255,255,255,0.395); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.88s backwards;"></div>
+    <div style="flex:1; height:86.9%; background:rgba(255,255,255,0.411); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.92s backwards;"></div>
+    <div style="flex:1; height:91.2%; background:rgba(255,255,255,0.428); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 0.96s backwards;"></div>
+    <div style="flex:1; height:95.6%; background:rgba(255,255,255,0.444); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.00s backwards;"></div>
+    <div style="flex:1; height:100.0%; background:rgba(255,255,255,0.460); border-radius:5px 5px 0 0; transform-origin:bottom; animation:barGrow 0.7s cubic-bezier(0.22, 0.8, 0.36, 1) 1.04s backwards;"></div>
   </div>
 </div>
 
-<section data-screen-label="Contact Form" style="padding: clamp(56px, 7vw, 90px) clamp(24px, 8vw, 128px);">
-  <div class="ct-grid" style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: start;">
+<!-- ============ CONTACT FORM ============ -->
+<section data-screen-label="Contact Form" style="padding:clamp(56px, 7vw, 90px) clamp(24px, 8vw, 128px);">
+  <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:7fr 5fr; gap:64px; align-items:start;">
 
     <div>
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
-        <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em; color:#0526D9; display:flex; align-items:center; gap:10px;">
+        <span style="width:7px; height:7px; background:#0526D9; display:inline-block;"></span>
         <span>THE BRIEF</span>
       </div>
+
       
-      <div style="display: flex; flex-direction: column; gap: 18px; margin-top: 26px;">
-        <div class="cf-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="cf-name" style="font-size: 13.5px; font-weight: 600; color: #0A0E2A;">Name</label>
-            <input id="cf-name" type="text" class="cf-input" placeholder="Your name">
+      <div style="display:flex; flex-direction:column; gap:18px; margin-top:26px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label for="cf-name" style="font-size:13.5px; font-weight:600; color:#0A0E2A;">Name</label>
+            <input id="cf-name" type="text" placeholder="Your name" style="border:1px solid #D8D8D0; border-radius:12px; padding:13px 16px; font-size:15px; font-family:'Instrument Sans', sans-serif; color:#0A0E2A; background:#FFFFFF; outline:none; width:100%; box-sizing:border-box; transition:border-color 0.2s ease, box-shadow 0.2s ease;" style-focus="border-color:#0526D9; box-shadow:0 0 0 3px rgba(5,38,217,0.12);">
           </div>
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="cf-email" style="font-size: 13.5px; font-weight: 600; color: #0A0E2A;">Work email</label>
-            <input id="cf-email" type="email" class="cf-input" placeholder="you@company.com">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label for="cf-email" style="font-size:13.5px; font-weight:600; color:#0A0E2A;">Work email</label>
+            <input id="cf-email" type="email" placeholder="you@company.com" style="border:1px solid #D8D8D0; border-radius:12px; padding:13px 16px; font-size:15px; font-family:'Instrument Sans', sans-serif; color:#0A0E2A; background:#FFFFFF; outline:none; width:100%; box-sizing:border-box; transition:border-color 0.2s ease, box-shadow 0.2s ease;" style-focus="border-color:#0526D9; box-shadow:0 0 0 3px rgba(5,38,217,0.12);">
           </div>
         </div>
-        <div class="cf-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="cf-company" style="font-size: 13.5px; font-weight: 600; color: #0A0E2A;">Company</label>
-            <input id="cf-company" type="text" class="cf-input" placeholder="Company or brand">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label for="cf-company" style="font-size:13.5px; font-weight:600; color:#0A0E2A;">Company</label>
+            <input id="cf-company" type="text" placeholder="Company or brand" style="border:1px solid #D8D8D0; border-radius:12px; padding:13px 16px; font-size:15px; font-family:'Instrument Sans', sans-serif; color:#0A0E2A; background:#FFFFFF; outline:none; width:100%; box-sizing:border-box; transition:border-color 0.2s ease, box-shadow 0.2s ease;" style-focus="border-color:#0526D9; box-shadow:0 0 0 3px rgba(5,38,217,0.12);">
           </div>
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="cf-need" style="font-size: 13.5px; font-weight: 600; color: #0A0E2A;">What do you need?</label>
-            <select id="cf-need" class="cf-input" style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22><path d=%22M1 1l5 5 5-5%22 stroke=%22%238A8FA3%22 stroke-width=%222%22 fill=%22none%22 stroke-linecap=%22round%22/></svg>'); background-repeat: no-repeat; background-position: right 16px center; cursor: pointer;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label for="cf-need" style="font-size:13.5px; font-weight:600; color:#0A0E2A;">What do you need?</label>
+            <select id="cf-need" style="border:1px solid #D8D8D0; border-radius:12px; padding:13px 16px; font-size:15px; font-family:'Instrument Sans', sans-serif; color:#0A0E2A; background:#FFFFFF; outline:none; width:100%; box-sizing:border-box; transition:border-color 0.2s ease, box-shadow 0.2s ease; appearance:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22><path d=%22M1 1l5 5 5-5%22 stroke=%22%238A8FA3%22 stroke-width=%222%22 fill=%22none%22 stroke-linecap=%22round%22/></svg>'); background-repeat:no-repeat; background-position:right 16px center; cursor:pointer;" style-focus="border-color:#0526D9; box-shadow:0 0 0 3px rgba(5,38,217,0.12);">
               <option>Brand &amp; corporate identity</option>
               <option>Packaging &amp; print production</option>
               <option>Website or app</option>
@@ -80,171 +91,152 @@ html, body { margin: 0; padding: 0; background: #FFFFFF; }
             </select>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-          <label for="cf-msg" style="font-size: 13.5px; font-weight: 600; color: #0A0E2A;">Where does the brand stand today?</label>
-          <textarea id="cf-msg" rows="5" class="cf-input" placeholder="A sentence or two is enough — what you have, what's not working, when you need it." style="resize: vertical; min-height: 120px;"></textarea>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label for="cf-msg" style="font-size:13.5px; font-weight:600; color:#0A0E2A;">Where does the brand stand today?</label>
+          <textarea id="cf-msg" rows="5" placeholder="A sentence or two is enough — what you have, what's not working, when you need it." style="border:1px solid #D8D8D0; border-radius:12px; padding:13px 16px; font-size:15px; font-family:'Instrument Sans', sans-serif; color:#0A0E2A; background:#FFFFFF; outline:none; width:100%; box-sizing:border-box; transition:border-color 0.2s ease, box-shadow 0.2s ease; resize:vertical; min-height:120px;" style-focus="border-color:#0526D9; box-shadow:0 0 0 3px rgba(5,38,217,0.12);"></textarea>
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-top: 6px;">
-          <span style="font-size: 13px; color: #8A8FA3;">We reply within one business day.</span>
-          <a href="#" style="background: #0526D9; color: #FFFFFF; padding: 14px 28px; border-radius: 999px; font-weight: 600; font-size: 15.5px;">Request the call →</a>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:6px;">
+          <span style="font-size:13px; color:#8A8FA3;">We reply within one business day.</span>
+          <a href="#" onClick="" style="background:#0526D9; color:#FFFFFF; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15.5px; transition:background 0.2s ease;">Request the call →</a>
         </div>
       </div>
       
+
       
-      <div style="margin-top: 26px; background: #EEF2FB; border-radius: 18px; padding: clamp(32px, 4vw, 48px); text-align: center;">
-        <div style="width: 52px; height: 52px; border-radius: 999px; background: #0526D9; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto;">✓</div>
-        <h3 style="margin: 20px 0 0; font-size: clamp(24px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; color: #0A0E2A;">Brief received.</h3>
-        <p style="margin: 12px auto 0; max-width: 380px; font-size: 15.5px; line-height: 1.6; color: #565B72;">We'll come back within one business day with two or three times for the call.</p>
-        <a href="/casework" style="display: inline-block; margin-top: 24px; border: 1px solid #D8D8D0; color: #0A0E2A; padding: 12px 22px; border-radius: 999px; font-weight: 500; font-size: 14.5px;">Browse the casework meanwhile</a>
+      <div style="margin-top:26px; background:#EEF2FB; border-radius:18px; padding:clamp(32px, 4vw, 48px); text-align:center;">
+        <div style="width:52px; height:52px; border-radius:999px; background:#0526D9; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:24px; margin:0 auto;">✓</div>
+        <h3 style="margin:20px 0 0; font-size:clamp(24px, 2.4vw, 32px); font-weight:500; letter-spacing:-0.02em; color:#0A0E2A;">Brief received.</h3>
+        <p style="margin:12px auto 0; max-width:380px; font-size:15.5px; line-height:1.6; color:#565B72;">We'll come back within one business day with two or three times for the call.</p>
+        <a href="/casework" style="display:inline-block; margin-top:24px; border:1px solid #D8D8D0; color:#0A0E2A; padding:12px 22px; border-radius:999px; font-weight:500; font-size:14.5px; transition:border-color 0.2s ease;">Browse the casework meanwhile</a>
       </div>
       
     </div>
 
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-      <div style="background: #0526D9; border-radius: 18px; color: #FFFFFF; padding: clamp(26px, 3vw, 36px);">
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; color: #B7C4FF;">WHAT HAPPENS NEXT</div>
-        <div style="display: flex; gap: 16px; border-top: 1px solid rgba(255,255,255,0.22); margin-top: 18px; padding-top: 16px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #B7C4FF; flex: none; padding-top: 2px;">01</span>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="background:#0526D9; border-radius:18px; color:#FFFFFF; padding:clamp(26px, 3vw, 36px);">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; color:#B7C4FF;">WHAT HAPPENS NEXT</div>
+        <div style="display:flex; gap:16px; border-top:1px solid rgba(255,255,255,0.22); margin-top:18px; padding-top:16px;">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#B7C4FF; flex:none; padding-top:2px;">01</span>
           <div>
-            <div style="font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">The intro call — 20 min</div>
-            <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.78);">You talk, we listen. Where the brand is, where it's going, what's in the way.</p>
+            <div style="font-size:15.5px; font-weight:600; letter-spacing:-0.01em;">The intro call — 20 min</div>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.78);">You talk, we listen. Where the brand is, where it's going, what's in the way.</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px; border-top: 1px solid rgba(255,255,255,0.22); margin-top: 16px; padding-top: 16px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #B7C4FF; flex: none; padding-top: 2px;">02</span>
+        <div style="display:flex; gap:16px; border-top:1px solid rgba(255,255,255,0.22); margin-top:16px; padding-top:16px;">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#B7C4FF; flex:none; padding-top:2px;">02</span>
           <div>
-            <div style="font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">The free audit</div>
-            <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.78);">We review what you have — identity, materials, presence — and tell you honestly what holds and what doesn't.</p>
+            <div style="font-size:15.5px; font-weight:600; letter-spacing:-0.01em;">The free audit</div>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.78);">We review what you have — identity, materials, presence — and tell you honestly what holds and what doesn't.</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px; border-top: 1px solid rgba(255,255,255,0.22); margin-top: 16px; padding-top: 16px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #B7C4FF; flex: none; padding-top: 2px;">03</span>
+        <div style="display:flex; gap:16px; border-top:1px solid rgba(255,255,255,0.22); margin-top:16px; padding-top:16px;">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#B7C4FF; flex:none; padding-top:2px;">03</span>
           <div>
-            <div style="font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">The plan &amp; fixed quote</div>
-            <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.78);">What we'd do, in what order, at what price. No retainer required, no surprises later.</p>
+            <div style="font-size:15.5px; font-weight:600; letter-spacing:-0.01em;">The plan &amp; fixed quote</div>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.78);">What we'd do, in what order, at what price. No retainer required, no surprises later.</p>
           </div>
         </div>
       </div>
-      <div style="border: 1px solid #E7E9F0; border-radius: 18px; padding: clamp(26px, 3vw, 36px);">
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; color: #8A8FA3;">PREFER EMAIL?</div>
-        <a href="mailto:hello@speediq.com" style="display: inline-block; margin-top: 12px; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; letter-spacing: -0.01em; color: #0526D9;">hello@speediq.com</a>
-        <p style="margin: 10px 0 0; font-size: 13.5px; line-height: 1.55; color: #565B72;">Attach anything — a deck, a logo file, a photo of the storefront. It all helps.</p>
+      <div style="border:1px solid #E7E9F0; border-radius:18px; padding:clamp(26px, 3vw, 36px);">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; color:#8A8FA3;">PREFER EMAIL?</div>
+        <a href="mailto:hello@speediq.ai" style="display:inline-block; margin-top:12px; font-size:clamp(18px, 1.8vw, 22px); font-weight:600; letter-spacing:-0.01em; color:#0526D9; transition:color 0.2s ease;">hello@speediq.ai</a>
+        <p style="margin:10px 0 0; font-size:13.5px; line-height:1.55; color:#565B72;">Attach anything — a deck, a logo file, a photo of the storefront. It all helps.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section data-screen-label="What Calls Become" style="margin: 0 20px; background: #EEF2FB; border-radius: 28px; padding: clamp(56px, 7vw, 90px) clamp(20px, calc(8vw - 20px), 108px);">
-  <div style="max-width: 1240px; margin: 0 auto;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-      <div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #0526D9; display: flex; align-items: center; gap: 10px;">
-          <span style="width: 7px; height: 7px; background: #0526D9; display: inline-block;"></span>
-          <span>WHAT INTRO CALLS BECOME</span>
-        </div>
-        <h2 style="margin: 18px 0 0; max-width: 680px; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.12; letter-spacing: -0.025em; font-weight: 500; color: #0A0E2A; text-wrap: balance;">Every case started with this conversation</h2>
-      </div>
-      <a href="/casework" style="font-size: 15px; font-weight: 600; color: #0526D9; flex: none;">All casework →</a>
-    </div>
-    <div class="lead-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: clamp(32px, 4vw, 48px);">
-      <a href="/casework/ethmar" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E7E9F0; border-radius: 18px; overflow: hidden; color: inherit; transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 0.8, 0.36, 1);">
-        <div style="position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #EEF2FB;">
-          <img src="/photos/ethmar-cream-can.png" alt="Ethmar cream can packaging" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #0526D9;">A CALL ABOUT ONE LABEL —</span>
-          <span style="font-size: 17px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">became a 30-package shelf system for Ethmar</span>
-        </div>
-      </a>
-      <a href="/casework/villate" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E7E9F0; border-radius: 18px; overflow: hidden; color: inherit; transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 0.8, 0.36, 1);">
-        <div style="position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #EEF2FB;">
-          <img src="/photos/classic-interior.png" alt="Villate classic style interior render" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;">
-        </div>
-        <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #0526D9;">A CALL ABOUT A LOGO —</span>
-          <span style="font-size: 17px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">became five photoreal villa worlds for Villate</span>
-        </div>
-      </a>
-      <a href="/casework/maceen" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E7E9F0; border-radius: 18px; overflow: hidden; color: inherit; transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 0.8, 0.36, 1);">
-        <div style="position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #0A0E2A;">
-          <img src="/photos/maceen-booth-alt.png" alt="Maceen Capital booth concept" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: #0526D9;">A CALL ABOUT A REPORT —</span>
-          <span style="font-size: 17px; font-weight: 600; color: #0A0E2A; letter-spacing: -0.01em;">became a full identity and expo booth for Maceen</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section data-screen-label="Meet Us On The Floor" style="padding: clamp(56px, 7vw, 90px) clamp(24px, 8vw, 128px);">
-  <div class="floor-band" style="max-width: 1240px; margin: 0 auto; position: relative; border-radius: 24px; overflow: hidden; padding: clamp(32px, 4.5vw, 64px); box-sizing: border-box;">
-    <img src="/photos/3d-texture.jpg" alt="Blue texture" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
-    <div class="floor-inner" style="position: relative; z-index: 2; display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 4vw, 56px); align-items: center;">
-      <div style="color: #FFFFFF;">
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; color: #B7C4FF; display: flex; align-items: center; gap: 10px;">
-          <span style="width: 7px; height: 7px; background: #B7C4FF; display: inline-block;"></span>
+<!-- ============ MEET US ON THE FLOOR ============ -->
+<section data-screen-label="Meet Us On The Floor" style="padding:clamp(56px, 7vw, 90px) clamp(24px, 8vw, 128px);">
+  <div style="max-width:1240px; margin:0 auto; position:relative; border-radius:24px; overflow:hidden; padding:clamp(32px, 4.5vw, 64px); box-sizing:border-box;">
+    <img src="/photos/3d-texture.jpg" alt="Blue texture" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+    <div style="position:relative; z-index:2; display:grid; grid-template-columns:5fr 7fr; gap:clamp(32px, 4vw, 56px); align-items:center;">
+      <div style="color:#FFFFFF;">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; color:#B7C4FF; display:flex; align-items:center; gap:10px;">
+          <span style="width:7px; height:7px; background:#B7C4FF; display:inline-block;"></span>
           <span>OR MEET THE WORK IN PERSON</span>
         </div>
-        <h3 style="margin: 14px 0 0; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.14; letter-spacing: -0.02em; font-weight: 500; text-wrap: balance;">Our references stand on expo floors.</h3>
-        <p style="margin: 12px 0 0; font-size: 15.5px; line-height: 1.6; color: rgba(255,255,255,0.85); text-wrap: pretty;">Stands for EADS Defence &amp; Security — winner of the best exhibition award — and HBL Power Systems, approved in 3D and built for the floor. Ask on the call and we'll point you to work you can walk up to.</p>
-        <a href="/casework" style="display: inline-block; margin-top: 24px; background: #FFFFFF; color: #0526D9; padding: 13px 24px; border-radius: 999px; font-weight: 600; font-size: 15px;">See where →</a>
+        <h3 style="margin:14px 0 0; font-size:clamp(26px, 2.6vw, 38px); line-height:1.14; letter-spacing:-0.02em; font-weight:500; text-wrap:balance;">Our references stand on expo floors.</h3>
+        <p style="margin:12px 0 0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.85); text-wrap:pretty;">Stands for EADS Defence &amp; Security — winner of the best exhibition award — and HBL Power Systems, approved in 3D and built for the floor. Ask on the call and we'll point you to work you can walk up to.</p>
+        <a href="/casework" style="display:inline-block; margin-top:24px; background:#FFFFFF; color:#0526D9; padding:13px 24px; border-radius:999px; font-weight:600; font-size:15px; transition:background 0.2s ease;">See where →</a>
       </div>
-      <div class="floor-imgs" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-        <div style="background: #FFFFFF; border-radius: 14px; padding: 10px; box-shadow: 0 32px 64px -24px rgba(3,10,50,0.55); transform: rotate(-1.2deg);">
-          <div style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4 / 3; background: #EEF2FB;">
-            <img src="/photos/eads-stand.png" alt="EADS Defence and Security exhibition stand" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:#FFFFFF; border-radius:14px; padding:10px; box-shadow:0 32px 64px -24px rgba(3,10,50,0.55); transform:rotate(-1.2deg);">
+          <div style="position:relative; border-radius:8px; overflow:hidden; aspect-ratio:4 / 3; background:#EEF2FB;">
+            <img src="/photos/eads-stand.png" alt="EADS Defence and Security exhibition stand" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:right; display:block;">
           </div>
-          <div style="padding: 10px 4px 4px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.1em; color: #565B72;">EADS — BEST EXHIBITION AWARD</div>
+          <div style="padding:10px 4px 4px; font-family:'IBM Plex Mono', monospace; font-size:8.5px; letter-spacing:0.1em; color:#565B72;">EADS — BEST EXHIBITION AWARD</div>
         </div>
-        <div style="background: #FFFFFF; border-radius: 14px; padding: 10px; box-shadow: 0 32px 64px -24px rgba(3,10,50,0.55); transform: rotate(1.2deg); margin-top: 18px;">
-          <div style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4 / 3; background: #EEF2FB;">
-            <img src="/photos/hbl-booth.png" alt="HBL Power Systems exhibition booth" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="background:#FFFFFF; border-radius:14px; padding:10px; box-shadow:0 32px 64px -24px rgba(3,10,50,0.55); transform:rotate(1.2deg); margin-top:18px;">
+          <div style="position:relative; border-radius:8px; overflow:hidden; aspect-ratio:4 / 3; background:#EEF2FB;">
+            <img src="/photos/hbl-booth.png" alt="HBL Power Systems exhibition booth" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
           </div>
-          <div style="padding: 10px 4px 4px; font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.1em; color: #565B72;">HBL POWER SYSTEMS — EXPO BOOTH</div>
+          <div style="padding:10px 4px 4px; font-family:'IBM Plex Mono', monospace; font-size:8.5px; letter-spacing:0.1em; color:#565B72;">HBL POWER SYSTEMS — EXPO BOOTH</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer data-screen-label="Footer" style="padding: clamp(40px, 6vw, 64px) clamp(24px, 8vw, 128px) 36px; border-top: 1px solid #ECECE6;">
-  <div style="max-width: 1240px; margin: 0 auto;">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer" style="padding:clamp(56px, 8vw, 88px) clamp(24px, 8vw, 128px) 36px;">
+  <div style="max-width:1240px; margin:0 auto;">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:48px; flex-wrap:wrap;">
       <div>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; flex: none;"><path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path></svg>
-          <span style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #0A0E2A;">SpeedIQ</span>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <svg width="28" height="20" viewBox="0 0 409 290" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; flex:none;">
+            <path d="M239.482 0.348289L114.082 0.608379L23.9201 112.704C-8.23713 152.685 -7.9415 209.739 24.6283 249.384C68.4223 302.691 150.222 302.034 193.154 248.03L319.313 89.3327L332.87 89.3046L332.87 101.999L188.503 289.663L312.209 289.406L408.209 165.226L407.58 -1.3369e-05L266.596 0.292406L121.046 183.381C116.816 188.702 108.739 188.719 104.487 183.415C101.392 179.555 101.381 174.068 104.459 170.195L239.482 0.348289Z" fill="#0526D9"></path>
+          </svg>
+          <span style="font-size:20px; font-weight:700; letter-spacing:-0.02em; color:#0A0E2A;">SpeedIQ</span>
         </div>
-        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #565B72; max-width: 280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
-      </div>
-      <div style="display: flex; gap: 48px; flex-wrap: wrap;">
+        <p style="margin:12px 0 0; font-size:14.5px; line-height:1.6; color:#565B72; max-width:280px;">The full-stack digital agency for brands that want to climb, quarter after quarter.</p>
+        <a href="mailto:hello@speediq.ai" style="display:inline-block; margin-top:16px; font-size:15.5px; font-weight:600; color:#0526D9; transition:color 0.2s ease;">hello@speediq.ai</a>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">COMPANY</div>
-          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
-            <a href="/about" style="font-size: 15px; color: #3A3F55;">About</a>
-            <a href="/casework" style="font-size: 15px; color: #3A3F55;">Casework</a>
-            <a href="/contact" style="font-size: 15px; color: #0526D9; font-weight: 600;">Contact</a>
+          <a href="/contact" style="display:inline-block; margin-top:20px; background:#0526D9; color:#FFFFFF; padding:12px 24px; border-radius:999px; font-weight:600; font-size:14.5px; transition:background 0.2s ease;">Book an intro call</a>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap:32px; flex:1 1 480px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.12em; color:#8A8FA3;">SERVICES</div>
+          <div style="display:flex; flex-direction:column; align-items:flex-start; gap:13px; margin-top:20px;">
+            <a href="/services/brand-identity" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Brand &amp; Corporate Identity</a>
+            <a href="/services/web-development" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Web &amp; App Development</a>
+            <a href="/services/advertising-growth" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Advertising &amp; Growth</a>
+            <a href="/services/3d-modeling" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">3D Modeling</a>
+            <a href="/services/events-exhibitions" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Events &amp; Exhibitions</a>
+            <a href="/services/print-production" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Print &amp; Production</a>
           </div>
         </div>
         <div>
-          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8A8FA3;">SERVICES</div>
-          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 20px;">
-            <a href="/services/brand-identity" style="font-size: 15px; color: #3A3F55;">Brand &amp; Corporate Identity</a>
-            <a href="/services/web-development" style="font-size: 15px; color: #3A3F55;">Web &amp; App Development</a>
-            <a href="/services/advertising-growth" style="font-size: 15px; color: #3A3F55;">Advertising &amp; Growth</a>
-            <a href="/services/3d-modeling" style="font-size: 15px; color: #3A3F55;">3D Modeling</a>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.12em; color:#8A8FA3;">CASE STUDIES</div>
+          <div style="display:flex; flex-direction:column; align-items:flex-start; gap:13px; margin-top:20px;">
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Ethmar</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Jaroudi Media</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Maceen Capital</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Villate</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Leil Nhar</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Amesys Bull</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.12em; color:#8A8FA3;">COMPANY</div>
+          <div style="display:flex; flex-direction:column; align-items:flex-start; gap:13px; margin-top:20px;">
+            <a href="/about" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">About</a>
+            <a href="/casework" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Casework</a>
+            <a href="https://all.speediq.ai" target="_blank" rel="noopener" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">CRM — all.speediq.ai</a>
+            <a href="/contact" style="font-size:15px; color:#3A3F55; transition:color 0.2s ease;">Contact</a>
           </div>
         </div>
       </div>
     </div>
-    <div style="border-top: 1px solid #ECECE6; margin-top: 56px; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-      <div style="font-size: 13.5px; color: #8A8FA3;">© 2026 SpeedIQ Inc. All rights reserved.</div>
-      <div style="display: flex; gap: 24px;">
-        <a href="/" style="font-size: 13.5px; color: #8A8FA3;">Home</a>
-        <a href="/casework" style="font-size: 13.5px; color: #8A8FA3;">Casework</a>
-        <a href="/about" style="font-size: 13.5px; color: #8A8FA3;">About</a>
+
+    <div style="border-top:1px solid #ECECE6; margin-top:72px; padding-top:26px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div style="font-size:13.5px; color:#8A8FA3;">© 2026 SpeedIQ. All rights reserved.</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap;">
+        <a href="Home Page.dc.html" style="font-size:13.5px; color:#8A8FA3; transition:color 0.2s ease;">Home</a>
+        <a href="/casework" style="font-size:13.5px; color:#8A8FA3; transition:color 0.2s ease;">Casework</a>
+        <a href="/about" style="font-size:13.5px; color:#8A8FA3; transition:color 0.2s ease;">About</a>
+        <a href="/contact" style="font-size:13.5px; color:#8A8FA3; transition:color 0.2s ease;">Contact</a>
       </div>
     </div>
   </div>

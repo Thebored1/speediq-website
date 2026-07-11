@@ -2,312 +2,404 @@ import type { ReactNode } from "react";
 
 export const MOCKUPS: ReactNode[] = [
   /* service 0 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Brand & Corporate Identity</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Logos, complete identities, guidelines, and collateral — positioning that makes you unmistakable at every touchpoint. From Ethmar's thirty-plus package range to Maceen Capital's annual reports, we build identities that hold together everywhere they show up.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>LOGOS & IDENTITIES</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>BRAND GUIDELINES</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ANNUAL REPORTS & BROCHURES</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>SALES COLLATERAL</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>CREATIVE COPYWRITING</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/guidelines.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "20px", width: "min(340px, 88%)", boxSizing: "border-box" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}>
-                  <span>ETHMAR — BRAND GUIDELINES</span>
-                  <span style={{ color: "#0A0E2A" }}>V2.1</span>
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Brand & Corporate Identity</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Logos, complete identities, guidelines, and collateral — positioning that makes you unmistakable at every touchpoint. From Ethmar's thirty-plus package range to Maceen Capital's annual reports, we build identities that hold together everywhere they show up.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>LOGOS & IDENTITIES</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>BRAND GUIDELINES</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ANNUAL REPORTS & BROCHURES</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>SALES COLLATERAL</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>CREATIVE COPYWRITING</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "18px", borderTop: "1px solid #EEF0F4", marginTop: "12px", paddingTop: "14px" }}>
-                  <span style={{ fontSize: "58px", fontWeight: "650", letterSpacing: "-0.03em", lineHeight: "0.9", color: "#0A0E2A" }}>Aa</span>
-                  <span>
-                    <span style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#0A0E2A" }}>Instrument Sans</span>
-                    <span style={{ display: "block", fontSize: "10.5px", color: "#8A8FA3", marginTop: "3px" }}>Regular · Medium · Bold</span>
-                    <span style={{ display: "block", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.08em", color: "#8A8FA3", marginTop: "8px" }}>HEADLINES −2% TRACKING</span>
-                  </span>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/guidelines.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "20px", width: "min(340px, 88%)", boxSizing: "border-box" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}>
+                      <span>ETHMAR — BRAND GUIDELINES</span>
+                      <span style={{ color: "#0A0E2A" }}>V2.1</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "18px", borderTop: "1px solid #EEF0F4", marginTop: "12px", paddingTop: "14px" }}>
+                      <span style={{ fontSize: "58px", fontWeight: "650", letterSpacing: "-0.03em", lineHeight: "0.9", color: "#0A0E2A" }}>Aa</span>
+                      <span>
+                        <span style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#0A0E2A" }}>Instrument Sans</span>
+                        <span style={{ display: "block", fontSize: "10.5px", color: "#8A8FA3", marginTop: "3px" }}>Regular · Medium · Bold</span>
+                        <span style={{ display: "block", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.08em", color: "#8A8FA3", marginTop: "8px" }}>HEADLINES −2% TRACKING</span>
+                      </span>
+                    </div>
+                    <div style={{ display: "flex", gap: "6px", marginTop: "16px" }}>
+                      <div style={{ flex: "1" }}>
+                        <div style={{ height: "44px", borderRadius: "6px", background: "#1E7A46", border: "1px solid rgba(10,14,42,0.08)" }}></div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>1E7A46</div>
+                      </div>
+                      <div style={{ flex: "1" }}>
+                        <div style={{ height: "44px", borderRadius: "6px", background: "#F4B840", border: "1px solid rgba(10,14,42,0.08)" }}></div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>F4B840</div>
+                      </div>
+                      <div style={{ flex: "1" }}>
+                        <div style={{ height: "44px", borderRadius: "6px", background: "#E2582A", border: "1px solid rgba(10,14,42,0.08)" }}></div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>E2582A</div>
+                      </div>
+                      <div style={{ flex: "1" }}>
+                        <div style={{ height: "44px", borderRadius: "6px", background: "#0A0E2A", border: "1px solid rgba(10,14,42,0.08)" }}></div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>0A0E2A</div>
+                      </div>
+                      <div style={{ flex: "1" }}>
+                        <div style={{ height: "44px", borderRadius: "6px", background: "#F4F1EA", border: "1px solid rgba(10,14,42,0.08)" }}></div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>F4F1EA</div>
+                      </div>
+                    </div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.1em", color: "#8A8FA3", borderTop: "1px solid #EEF0F4", marginTop: "14px", paddingTop: "10px" }}>PRINT · PACKAGING · DIGITAL</div>
+                  </div>
                 </div>
-                <div style={{ display: "flex", gap: "6px", marginTop: "16px" }}>
-                  <div style={{ flex: "1" }}>
-                    <div style={{ height: "44px", borderRadius: "6px", background: "#1E7A46", border: "1px solid rgba(10,14,42,0.08)" }}></div>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>1E7A46</div>
-                  </div>
-                  <div style={{ flex: "1" }}>
-                    <div style={{ height: "44px", borderRadius: "6px", background: "#F4B840", border: "1px solid rgba(10,14,42,0.08)" }}></div>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>F4B840</div>
-                  </div>
-                  <div style={{ flex: "1" }}>
-                    <div style={{ height: "44px", borderRadius: "6px", background: "#E2582A", border: "1px solid rgba(10,14,42,0.08)" }}></div>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>E2582A</div>
-                  </div>
-                  <div style={{ flex: "1" }}>
-                    <div style={{ height: "44px", borderRadius: "6px", background: "#0A0E2A", border: "1px solid rgba(10,14,42,0.08)" }}></div>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>0A0E2A</div>
-                  </div>
-                  <div style={{ flex: "1" }}>
-                    <div style={{ height: "44px", borderRadius: "6px", background: "#F4F1EA", border: "1px solid rgba(10,14,42,0.08)" }}></div>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", color: "#8A8FA3", textAlign: "center", marginTop: "5px" }}>F4F1EA</div>
-                  </div>
-                </div>
-                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.1em", color: "#8A8FA3", borderTop: "1px solid #EEF0F4", marginTop: "14px", paddingTop: "10px" }}>PRINT · PACKAGING · DIGITAL</div>
               </div>
             </div>
-          </div>
-          </div></>,
+          </>,
   /* service 1 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Web & App Development</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Fast, conversion-focused websites and apps — designed, built, and shipped in weeks. One team carries your identity straight into the product: design system, build, launch, and the iterations after go-live.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>WEBSITE DESIGN</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>WEB APPS</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MOBILE APPS</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/web-texture.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", width: "min(370px, 92%)", boxSizing: "border-box", overflow: "visible", position: "relative" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", borderBottom: "1px solid #EEF0F4" }}>
-                  <span style={{ display: "flex", gap: "5px" }}>
-                    <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F26D5F" }}></span>
-                    <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F5BE4F" }}></span>
-                    <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#5FC26D" }}></span>
-                  </span>
-                  <span style={{ flex: "1", background: "#F1F2F6", borderRadius: "999px", padding: "5px 12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", color: "#565B72", textAlign: "center" }}>ethmar.com</span>
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Web & App Development</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Fast, conversion-focused websites and apps — designed, built, and shipped in weeks. One team carries your identity straight into the product: design system, build, launch, and the iterations after go-live.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>WEBSITE DESIGN</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>WEB APPS</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MOBILE APPS</span>
                 </div>
-                <div style={{ padding: "16px 16px 18px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <span style={{ width: "9px", height: "9px", background: "#1E7A46", borderRadius: "2px" }}></span>
-                    <span style={{ fontSize: "10px", fontWeight: "700", letterSpacing: "0.06em", color: "#0A0E2A" }}>ETHMAR</span>
-                    <span style={{ marginLeft: "auto", display: "flex", gap: "8px" }}>
-                      <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
-                      <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
-                      <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
-                    </span>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/web-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", width: "min(370px, 92%)", boxSizing: "border-box", overflow: "visible", position: "relative" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", borderBottom: "1px solid #EEF0F4" }}>
+                      <span style={{ display: "flex", gap: "5px" }}>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F26D5F" }}></span>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F5BE4F" }}></span>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#5FC26D" }}></span>
+                      </span>
+                      <span style={{ flex: "1", background: "#F1F2F6", borderRadius: "999px", padding: "5px 12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", color: "#565B72", textAlign: "center" }}>ethmar.com</span>
+                    </div>
+                    <div style={{ padding: "16px 16px 18px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <span style={{ width: "9px", height: "9px", background: "#1E7A46", borderRadius: "2px" }}></span>
+                        <span style={{ fontSize: "10px", fontWeight: "700", letterSpacing: "0.06em", color: "#0A0E2A" }}>ETHMAR</span>
+                        <span style={{ marginLeft: "auto", display: "flex", gap: "8px" }}>
+                          <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
+                          <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
+                          <span style={{ width: "22px", height: "4px", borderRadius: "2px", background: "#E3E5EE" }}></span>
+                        </span>
+                      </div>
+                      <div style={{ width: "72%" }}>
+                        <div style={{ marginTop: "16px", fontSize: "17px", fontWeight: "700", letterSpacing: "-0.01em", lineHeight: "1.15", color: "#0A0E2A" }}>Fresh from the farm, boxed with care</div>
+                        <div style={{ height: "5px", width: "84%", borderRadius: "3px", background: "#EDEEF3", marginTop: "10px" }}></div>
+                        <div style={{ height: "5px", width: "62%", borderRadius: "3px", background: "#EDEEF3", marginTop: "6px" }}></div>
+                        <div style={{ display: "inline-block", marginTop: "13px", background: "#0526D9", color: "#FFFFFF", fontSize: "10.5px", fontWeight: "600", padding: "7px 13px", borderRadius: "999px" }}>Shop the range</div>
+                      </div>
+                      <div style={{ display: "flex", gap: "8px", marginTop: "16px", width: "68%" }}>
+                        <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #DCE9D2, #9CC08A)" }}></div>
+                        <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #F6E3C2, #E4B265)" }}></div>
+                        <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #D8E4F6, #8FA3FF)" }}></div>
+                      </div>
+                    </div>
+                    <div style={{ position: "absolute", right: "14px", bottom: "14px", width: "64px", border: "3px solid #0A0E2A", borderRadius: "12px", background: "#FFFFFF", boxShadow: "0 14px 28px -12px rgba(15,20,40,0.45)", padding: "7px 6px" }}>
+                      <div style={{ width: "18px", height: "3px", borderRadius: "2px", background: "#0A0E2A", margin: "0 auto" }}></div>
+                      <div style={{ height: "4px", borderRadius: "2px", background: "#EDEEF3", marginTop: "8px" }}></div>
+                      <div style={{ height: "4px", width: "70%", borderRadius: "2px", background: "#EDEEF3", marginTop: "4px" }}></div>
+                      <div style={{ height: "22px", borderRadius: "4px", background: "linear-gradient(135deg, #DCE9D2, #9CC08A)", marginTop: "7px" }}></div>
+                      <div style={{ height: "9px", borderRadius: "999px", background: "#0526D9", marginTop: "7px" }}></div>
+                    </div>
                   </div>
-                  <div style={{ width: "72%" }}>
-                    <div style={{ marginTop: "16px", fontSize: "17px", fontWeight: "700", letterSpacing: "-0.01em", lineHeight: "1.15", color: "#0A0E2A" }}>Fresh from the farm, boxed with care</div>
-                    <div style={{ height: "5px", width: "84%", borderRadius: "3px", background: "#EDEEF3", marginTop: "10px" }}></div>
-                    <div style={{ height: "5px", width: "62%", borderRadius: "3px", background: "#EDEEF3", marginTop: "6px" }}></div>
-                    <div style={{ display: "inline-block", marginTop: "13px", background: "#0526D9", color: "#FFFFFF", fontSize: "10.5px", fontWeight: "600", padding: "7px 13px", borderRadius: "999px" }}>Shop the range</div>
-                  </div>
-                  <div style={{ display: "flex", gap: "8px", marginTop: "16px", width: "68%" }}>
-                    <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #DCE9D2, #9CC08A)" }}></div>
-                    <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #F6E3C2, #E4B265)" }}></div>
-                    <div style={{ flex: "1", height: "36px", borderRadius: "6px", background: "linear-gradient(135deg, #D8E4F6, #8FA3FF)" }}></div>
-                  </div>
-                </div>
-                <div style={{ position: "absolute", right: "14px", bottom: "14px", width: "64px", border: "3px solid #0A0E2A", borderRadius: "12px", background: "#FFFFFF", boxShadow: "0 14px 28px -12px rgba(15,20,40,0.45)", padding: "7px 6px" }}>
-                  <div style={{ width: "18px", height: "3px", borderRadius: "2px", background: "#0A0E2A", margin: "0 auto" }}></div>
-                  <div style={{ height: "4px", borderRadius: "2px", background: "#EDEEF3", marginTop: "8px" }}></div>
-                  <div style={{ height: "4px", width: "70%", borderRadius: "2px", background: "#EDEEF3", marginTop: "4px" }}></div>
-                  <div style={{ height: "22px", borderRadius: "4px", background: "linear-gradient(135deg, #DCE9D2, #9CC08A)", marginTop: "7px" }}></div>
-                  <div style={{ height: "9px", borderRadius: "999px", background: "#0526D9", marginTop: "7px" }}></div>
                 </div>
               </div>
             </div>
-          </div>
-          </div></>,
+          </>,
   /* service 2 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Advertising & Growth</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Campaigns, creative copywriting, media strategy, and SEO that compound reach quarter over quarter. Planning comes before production, so creative, channels, and budget all pull toward the same number.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ADVERTISEMENTS</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MEDIA STRATEGY & PLANNING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>DIRECT MARKETING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>SEO</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>PHOTOGRAPHY</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>CORPORATE VIDEO</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/growth-texture.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ background: "#FFFFFF", borderRadius: "14px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", width: "min(330px, 90%)", maxHeight: "96%", boxSizing: "border-box", display: "flex", flexDirection: "column", overflow: "hidden" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "11px 16px", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
-                  <span style={{ display: "flex", gap: "5px" }}>
-                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
-                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
-                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
-                  </span>
-                  <span style={{ fontSize: "12.5px", fontWeight: "650", color: "#0A0E2A" }}>SpeedIQ</span>
-                  <span style={{ marginLeft: "auto", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DASHBOARD</span>
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Advertising & Growth</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Campaigns, creative copywriting, media strategy, and SEO that compound reach quarter over quarter. Planning comes before production, so creative, channels, and budget all pull toward the same number.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ADVERTISEMENTS</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MEDIA STRATEGY & PLANNING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>DIRECT MARKETING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>SEO</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>PHOTOGRAPHY</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>CORPORATE VIDEO</span>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
-                  <div style={{ padding: "10px 16px" }}>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DELIVERY RATE</div>
-                    <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>99%</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
-                  </div>
-                  <div style={{ padding: "10px 16px", borderLeft: "1px solid #EEF0F4" }}>
-                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>MESSAGES / MO</div>
-                    <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>2.4M</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
-                  </div>
-                </div>
-                <div style={{ padding: "12px 16px", flex: "none" }}>
-                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DELIVERY FORECAST · 6 MONTHS</div>
-                  <svg viewBox="0 0 260 84" style={{ width: "100%", height: "78px", display: "block", marginTop: "8px" }} xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="21" x2="260" y2="21" stroke="#F0F1F5" strokeWidth="1" />
-                    <line x1="0" y1="42" x2="260" y2="42" stroke="#F0F1F5" strokeWidth="1" />
-                    <line x1="0" y1="63" x2="260" y2="63" stroke="#F0F1F5" strokeWidth="1" />
-                    <path d="M12 40 L58 44 L104 31 L150 27 L196 23 L244 19" fill="none" stroke="#C9CCD6" strokeWidth="2" strokeDasharray="4 4" />
-                    <path d="M12 44 L58 66 L104 24 L150 54 L196 35 L244 31" fill="none" stroke="#1F8A5B" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
-                    <circle cx="12" cy="44" r="3.5" fill="#1F8A5B" />
-                    <circle cx="58" cy="66" r="3.5" fill="#1F8A5B" />
-                    <circle cx="104" cy="24" r="3.5" fill="#1F8A5B" />
-                    <circle cx="150" cy="54" r="3.5" fill="#1F8A5B" />
-                    <circle cx="196" cy="35" r="3.5" fill="#1F8A5B" />
-                    <circle cx="244" cy="31" r="3.5" fill="#1F8A5B" />
-                  </svg>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", color: "#8A8FA3", padding: "0 2px", marginTop: "4px" }}>
-                    <span>NOW</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ background: "#FFFFFF", borderRadius: "14px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", width: "min(330px, 90%)", maxHeight: "96%", boxSizing: "border-box", display: "flex", flexDirection: "column", overflow: "hidden" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "11px 16px", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
+                      <span style={{ display: "flex", gap: "5px" }}>
+                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
+                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
+                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#DCDEE6" }}></span>
+                      </span>
+                      <span style={{ fontSize: "12.5px", fontWeight: "650", color: "#0A0E2A" }}>SpeedIQ</span>
+                      <span style={{ marginLeft: "auto", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DASHBOARD</span>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
+                      <div style={{ padding: "10px 16px" }}>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DELIVERY RATE</div>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>99%</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
+                      </div>
+                      <div style={{ padding: "10px 16px", borderLeft: "1px solid #EEF0F4" }}>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>MESSAGES / MO</div>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>2.4M</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
+                      </div>
+                    </div>
+                    <div style={{ padding: "12px 16px", flex: "none" }}>
+                      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>DELIVERY FORECAST · 6 MONTHS</div>
+                      <svg viewBox="0 0 260 84" style={{ width: "100%", height: "78px", display: "block", marginTop: "8px" }} xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="21" x2="260" y2="21" stroke="#F0F1F5" strokeWidth="1" />
+                        <line x1="0" y1="42" x2="260" y2="42" stroke="#F0F1F5" strokeWidth="1" />
+                        <line x1="0" y1="63" x2="260" y2="63" stroke="#F0F1F5" strokeWidth="1" />
+                        <path d="M12 40 L58 44 L104 31 L150 27 L196 23 L244 19" fill="none" stroke="#C9CCD6" strokeWidth="2" strokeDasharray="4 4" />
+                        <path d="M12 44 L58 66 L104 24 L150 54 L196 35 L244 31" fill="none" stroke="#1F8A5B" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+                        <circle cx="12" cy="44" r="3.5" fill="#1F8A5B" />
+                        <circle cx="58" cy="66" r="3.5" fill="#1F8A5B" />
+                        <circle cx="104" cy="24" r="3.5" fill="#1F8A5B" />
+                        <circle cx="150" cy="54" r="3.5" fill="#1F8A5B" />
+                        <circle cx="196" cy="35" r="3.5" fill="#1F8A5B" />
+                        <circle cx="244" cy="31" r="3.5" fill="#1F8A5B" />
+                      </svg>
+                      <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", color: "#8A8FA3", padding: "0 2px", marginTop: "4px" }}>
+                        <span>NOW</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div></>,
+          </>,
   /* service 3 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>3D Exterior & Interior Modeling</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Photoreal architectural visualization in any style — from single renders to complete concept campaigns. For Villate we modeled five complete villa styles, exteriors and interiors, ready for campaigns and sales platforms.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EXTERIOR MODELING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>INTERIOR MODELING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MODERN · CLASSIC · CONTEMPORARY · SPANISH · MEXICAN</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/3d-texture.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ position: "relative", width: "min(370px, 92%)", height: "216px", background: "#14171C", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", overflow: "hidden" }}>
-                <div style={{ position: "absolute", left: "-40%", right: "-40%", bottom: "-4px", height: "68%", backgroundImage: "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)", backgroundSize: "26px 26px", transform: "perspective(340px) rotateX(58deg)", transformOrigin: "50% 100%" }}></div>
-                <div style={{ position: "absolute", inset: "0", background: "radial-gradient(90% 60% at 50% 70%, rgba(201,152,115,0.18), rgba(20,23,28,0) 70%)" }}></div>
-                <div style={{ position: "absolute", left: "50%", bottom: "30%", transform: "translateX(-62%)", width: "78px", height: "58px", border: "1.5px solid rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.05)", borderRadius: "2px" }}></div>
-                <div style={{ position: "absolute", left: "50%", bottom: "30%", transform: "translateX(28%)", width: "34px", height: "30px", border: "1.5px solid rgba(255,255,255,0.45)", background: "rgba(255,255,255,0.03)", borderRadius: "2px" }}></div>
-                <span style={{ position: "absolute", top: "10px", left: "10px", width: "13px", height: "13px", borderTop: "2px solid rgba(255,255,255,0.5)", borderLeft: "2px solid rgba(255,255,255,0.5)" }}></span>
-                <span style={{ position: "absolute", top: "10px", right: "10px", width: "13px", height: "13px", borderTop: "2px solid rgba(255,255,255,0.5)", borderRight: "2px solid rgba(255,255,255,0.5)" }}></span>
-                <span style={{ position: "absolute", bottom: "10px", left: "10px", width: "13px", height: "13px", borderBottom: "2px solid rgba(255,255,255,0.5)", borderLeft: "2px solid rgba(255,255,255,0.5)" }}></span>
-                <span style={{ position: "absolute", bottom: "10px", right: "10px", width: "13px", height: "13px", borderBottom: "2px solid rgba(255,255,255,0.5)", borderRight: "2px solid rgba(255,255,255,0.5)" }}></span>
-                <div style={{ position: "absolute", top: "14px", left: "22px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.75)" }}>VILLA_07 — SPANISH</div>
-                <div style={{ position: "absolute", top: "14px", right: "22px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.55)" }}>PERSP · 35MM</div>
-                <div style={{ position: "absolute", left: "22px", right: "22px", bottom: "14px", display: "flex", alignItems: "center", gap: "10px" }}>
-                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.8)" }}>RENDERING — EXTERIOR PASS</span>
-                  <span style={{ flex: "1", height: "4px", background: "rgba(255,255,255,0.15)", borderRadius: "2px" }}><span style={{ display: "block", width: "82%", height: "100%", background: "#9DB98A", borderRadius: "2px" }}></span></span>
-                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#9DB98A" }}>82%</span>
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>3D Exterior & Interior Modeling</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Photoreal architectural visualization in any style — from single renders to complete concept campaigns. For Villate we modeled five complete villa styles, exteriors and interiors, ready for campaigns and sales platforms.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EXTERIOR MODELING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>INTERIOR MODELING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>MODERN · CLASSIC · CONTEMPORARY · SPANISH · MEXICAN</span>
                 </div>
               </div>
-              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.12em", color: "rgba(255,255,255,0.85)", textShadow: "0 1px 10px rgba(0,0,0,0.3)" }}>5 STYLES · EXTERIOR + INTERIOR · 4K</div>
-            </div>
-          </div>
-          </div></>,
-  /* service 4 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Events & Exhibitions</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Stands and event branding from concept render to on-site build. Our EADS Defence & Security stand took home the Best Exhibition Award — Maceen Capital, Amesys Bull, and H2L followed the same render-to-reality process.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EXHIBITION STANDS</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EVENT BRANDING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ON-SITE BUILD</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/events-texture.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "16px 18px 14px", width: "min(330px, 88%)", boxSizing: "border-box" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}>
-                  <span style={{ color: "#0A0E2A" }}>STAND 4.12 — EADS</span>
-                  <span>SCALE 1:50</span>
-                </div>
-                <div style={{ position: "relative", height: "158px", marginTop: "12px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "8px", backgroundImage: "radial-gradient(#DBDEE8 1px, transparent 1px)", backgroundSize: "14px 14px" }}>
-                  <div style={{ position: "absolute", top: "12px", left: "12px", right: "12px", height: "7px", background: "#0526D9", borderRadius: "2px" }}></div>
-                  <div style={{ position: "absolute", top: "12px", left: "12px", width: "7px", height: "62%", background: "#0526D9", borderRadius: "2px" }}></div>
-                  <div style={{ position: "absolute", top: "9px", left: "50%", transform: "translateX(-50%)", width: "64px", height: "13px", background: "#0A0E2A", borderRadius: "3px", border: "2px solid #F7F8FB" }}></div>
-                  <div style={{ position: "absolute", bottom: "16px", left: "16px", width: "58px", height: "20px", background: "#8FA3FF", borderRadius: "3px" }}></div>
-                  <div style={{ position: "absolute", top: "14px", right: "16px", width: "26px", height: "26px", border: "1.5px dashed #9AA1B8", borderRadius: "3px" }}></div>
-                  <div style={{ position: "absolute", top: "52%", right: "24%", width: "30px", height: "30px" }}>
-                    <span style={{ position: "absolute", inset: "0", border: "2px solid #4A63E4", borderRadius: "50%", background: "#FFFFFF" }}></span>
-                    <span style={{ position: "absolute", top: "-9px", left: "50%", transform: "translateX(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
-                    <span style={{ position: "absolute", bottom: "-9px", left: "50%", transform: "translateX(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
-                    <span style={{ position: "absolute", left: "-9px", top: "50%", transform: "translateY(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
-                    <span style={{ position: "absolute", right: "-9px", top: "50%", transform: "translateY(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/3d-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ position: "relative", width: "min(370px, 92%)", height: "216px", background: "#14171C", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", overflow: "hidden" }}>
+                    <div style={{ position: "absolute", left: "-40%", right: "-40%", bottom: "-4px", height: "68%", backgroundImage: "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)", backgroundSize: "26px 26px", transform: "perspective(340px) rotateX(58deg)", transformOrigin: "50% 100%" }}></div>
+                    <div style={{ position: "absolute", inset: "0", background: "radial-gradient(90% 60% at 50% 70%, rgba(201,152,115,0.18), rgba(20,23,28,0) 70%)" }}></div>
+                    <div style={{ position: "absolute", left: "50%", bottom: "30%", transform: "translateX(-62%)", width: "78px", height: "58px", border: "1.5px solid rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.05)", borderRadius: "2px" }}></div>
+                    <div style={{ position: "absolute", left: "50%", bottom: "30%", transform: "translateX(28%)", width: "34px", height: "30px", border: "1.5px solid rgba(255,255,255,0.45)", background: "rgba(255,255,255,0.03)", borderRadius: "2px" }}></div>
+                    <span style={{ position: "absolute", top: "10px", left: "10px", width: "13px", height: "13px", borderTop: "2px solid rgba(255,255,255,0.5)", borderLeft: "2px solid rgba(255,255,255,0.5)" }}></span>
+                    <span style={{ position: "absolute", top: "10px", right: "10px", width: "13px", height: "13px", borderTop: "2px solid rgba(255,255,255,0.5)", borderRight: "2px solid rgba(255,255,255,0.5)" }}></span>
+                    <span style={{ position: "absolute", bottom: "10px", left: "10px", width: "13px", height: "13px", borderBottom: "2px solid rgba(255,255,255,0.5)", borderLeft: "2px solid rgba(255,255,255,0.5)" }}></span>
+                    <span style={{ position: "absolute", bottom: "10px", right: "10px", width: "13px", height: "13px", borderBottom: "2px solid rgba(255,255,255,0.5)", borderRight: "2px solid rgba(255,255,255,0.5)" }}></span>
+                    <div style={{ position: "absolute", top: "14px", left: "22px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.75)" }}>VILLA_07 — SPANISH</div>
+                    <div style={{ position: "absolute", top: "14px", right: "22px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.55)" }}>PERSP · 35MM</div>
+                    <div style={{ position: "absolute", left: "22px", right: "22px", bottom: "14px", display: "flex", alignItems: "center", gap: "10px" }}>
+                      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.8)" }}>RENDERING — EXTERIOR PASS</span>
+                      <span style={{ flex: "1", height: "4px", background: "rgba(255,255,255,0.15)", borderRadius: "2px" }}><span style={{ display: "block", width: "82%", height: "100%", background: "#9DB98A", borderRadius: "2px" }}></span></span>
+                      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#9DB98A" }}>82%</span>
+                    </div>
                   </div>
-                  <div style={{ position: "absolute", bottom: "3px", left: "0", right: "0", textAlign: "center", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", letterSpacing: "0.1em", color: "#8A8FA3" }}>6.0 M</div>
-                  <div style={{ position: "absolute", right: "3px", top: "50%", transform: "translateY(-50%)", writingMode: "vertical-rl", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", letterSpacing: "0.1em", color: "#8A8FA3" }}>4.0 M</div>
-                </div>
-                <div style={{ display: "flex", gap: "14px", marginTop: "10px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.06em", color: "#8A8FA3", alignItems: "center" }}>
-                  <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", background: "#0526D9", borderRadius: "2px" }}></span>WALLS</span>
-                  <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", background: "#8FA3FF", borderRadius: "2px" }}></span>COUNTER</span>
-                  <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", border: "1.5px solid #4A63E4", borderRadius: "50%", boxSizing: "border-box" }}></span>MEETING</span>
-                  <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", border: "1.5px dashed #9AA1B8", borderRadius: "2px", boxSizing: "border-box" }}></span>STORE</span>
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.12em", color: "rgba(255,255,255,0.85)", textShadow: "0 1px 10px rgba(0,0,0,0.3)" }}>5 STYLES · EXTERIOR + INTERIOR · 4K</div>
                 </div>
               </div>
             </div>
-          </div>
-          </div></>,
+          </>,
+  /* service 4 */
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Events & Exhibitions</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Stands and event branding from concept render to on-site build. Our EADS Defence & Security stand took home the Best Exhibition Award — Maceen Capital, Amesys Bull, and H2L followed the same render-to-reality process.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EXHIBITION STANDS</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>EVENT BRANDING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>ON-SITE BUILD</span>
+                </div>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/events-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ background: "#FFFFFF", borderRadius: "12px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "16px 18px 14px", width: "min(330px, 88%)", boxSizing: "border-box" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}>
+                      <span style={{ color: "#0A0E2A" }}>STAND 4.12 — EADS</span>
+                      <span>SCALE 1:50</span>
+                    </div>
+                    <div style={{ position: "relative", height: "158px", marginTop: "12px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "8px", backgroundImage: "radial-gradient(#DBDEE8 1px, transparent 1px)", backgroundSize: "14px 14px" }}>
+                      <div style={{ position: "absolute", top: "12px", left: "12px", right: "12px", height: "7px", background: "#0526D9", borderRadius: "2px" }}></div>
+                      <div style={{ position: "absolute", top: "12px", left: "12px", width: "7px", height: "62%", background: "#0526D9", borderRadius: "2px" }}></div>
+                      <div style={{ position: "absolute", top: "9px", left: "50%", transform: "translateX(-50%)", width: "64px", height: "13px", background: "#0A0E2A", borderRadius: "3px", border: "2px solid #F7F8FB" }}></div>
+                      <div style={{ position: "absolute", bottom: "16px", left: "16px", width: "58px", height: "20px", background: "#8FA3FF", borderRadius: "3px" }}></div>
+                      <div style={{ position: "absolute", top: "14px", right: "16px", width: "26px", height: "26px", border: "1.5px dashed #9AA1B8", borderRadius: "3px" }}></div>
+                      <div style={{ position: "absolute", top: "52%", right: "24%", width: "30px", height: "30px" }}>
+                        <span style={{ position: "absolute", inset: "0", border: "2px solid #4A63E4", borderRadius: "50%", background: "#FFFFFF" }}></span>
+                        <span style={{ position: "absolute", top: "-9px", left: "50%", transform: "translateX(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
+                        <span style={{ position: "absolute", bottom: "-9px", left: "50%", transform: "translateX(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
+                        <span style={{ position: "absolute", left: "-9px", top: "50%", transform: "translateY(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
+                        <span style={{ position: "absolute", right: "-9px", top: "50%", transform: "translateY(-50%)", width: "7px", height: "7px", borderRadius: "50%", background: "#4A63E4" }}></span>
+                      </div>
+                      <div style={{ position: "absolute", bottom: "3px", left: "0", right: "0", textAlign: "center", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", letterSpacing: "0.1em", color: "#8A8FA3" }}>6.0 M</div>
+                      <div style={{ position: "absolute", right: "3px", top: "50%", transform: "translateY(-50%)", writingMode: "vertical-rl", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8px", letterSpacing: "0.1em", color: "#8A8FA3" }}>4.0 M</div>
+                    </div>
+                    <div style={{ display: "flex", gap: "14px", marginTop: "10px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.06em", color: "#8A8FA3", alignItems: "center" }}>
+                      <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", background: "#0526D9", borderRadius: "2px" }}></span>WALLS</span>
+                      <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", background: "#8FA3FF", borderRadius: "2px" }}></span>COUNTER</span>
+                      <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", border: "1.5px solid #4A63E4", borderRadius: "50%", boxSizing: "border-box" }}></span>MEETING</span>
+                      <span style={{ display: "flex", alignItems: "center", gap: "5px" }}><span style={{ width: "9px", height: "9px", border: "1.5px dashed #9AA1B8", borderRadius: "2px", boxSizing: "border-box" }}></span>STORE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>,
   /* service 5 */
-  <><div className="svc-row" style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Print & Production</h3>
-          <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Packaging, signage, and premium digital & offset printing — production-managed end to end. One accountable team from final artwork to delivered product, the way Leil Nhar's illustrated brand world made it to shelf.</p>
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>PACKAGING & BOXES</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>INDOOR & OUTDOOR SIGNS</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>DIGITAL PRINTING</span>
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>OFFSET PRINTING</span>
-          </div>
-          </div>
-          <div className="svc-card" style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-            <div style={{ position: "absolute", inset: "0", background: "url(\"/photos/print-texture.jpg\") center / cover no-repeat" }}></div>
-            <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
-            <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
-            <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
-              <div style={{ position: "relative", background: "#FFFFFF", borderRadius: "3px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "22px", width: "min(320px, 86%)", boxSizing: "border-box", transform: "rotate(-1.5deg)" }}>
-                <span style={{ position: "absolute", top: "7px", left: "7px", width: "12px", height: "12px", borderTop: "1.5px solid #2E2E33", borderLeft: "1.5px solid #2E2E33" }}></span>
-                <span style={{ position: "absolute", top: "7px", right: "7px", width: "12px", height: "12px", borderTop: "1.5px solid #2E2E33", borderRight: "1.5px solid #2E2E33" }}></span>
-                <span style={{ position: "absolute", bottom: "7px", left: "7px", width: "12px", height: "12px", borderBottom: "1.5px solid #2E2E33", borderLeft: "1.5px solid #2E2E33" }}></span>
-                <span style={{ position: "absolute", bottom: "7px", right: "7px", width: "12px", height: "12px", borderBottom: "1.5px solid #2E2E33", borderRight: "1.5px solid #2E2E33" }}></span>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
-                  <span style={{ display: "flex", gap: "2px" }}><span style={{ width: "13px", height: "13px", background: "#56A8D8" }}></span><span style={{ width: "13px", height: "13px", background: "#C2549B" }}></span><span style={{ width: "13px", height: "13px", background: "#E4C24A" }}></span><span style={{ width: "13px", height: "13px", background: "#2E2E33" }}></span><span style={{ width: "13px", height: "13px", background: "#BBD9EC" }}></span><span style={{ width: "13px", height: "13px", background: "#E4B3D2" }}></span><span style={{ width: "13px", height: "13px", background: "#F2E3A8" }}></span><span style={{ width: "13px", height: "13px", background: "#ABABB0" }}></span></span>
-                  <span style={{ position: "relative", width: "18px", height: "18px", flex: "none" }}>
-                    <span style={{ position: "absolute", inset: "0", border: "1.5px solid #2E2E33", borderRadius: "50%" }}></span>
-                    <span style={{ position: "absolute", left: "50%", top: "-2px", bottom: "-2px", width: "1.5px", background: "#2E2E33", transform: "translateX(-50%)" }}></span>
-                    <span style={{ position: "absolute", top: "50%", left: "-2px", right: "-2px", height: "1.5px", background: "#2E2E33", transform: "translateY(-50%)" }}></span>
-                  </span>
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>Print & Production</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Packaging, signage, and premium digital & offset printing — production-managed end to end. One accountable team from final artwork to delivered product, the way Leil Nhar's illustrated brand world made it to shelf.</p>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>PACKAGING & BOXES</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>INDOOR & OUTDOOR SIGNS</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>DIGITAL PRINTING</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>OFFSET PRINTING</span>
                 </div>
-                <div style={{ marginTop: "16px", fontSize: "14px", fontWeight: "650", letterSpacing: "-0.01em", color: "#0A0E2A" }}>Placemat range — Vol. 2</div>
-                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.06em", color: "#8A8FA3", marginTop: "6px", lineHeight: "1.7" }}>LEIL NHAR · OFFSET 4/4 · 350GSM MATTE<br />RUN 30,000 · SHEET B2 · DIE-CUT R6</div>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", borderTop: "1px solid #EEF0F4", marginTop: "14px", paddingTop: "10px", paddingRight: "96px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.08em", color: "#8A8FA3" }}>
-                  <span>PROOF 2 OF 2</span>
-                  <span>08 JUL 2026</span>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/print-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ position: "relative", background: "#FFFFFF", borderRadius: "3px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", padding: "22px", width: "min(320px, 86%)", boxSizing: "border-box", transform: "rotate(-1.5deg)" }}>
+                    <span style={{ position: "absolute", top: "7px", left: "7px", width: "12px", height: "12px", borderTop: "1.5px solid #2E2E33", borderLeft: "1.5px solid #2E2E33" }}></span>
+                    <span style={{ position: "absolute", top: "7px", right: "7px", width: "12px", height: "12px", borderTop: "1.5px solid #2E2E33", borderRight: "1.5px solid #2E2E33" }}></span>
+                    <span style={{ position: "absolute", bottom: "7px", left: "7px", width: "12px", height: "12px", borderBottom: "1.5px solid #2E2E33", borderLeft: "1.5px solid #2E2E33" }}></span>
+                    <span style={{ position: "absolute", bottom: "7px", right: "7px", width: "12px", height: "12px", borderBottom: "1.5px solid #2E2E33", borderRight: "1.5px solid #2E2E33" }}></span>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
+                      <span style={{ display: "flex", gap: "2px" }}><span style={{ width: "13px", height: "13px", background: "#56A8D8" }}></span><span style={{ width: "13px", height: "13px", background: "#C2549B" }}></span><span style={{ width: "13px", height: "13px", background: "#E4C24A" }}></span><span style={{ width: "13px", height: "13px", background: "#2E2E33" }}></span><span style={{ width: "13px", height: "13px", background: "#BBD9EC" }}></span><span style={{ width: "13px", height: "13px", background: "#E4B3D2" }}></span><span style={{ width: "13px", height: "13px", background: "#F2E3A8" }}></span><span style={{ width: "13px", height: "13px", background: "#ABABB0" }}></span></span>
+                      <span style={{ position: "relative", width: "18px", height: "18px", flex: "none" }}>
+                        <span style={{ position: "absolute", inset: "0", border: "1.5px solid #2E2E33", borderRadius: "50%" }}></span>
+                        <span style={{ position: "absolute", left: "50%", top: "-2px", bottom: "-2px", width: "1.5px", background: "#2E2E33", transform: "translateX(-50%)" }}></span>
+                        <span style={{ position: "absolute", top: "50%", left: "-2px", right: "-2px", height: "1.5px", background: "#2E2E33", transform: "translateY(-50%)" }}></span>
+                      </span>
+                    </div>
+                    <div style={{ marginTop: "16px", fontSize: "14px", fontWeight: "650", letterSpacing: "-0.01em", color: "#0A0E2A" }}>Placemat range — Vol. 2</div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.06em", color: "#8A8FA3", marginTop: "6px", lineHeight: "1.7" }}>LEIL NHAR · OFFSET 4/4 · 350GSM MATTE<br />RUN 30,000 · SHEET B2 · DIE-CUT R6</div>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", borderTop: "1px solid #EEF0F4", marginTop: "14px", paddingTop: "10px", paddingRight: "96px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.08em", color: "#8A8FA3" }}>
+                      <span>PROOF 2 OF 2</span>
+                      <span>08 JUL 2026</span>
+                    </div>
+                    <span style={{ position: "absolute", right: "14px", bottom: "26px", transform: "rotate(7deg)", border: "2px solid #1F8A5B", color: "#1F8A5B", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.14em", padding: "5px 10px", borderRadius: "4px", opacity: "0.85" }}>APPROVED</span>
+                  </div>
                 </div>
-                <span style={{ position: "absolute", right: "14px", bottom: "26px", transform: "rotate(7deg)", border: "2px solid #1F8A5B", color: "#1F8A5B", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", letterSpacing: "0.14em", padding: "5px 10px", borderRadius: "4px", opacity: "0.85" }}>APPROVED</span>
               </div>
             </div>
-          </div>
-          </div></>,
+          </>,
+  /* service 6 */
+  <>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 4.2fr) minmax(0, 7.8fr)", gap: "clamp(28px, 4vw, 60px)", alignItems: "stretch", height: "100%" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>CRM & Marketing Automation</h3>
+                <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Our own platform — WhatsApp, email, and campaign automation with every lead in one pipeline, and live analytics to prove what's working. Free for SpeedIQ clients; the same dashboards we report against.</p>
+                <a href="https://all.speediq.ai" target="_blank" rel="noopener" style={{ marginTop: "14px", fontSize: "14.5px", fontWeight: "600", color: "#0526D9", transition: "color 0.2s ease" }}>Open all.speediq.ai →</a>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>UNIFIED INBOX</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>VISUAL PIPELINE</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>CAMPAIGN AUTOMATION</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>WHATSAPP & EMAIL</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>LIVE ANALYTICS</span>
+                </div>
+              </div>
+              <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
+                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
+                <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
+                <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
+                  <div style={{ background: "#FFFFFF", borderRadius: "14px", boxShadow: "0 28px 56px -24px rgba(15,20,40,0.5)", width: "min(420px, 92%)", maxHeight: "96%", boxSizing: "border-box", display: "flex", flexDirection: "column", overflow: "hidden" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
+                      <span style={{ display: "flex", gap: "5px" }}>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F26D5F" }}></span>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F5BE4F" }}></span>
+                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#5FC26D" }}></span>
+                      </span>
+                      <span style={{ flex: "1", background: "#F1F2F6", borderRadius: "999px", padding: "5px 12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", color: "#565B72", textAlign: "center" }}>all.speediq.ai</span>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
+                      <div style={{ padding: "10px 16px" }}>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>OPEN DEALS</div>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>128</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
+                      </div>
+                      <div style={{ padding: "10px 16px", borderLeft: "1px solid #EEF0F4" }}>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", letterSpacing: "0.1em", color: "#8A8FA3" }}>REPLY RATE</div>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginTop: "4px" }}><span style={{ fontSize: "23px", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1", color: "#0A0E2A" }}>64%</span><span style={{ fontSize: "12px", color: "#1F8A5B" }}>↑</span></div>
+                      </div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", padding: "12px 14px 14px" }}>
+                      <div>
+                        <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}><span>NEW</span><span>04</span></div>
+                        <div style={{ marginTop: "8px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>Ethmar — repack Q3</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "2px 7px" }}>WHATSAPP</div>
+                        </div>
+                        <div style={{ marginTop: "6px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>Villate — spring push</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "2px 7px" }}>EMAIL</div>
+                        </div>
+                      </div>
+                      <div>
+                        <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}><span>CONTACTED</span><span>03</span></div>
+                        <div style={{ marginTop: "8px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>Maceen — fund launch</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "2px 7px" }}>SCORE 86</div>
+                        </div>
+                        <div style={{ marginTop: "6px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>RP — mall rollout</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "2px 7px" }}>FOLLOW-UP</div>
+                        </div>
+                      </div>
+                      <div>
+                        <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "'IBM Plex Mono', monospace", fontSize: "8.5px", letterSpacing: "0.1em", color: "#8A8FA3" }}><span>WON</span><span>02</span></div>
+                        <div style={{ marginTop: "8px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>Leil Nhar — Riyadh</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#1F8A5B", background: "#FFFFFF", border: "1px solid #BFDCCE", borderRadius: "999px", padding: "2px 7px" }}>CLOSED</div>
+                        </div>
+                        <div style={{ marginTop: "6px", background: "#F7F8FB", border: "1px solid #E7E9F0", borderRadius: "6px", padding: "8px 9px" }}>
+                          <div style={{ fontSize: "10.5px", fontWeight: "600", color: "#0A0E2A" }}>Jaroudi — retainer</div>
+                          <div style={{ display: "inline-block", marginTop: "6px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "7.5px", letterSpacing: "0.06em", color: "#1F8A5B", background: "#FFFFFF", border: "1px solid #BFDCCE", borderRadius: "999px", padding: "2px 7px" }}>CLOSED</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>,
 ];

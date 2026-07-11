@@ -8,6 +8,7 @@ const SERVICES: [string, string, string][] = [
   ["3D Modeling", "/services/3d-modeling", "Exterior & interior renders"],
   ["Events & Exhibitions", "/services/events-exhibitions", "Stands & event branding"],
   ["Print & Production", "/services/print-production", "Packaging, signage, print"],
+  ["CRM & Marketing Automation", "https://all.speediq.ai", "Inbox, pipeline, automation"],
 ];
 
 const OTHER: [string, string][] = [
