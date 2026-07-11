@@ -11,7 +11,9 @@ export default function Services() {
   const [hdrHidden, setHdrHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    let ticking = false;
+    const compute = () => {
+      ticking = false;
       const track = trackRef.current;
       if (!track) return;
       const r = track.getBoundingClientRect();
@@ -23,9 +25,14 @@ export default function Services() {
       setActive((a) => (a !== idx ? idx : a));
       setHdrHidden((h) => (h !== hid ? hid : h));
     };
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(compute);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
-    onScroll();
+    compute();
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
@@ -135,22 +142,29 @@ export default function Services() {
                 marginTop: "clamp(24px, 3vw, 36px)",
               }}
             >
-              {MOCKUPS.map((node, i) => (
-                <div
-                  key={i}
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    zIndex: active === i ? 2 : 1,
-                    opacity: active === i ? 1 : 0,
-                    transform: active === i ? "translateY(0px)" : "translateY(16px)",
-                    transition: "opacity 0.45s ease, transform 0.45s ease",
-                    pointerEvents: active === i ? "auto" : "none",
-                  }}
-                >
-                  {node}
-                </div>
-              ))}
+              {MOCKUPS.map((node, i) => {
+                const on = active === i;
+                return (
+                  <div
+                    key={i}
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      zIndex: on ? 2 : 1,
+                      opacity: on ? 1 : 0,
+                      // hidden layers drop out of compositing after the fade — the cards
+                      // use backdrop-filter + mix-blend-mode, which is costly to keep painting.
+                      visibility: on ? "visible" : "hidden",
+                      transform: on ? "translateY(0px)" : "translateY(16px)",
+                      transition: `opacity 0.45s ease, transform 0.45s ease, visibility 0s linear ${on ? "0s" : "0.45s"}`,
+                      pointerEvents: on ? "auto" : "none",
+                      contain: "layout paint",
+                    }}
+                  >
+                    {node}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
