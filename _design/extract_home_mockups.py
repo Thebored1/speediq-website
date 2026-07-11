@@ -12,7 +12,7 @@ b = s[s.find("</helmet>"):s.find('data-dc-script')]
 i = b.find('data-screen-label="Services"')
 j = b.find('data-screen-label="Belief"')
 seg = b[i:j]
-seg = re.sub(r'(["\(])assets/', r"\1/", seg)  # asset paths -> public
+seg = re.sub(r"assets/(photos|logos|fonts)/", r"/\1/", seg)  # asset paths -> public (any quoting)
 
 
 def inner_of_layer(s, start):

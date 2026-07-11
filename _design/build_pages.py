@@ -68,7 +68,7 @@ def common(body):
     body = re.sub(r"\{\{[^}]*\}\}", "", body)
     # asset + home-link paths
     body = body.replace("uploads/SpeedIQ Website.html", "/")
-    body = re.sub(r'(["\(])assets/', r"\1/", body)
+    body = re.sub(r"assets/(photos|logos|fonts)/", r"/\1/", body)  # any quoting
     # design .dc.html links -> real routes (per-client case study first, then the rest)
     for s in SLUGS:
         body = body.replace('href="Case Study.dc.html#' + s + '"', 'href="/casework/' + s + '"')

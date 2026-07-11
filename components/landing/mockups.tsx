@@ -17,7 +17,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/guidelines.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/guidelines.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -76,7 +76,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/web-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/web-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -140,7 +140,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -202,7 +202,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/3d-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/3d-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -242,7 +242,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/events-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/events-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -293,7 +293,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/print-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/print-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
@@ -339,7 +339,7 @@ export const MOCKUPS: ReactNode[] = [
                 </div>
               </div>
               <div style={{ position: "relative", height: "100%", minHeight: "clamp(280px, 38vh, 380px)", borderRadius: "18px", overflow: "hidden", background: "#DDE3FA" }}>
-                <div style={{ position: "absolute", inset: "0", background: "url('assets/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
+                <div style={{ position: "absolute", inset: "0", background: "url('/photos/growth-texture.jpg') center / cover no-repeat" }}></div>
                 <div style={{ position: "absolute", inset: "0", background: "rgba(5,38,217,0.55)", backdropFilter: "blur(3px) saturate(1.1)", WebkitBackdropFilter: "blur(3px) saturate(1.1)" }}></div>
                 <div style={{ position: "absolute", inset: "0", backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22 opacity=%220.55%22/%3E%3C/svg%3E')", backgroundSize: "160px 160px", opacity: "0.35", mixBlendMode: "overlay" }}></div>
                 <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", padding: "clamp(18px, 3vw, 30px)", boxSizing: "border-box" }}>
