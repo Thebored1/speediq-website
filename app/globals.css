@@ -131,3 +131,26 @@ input::placeholder { color: #9A9FB3; }
   .deliv-grid { grid-template-columns: 1fr !important; }
   .two-col { grid-template-columns: 1fr !important; }
 }
+/* Services scroll-stack collapses to a plain vertical flow on small screens
+   (the 470vh sticky/absolute-layer interaction is desktop-only). */
+@media (max-width: 1000px) {
+  .svc-track { height: auto !important; }
+  .svc-sticky {
+    position: static !important;
+    min-height: 0 !important;
+    align-items: stretch !important;
+    padding: 48px 24px !important;
+    overflow: visible !important;
+  }
+  .svc-hdr { grid-template-rows: 1fr !important; }
+  .svc-hdr-inner { opacity: 1 !important; transform: none !important; }
+  .svc-layerbox {
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    margin-top: 32px !important;
+  }
+  /* .svc-layer wrappers flow in a column (positioning handled in the component) */
+  .svc-layer > div { grid-template-columns: 1fr !important; gap: 20px !important; }
+}

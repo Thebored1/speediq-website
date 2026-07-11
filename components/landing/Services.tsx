@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { MOCKUPS } from "./mockups";
 
 const N = MOCKUPS.length;
@@ -9,6 +9,19 @@ export default function Services() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const [hdrHidden, setHdrHidden] = useState(false);
+  const [compact, setCompact] = useState(false); // mobile: flatten the scroll-stack
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1000px)");
+    const update = () => setCompact(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    window.addEventListener("resize", update);
+    return () => {
+      mq.removeEventListener("change", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -45,8 +58,9 @@ export default function Services() {
       data-screen-label="Services"
       style={{ margin: "20px 20px 0", background: "#EEF2FB", borderRadius: 28 }}
     >
-      <div ref={trackRef} style={{ position: "relative", height: "470vh" }}>
+      <div ref={trackRef} className="svc-track" style={{ position: "relative", height: "470vh" }}>
         <div
+          className="svc-sticky"
           style={{
             position: "sticky",
             top: 0,
@@ -88,6 +102,7 @@ export default function Services() {
 
           <div style={{ maxWidth: 1240, margin: "0 auto", width: "100%" }}>
             <div
+              className="svc-hdr"
               style={{
                 display: "grid",
                 gridTemplateRows: hdrHidden ? "0fr" : "1fr",
@@ -96,6 +111,7 @@ export default function Services() {
             >
               <div style={{ overflow: "hidden", minHeight: 0 }}>
                 <div
+                  className="svc-hdr-inner"
                   style={{
                     opacity: hdrHidden ? 0 : 1,
                     transform: hdrHidden ? "translateY(-44px)" : "translateY(0px)",
@@ -144,23 +160,24 @@ export default function Services() {
             >
               {MOCKUPS.map((node, i) => {
                 const on = active === i;
-                return (
-                  <div
-                    key={i}
-                    style={{
+                // Mobile: layers flow in a normal column (all visible). Desktop: the
+                // sticky cross-fading stack, with hidden layers dropped out of
+                // compositing (the cards use costly backdrop-filter + mix-blend-mode).
+                const style: CSSProperties = compact
+                  ? { position: "relative" }
+                  : {
                       position: "absolute",
                       inset: 0,
                       zIndex: on ? 2 : 1,
                       opacity: on ? 1 : 0,
-                      // hidden layers drop out of compositing after the fade — the cards
-                      // use backdrop-filter + mix-blend-mode, which is costly to keep painting.
                       visibility: on ? "visible" : "hidden",
                       transform: on ? "translateY(0px)" : "translateY(16px)",
                       transition: `opacity 0.45s ease, transform 0.45s ease, visibility 0s linear ${on ? "0s" : "0.45s"}`,
                       pointerEvents: on ? "auto" : "none",
                       contain: "layout paint",
-                    }}
-                  >
+                    };
+                return (
+                  <div key={i} className="svc-layer" style={style}>
                     {node}
                   </div>
                 );
