@@ -134,12 +134,14 @@ input::placeholder { color: #9A9FB3; }
 /* Services scroll-stack collapses to a plain vertical flow on small screens
    (the 470vh sticky/absolute-layer interaction is desktop-only). */
 @media (max-width: 1000px) {
+  /* drop the single shared panel — each service gets its own container */
+  #services { background: transparent !important; margin: 24px 0 0 !important; border-radius: 0 !important; }
   .svc-track { height: auto !important; }
   .svc-sticky {
     position: static !important;
     min-height: 0 !important;
     align-items: stretch !important;
-    padding: 48px 24px !important;
+    padding: 0 16px !important;
     overflow: visible !important;
   }
   .svc-hdr { grid-template-rows: 1fr !important; }
@@ -148,9 +150,14 @@ input::placeholder { color: #9A9FB3; }
     min-height: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 36px !important;
-    margin-top: 32px !important;
+    gap: 40px !important;
+    margin-top: 40px !important;
   }
-  /* .svc-layer wrappers flow in a column (positioning handled in the component) */
+  /* each service its own rounded panel */
+  .svc-layer {
+    background: #EEF2FB !important;
+    border-radius: 24px !important;
+    padding: clamp(24px, 6vw, 34px) !important;
+  }
   .svc-layer > div { grid-template-columns: 1fr !important; gap: 20px !important; }
 }
