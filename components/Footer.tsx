@@ -9,7 +9,7 @@ const services: [string, string][] = [
   ["3D Modeling", "/services/3d-modeling"],
   ["Events & Exhibitions", "/services/events-exhibitions"],
   ["Print & Production", "/services/print-production"],
-  ["CRM & Marketing Automation", "https://all.speediq.ai"],
+  ["CRM & Marketing Automation", "https://app.speediq.ai/"],
 ];
 const caseStudies: [string, string][] = [
   ["Ethmar", "/casework/ethmar"],

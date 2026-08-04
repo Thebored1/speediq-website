@@ -328,7 +328,7 @@ export const MOCKUPS: ReactNode[] = [
               <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                 <h3 style={{ margin: "0", fontSize: "clamp(23px, 2.1vw, 33px)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "500", color: "#0A0E2A", textWrap: "balance" }}>CRM & Marketing Automation</h3>
                 <p style={{ margin: "18px 0 0", fontSize: "15px", lineHeight: "1.6", color: "#565B72", maxWidth: "460px" }}>Our own platform — WhatsApp, email, and campaign automation with every lead in one pipeline, and live analytics to prove what's working. Free for SpeedIQ clients; the same dashboards we report against.</p>
-                <a href="https://all.speediq.ai" target="_blank" rel="noopener" style={{ marginTop: "14px", fontSize: "14.5px", fontWeight: "600", color: "#0526D9", transition: "color 0.2s ease" }}>Open all.speediq.ai →</a>
+                <a href="https://app.speediq.ai/" target="_blank" rel="noopener" style={{ marginTop: "14px", fontSize: "14.5px", fontWeight: "600", color: "#0526D9", transition: "color 0.2s ease" }}>Open app.speediq.ai →</a>
                 <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", color: "#8A8FA3", marginTop: "auto", paddingTop: "28px" }}>INCLUDES</div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "10px" }}>
                   <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", letterSpacing: "0.04em", fontWeight: "500", color: "#0526D9", background: "#FFFFFF", border: "1px solid #C9D2F2", borderRadius: "999px", padding: "5px 11px" }}>UNIFIED INBOX</span>
@@ -350,7 +350,7 @@ export const MOCKUPS: ReactNode[] = [
                         <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F5BE4F" }}></span>
                         <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#5FC26D" }}></span>
                       </span>
-                      <span style={{ flex: "1", background: "#F1F2F6", borderRadius: "999px", padding: "5px 12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", color: "#565B72", textAlign: "center" }}>all.speediq.ai</span>
+                      <span style={{ flex: "1", background: "#F1F2F6", borderRadius: "999px", padding: "5px 12px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9.5px", color: "#565B72", textAlign: "center" }}>app.speediq.ai</span>
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid #EEF0F4", flex: "none" }}>
                       <div style={{ padding: "10px 16px" }}>
